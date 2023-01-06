@@ -14,9 +14,9 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 
   <title>Сервис доставки еды</title>
   <link rel="stylesheet" href="css/style.css">
@@ -32,34 +32,34 @@
 
           <a class="logo" href="#">
             <img src="Images/logo.svg" alt="логотип"></img></a>
-<div class="hero__top-right">
-          <ul class="hero__menu">
-            <li class="hero-btn">
-              <a class="hero__link" href="#s1">Главная</a>
-            </li>
+          <div class="hero__top-right">
+            <ul class="hero__menu">
+              <li class="hero-btn">
+                <a class="hero__link" href="#s1">Главная</a>
+              </li>
 
-            <li class="hero-btn">
-              <a class="hero__link" href="#s1">Блюда</a>
-            </li>
+              <li class="hero-btn">
+                <a class="hero__link" href="#s1">Блюда</a>
+              </li>
 
-            <li class="hero-btn">
-              <a class="hero__link" href="#s1">Контакты</a>
-            </li>
+              <li class="hero-btn">
+                <a class="hero__link" href="#s1">Контакты</a>
+              </li>
 
-          </ul>
+            </ul>
 
-          <ul class="hero__icons">
-            <li>
-              <a class="hero__search" style="background-image: url('images/search_icon.svg')" href="#s1">
-                <span class="sr-only">поиск блюд</span></a>
-            </li>
-  
-            <li>
-              <a class="hero__cart" style="background-image: url('images/cart_icon.svg')" href="#s1">
-                <span class="sr-only">переход в корзину с заказами</span></a>
-            </li>
+            <ul class="hero__icons">
+              <li>
+                <a class="hero__search" style="background-image: url('images/search_icon.svg')" href="#s1">
+                  <span class="sr-only">поиск блюд</span></a>
+              </li>
 
-          </ul>
+              <li>
+                <a class="hero__cart" style="background-image: url('images/cart_icon.svg')" href="#s1">
+                  <span class="sr-only">переход в корзину с заказами</span></a>
+              </li>
+
+            </ul>
           </div>
         </nav>
 
@@ -78,108 +78,129 @@
           </div>
 
           <!-- <div class="hero__right"> -->
-            <div class="hero__img" style="background-image: url('images/scooter_guy.png');"></div>
-          </div>
+          <div class="hero__img" style="background-image: url('images/scooter_guy.png');"></div>
+        </div>
 
         <!-- </div> -->
       </div>
     </header>
     <section class="category">
+      <div class="container">
+        <div class="title category__title">Популярные категории</div>
 
-      <div class="title category__title"></div>
+        <ul class="category__list">
+          <li class="category__item" href="#">
+            <button class="category__btn">
+              <div class="category__icon category__icon--burger"></div>
+              <span class="category__text">Бургеры</span>
+            </button>
+          </li>
 
-      <ul class="category__list">
-        <li class="category__item" href="">
-          <button class="category__btn">Бургеры</button>
-        </li>
-        <li class="category__item" href="">
-          <button class="category__btn">Пицца</button>
-        </li>
-        <li class="category__item" href="">
-          <button class="category__btn">Сендвичи</button>
-        </li>
-        <li class="category__item" href="">
-          <button class="category__btn">Азиатская кухня</button>
-        </li>
-        <li class="category__item" href="">
-          <button class="category__btn">Cеты</button>
-        </li>
-      </ul>
+          <li class="category__item" href="#">
+            <button class="category__btn">
+              <div class="category__icon category__icon--pizza"></div>
+              <span class="category__text">Пицца</span>
+            </button>
+          </li>
 
-      <ul class="category__grid">
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="category__item" href="#">
+            <button class="category__btn">
+              <div class="category__icon category__icon--sandwiches"></div>
+              <span class="category__text">Сендвичи</span>
+            </button>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="category__item" href="#">
+            <button class="category__btn">
+              <div class="category__icon category__icon--asia"></div>
+              <span class="category__text">Азиатская кухня</span>
+            </button>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="category__item" href="#">
+            <button class="category__btn">
+              <div class="category__icon category__icon--dish"></div>
+              <span class="category__text">Cеты</span>
+            </button>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+        </ul>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+        <ul class="category__grid">
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-        <li class="grid-item">
-          <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
-            alt="Чизбургер с листьями салата">
-          <p class="grid-item__text">Чизбургер с листьями салата</p>
-          <a class="grid-item__button" href="#">В корзину</a>
-        </li>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-      </ul>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
 
-      <a class="category__show-more" href="#">Показать ещё</a>
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
+
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
+
+          <li class="grid-item">
+            <img class="grid-item__icon" src="images/burger_icons/cheeseburger_icon.png"
+              alt="Чизбургер с листьями салата">
+            <p class="grid-item__text">Чизбургер с листьями салата</p>
+            <a class="grid-item__button" href="#">В корзину</a>
+          </li>
+
+        </ul>
+
+        <a class="category__show-more" href="#">Показать ещё</a>
+      </div>
     </section>
     <section class="order"></section>
     <section class="restaurants"></section>
