@@ -238,19 +238,53 @@ body {
 .category__item {
   display: flex;
   flex-direction: row;
+  border-color: transparent;
 }
 
 
 
 .category__btn {
+  border: 1px solid #ececec;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
-  background-color: #ff6838;
-  border-color: transparent;
   border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
+
+.category__btn:focus {
+  outline: none;
+  border: 2px solid #ff6838;
+  color: #FFF2EE;
+
+}
+
+.category__btn:hover {
+  background-color: #fff2ee;
+  color: #ff6838;
+}
+
+.category__btn:active {
+  background-color: #fff2ee;
+  color: #363853;
+  border: transparent;
+  box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
+}
+
+.category__btn:focus .category__icon {
+  filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
+}
+
+.category__btn:hover .category__icon {
+  filter: invert(57%) sepia(26%) saturate(6717%) hue-rotate(337deg) brightness(101%) contrast(101%);
+}
+
+.category__btn:active .category__icon {
+  filter: invert(19%) sepia(11%) saturate(1866%) hue-rotate(198deg) brightness(96%) contrast(88%);
+}
+
 
 .category__icon {
   background-repeat: no-repeat;
