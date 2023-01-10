@@ -32,6 +32,7 @@ ol {
 
 a {
   text-decoration: none;
+
 }
 
 ul,
@@ -53,6 +54,7 @@ body {
   font-size: 20px;
   line-height: 1.3;
   font-weight: 400;
+  color: #31352b;
   background-color: #f9faff;
 }
 
@@ -186,15 +188,16 @@ body {
   justify-content: center;
   align-items: center;
 
+  border: transparent;
   border-radius: 6px;
-  width: 147px;
-  height: 47px;
   background-color: #ff6838;
   color: #fff;
 }
 
 .button--order {
   margin-right: 35px;
+  width: 147px;
+  height: 47px;
 }
 
 
@@ -369,7 +372,6 @@ body {
   max-width: 100px;
   height: 32px;
   margin-bottom: 20px;
-  border: transparent;
 }
 
 .category__show-more {
@@ -391,7 +393,108 @@ body {
   overflow: hidden;
 }
 
-.footter{
-display: flex;
-flex-direction: row;
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  color: #31352b;
+}
+
+.contacts__logo {
+  margin-bottom: 30px;
+}
+
+.contacts__input {
+  border: solid 1px #c2c2c2;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.contacts__input,
+.contacts__button {
+  width: 100%;
+  height: 44px;
+}
+
+.contacts__all-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__feedback {
+  display: flex;
+  flex-direction: column;
+  padding-left: 29px;
+}
+
+.contacts__adress,
+.contacts__tel,
+.contacts__email,
+.contacts__link {
+  color: #31352b;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+}
+
+.contacts__adress::before,
+.contacts__tel::before,
+.contacts__email::before {
+  position: absolute;
+  content: '';
+  left: -30px;
+  width: 28px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.contacts__tel::before {
+  height: 26px;
+}
+
+.contacts__email::before {
+  height: 25px;
+}
+
+.contacts__adress::before {
+  background-image: url('../images/icons/icon-location.svg');
+}
+
+.contacts__tel::before {
+  background-image: url('../images/icons/icon-call.svg');
+}
+
+.contacts__email::before {
+  background-image: url('../images/icons/icon-message.svg');
+}
+
+.contacts__socuailmedias {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  max-width: 143px;
+}
+
+.contacts__socialmedia {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50px;
+  width: 50px;
+  background-color: #ececec;
+  border-radius: 50%;
+}
+
+.footter {
+  display: flex;
+  flex-direction: row;
 }
