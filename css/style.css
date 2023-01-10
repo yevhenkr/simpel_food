@@ -222,6 +222,7 @@ body {
   color: #363853;
   font-size: 36px;
   text-align: center;
+  font-weight: 500;
 }
 
 .category__title {
@@ -233,6 +234,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 45px;
+  max-width: 1122px;
 }
 
 .category__item {
@@ -334,10 +336,38 @@ body {
   width: auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #ececec;
+  font-size: 15px;
+}
+
+.grid-item__icon {
+  display: flex;
+  max-width: 140px;
+  margin: 20px auto 6px;
+}
+
+.grid-item__text {
+  display: flex;
+  padding-bottom: 11px;
+}
+
+.grid-item__cost {
+  display: flex;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.grid-item__button {
+  display: flex;
+  max-width: 100px;
+  height: 32px;
+  margin-bottom: 20px;
+  border: transparent;
 }
 
 .category__show-more {
