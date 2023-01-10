@@ -212,45 +212,58 @@
       <div class="container">
         <div class="contacts">
           <div class="contacts-item">
-            <a class="logo" href="#">
+            <a class="logo contacts__logo" href="#">
               <img src="Images/logo.svg" alt="логотип"></img>
             </a>
             <form action="#" method="get">
               <label for="email"> </label>
-              <input type="email" placeholder="Ваш имейл" name="email" id="email" required>
+              <input class="contacts__input" type="email" placeholder="Ваш имейл" name="email" id="email" required>
               <span class="sr-only">Поле для вводу вашого имейл</span>
-              <button class="button" type="submit">Подписаться</button>
+              <button class="button contacts__button" type="submit">Подписаться</button>
             </form>
           </div>
 
-          <div class="contacts-item">
-            <a href="#">Как это работает</a>
-            <a href="#">Продукты</a>
-            <a href="#">Блюда</a>
-            <a href="#">Меню</a>
-          </div>
+          <ul class="contacts-item">
+            <li><a class="contacts__link" href="#">Как это работает</a></li>
+            <li><a class="contacts__link" href="#">Продукты</a></li>
+            <li><a class="contacts__link" href="#">Блюда</a></li>
+            <li><a class="contacts__link" href="#">Меню</a></li>
+          </ul>
 
-          <div class="contacts-item">
-            <a href="#">О нас</a>
-            <a href="#">Новости</a>
-            <a href="#">Партнеры</a>
-            <a href="#">ЧаВо</a>
-          </div>
+          <ul class="contacts-item">
+            <li><a class="contacts__link" href="#">О нас</a></li>
+            <li><a class="contacts__link" href="#">Новости</a></li=>
+            <li><a class="contacts__link" href="#">Партнеры</a></li>
+            <li><a class="contacts__link" href="#">ЧаВо</a></li>
+          </ul>
 
-          <div class="contacts-item">
-            <a href="#">Скачать приложение</a>
-            <a href="#">Блог</a>
-            <a href="#">Что нового?</a>
-            <a href="#">Карта сайта</a>
-          </div>
+          <ul class="contacts-item">
+            <li><a class="contacts__link" href="#">Скачать приложение</a></li>
+            <li><a class="contacts__link" href="#">Блог</a></li>
+            <li><a class="contacts__link" href="#">Что нового?</a></li>
+            <li><a class="contacts__link" href="#">Карта сайта</a></li>
+          </ul>
 
-          <div class="contacts-item">
-            <a class="contacts__adress" href="#">ул. Т.Г.Шевченко, 1</a>
-            <a class="contacts__tel" href="#">380501112233</a>
-            <a class="contacts__email" href="#">support@sfood.com</a>
-            <div class="contacts__socuail-media"></div>
-          </div>
+          <div class="contacts__all-media">
+            <ul class="contacts__feedback">
+              <li><a class="contacts__adress" href="#">ул. Т.Г.Шевченко, 1</a></li>
+              <li><a class="contacts__tel" href="#">380501112233</a></li>
+              <li><a class="contacts__email" href="#">support@sfood.com</a></li>
+            </ul>
 
+            <ul class="contacts__socuail-media">
+              <li><a class="contacts__socialmedia" style="background-image: url('images/icons/icon-facebook.svg');"
+                  href="#"><span class="sr-only">ссылка на телеграм</span></a>
+              </li>
+
+              <li><a class="contacts__socialmedia" style="background-image: url('images/icons/icon-twitter.svg');"
+                  href="#"><span class="sr-only">ссылка на твитер</span></a>
+              </li>
+              <li><a class="contacts__socialmedia" style="background-image: url('images/icons/icon-instagram.svg');"
+                  href="#"><span class="sr-only">ссылка на инстаграм</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
