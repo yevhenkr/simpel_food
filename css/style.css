@@ -413,6 +413,9 @@ body {
 .contacts__input {
   border: solid 1px #c2c2c2;
   margin-bottom: 12px;
+  text-indent: 12px;
+  color: #c2c2c2;
+
 }
 
 .contacts__input,
@@ -441,14 +444,14 @@ body {
 .contacts__btn:focus {
   background-color: #fff2ee;
   color: #ff6838;
-  border: 2px solid #ff6838;
+  border: 2px solid #ff9674;
   outline: none;
 }
 
 .contacts__btn:hover {
   background-color: #fff2ed;
   color: #ff6838;
-  border: 2px solid #ff6838;
+  border: 2px solid #ff9674;
 }
 
 .contacts__btn:active {
@@ -461,6 +464,18 @@ body {
 .contacts__btn:hover:before,
 .contacts__btn:active:before {
   filter: invert(59%) sepia(61%) saturate(4545%) hue-rotate(338deg) brightness(104%) contrast(101%);
+}
+
+
+.contacts__input:focus {
+  color: #c2c2c2;
+  border: 2px solid #ff6838;
+  outline: none;
+}
+
+.contacts__input:hover {
+  color: #363853;
+  outline: none;
 }
 
 .contacts__all-media {
