@@ -32,9 +32,9 @@
           <img src="Images/logo.svg" alt="логотип"></img>
         </a>
 
-        <nav class="hero__top">
+        <nav class="hero__nav">
 
-          <div class="hero__top-right">
+          <div class="hero__nav-right">
             <ul class="hero__menu">
               <li class="hero-btn">
                 <a class="hero__link" href="#s1">Главная</a>
@@ -47,17 +47,16 @@
               <li class="hero-btn">
                 <a class="hero__link" href="#s1">Контакты</a>
               </li>
-
             </ul>
 
             <ul class="hero__icons">
               <li>
-                <a class="hero__search" style="background-image: url('images/icons/search_icon.svg')" href="#s1">
+                <a class="hero__search" style="background-image: url('images/icons/search_icon.svg')" href="#">
                   <span class="sr-only">поиск блюд</span></a>
               </li>
 
               <li>
-                <a class="hero__cart" style="background-image: url('images/icons/cart_icon.svg')" href="#s1">
+                <a class="hero__cart" style="background-image: url('images/icons/cart_icon.svg')" href="#">
                   <span class="sr-only">переход в корзину с заказами</span></a>
               </li>
 
@@ -73,10 +72,10 @@
             </h1>
             <p class="hero__text">Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш
               счёт</p>
-              <div class="hero__bottom">
-                <a class="button button--order" href="#">Заказать</a>
-                <a class="hero__detail" href="#">Подробнее</a>
-              </div>
+            <div class="hero__bottom">
+              <a class="button headear--button" href="#">Заказать</a>
+              <a class="hero__detail" href="#">Подробнее</a>
+            </div>
           </div>
 
           <!-- <div class="hero__right"> -->
@@ -86,40 +85,41 @@
         <!-- </div> -->
       </div>
     </header>
+
     <section class="category">
       <div class="container">
         <h2 class="title category__title">Популярные категории</h2>
 
         <ul class="category__list">
-          <li class="category__item" href="#">
+          <li class="category-item" href="#">
             <button class="category__btn" type="button">
               <div class="category__icon category__icon--burger"></div>
               <h3 class="category__text">Бургеры</h3>
             </button>
           </li>
 
-          <li class="category__item" href="#">
+          <li class="category-item" href="#">
             <button class="category__btn" type="button">
               <div class="category__icon category__icon--pizza"></div>
               <h3 class="category__text">Пицца</h3>
             </button>
           </li>
 
-          <li class="category__item" href="#">
+          <li class="category-item" href="#">
             <button class="category__btn" type="button">
               <div class="category__icon category__icon--sandwiches"></div>
               <h3 class="category__text">Сендвичи</h3>
             </button>
           </li>
 
-          <li class="category__item" href="#">
+          <li class="category-item" href="#">
             <button class="category__btn" type="button">
               <div class="category__icon category__icon--asia"></div>
               <h3 class="category__text">Азиатская кухня</h3>
             </button>
           </li>
 
-          <li class="category__item" href="#">
+          <li class="category-item" href="#">
             <button class="category__btn" type="button">
               <div class="category__icon category__icon--dish"></div>
               <h3 class="category__text">Cеты</h3>
@@ -228,44 +228,76 @@
           </div>
 
           <ul class="footer-top-item">
-            <li><a class="footer-top__link" href="#">Как это работает</a></li>
-            <li><a class="footer-top__link" href="#">Продукты</a></li>
-            <li><a class="footer-top__link" href="#">Блюда</a></li>
-            <li><a class="footer-top__link" href="#">Меню</a></li>
+            <li>
+              <a class="footer-top__link" href="#">Как это работает</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">Продукты</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">Блюда</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">Меню</a>
+            </li>
           </ul>
 
           <ul class="footer-top-item">
-            <li><a class="footer-top__link" href="#">О нас</a></li>
-            <li><a class="footer-top__link" href="#">Новости</a></li=>
-            <li><a class="footer-top__link" href="#">Партнеры</a></li>
-            <li><a class="footer-top__link" href="#">ЧаВо</a></li>
+            <li>
+              <a class="footer-top__link" href="#">О нас</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">Новости</a></li=>
+            <li>
+              <a class="footer-top__link" href="#">Партнеры</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">ЧаВо</a>
+            </li>
           </ul>
 
           <ul class="footer-top-item">
-            <li><a class="footer-top__link" href="#">Скачать приложение</a></li>
-            <li><a class="footer-top__link" href="#">Блог</a></li>
-            <li><a class="footer-top__link" href="#">Что нового?</a></li>
-            <li><a class="footer-top__link" href="#">Карта сайта</a></li>
+            <li><a class="footer-top__link" href="#">Скачать приложение</a> 
+              </li>
+            <li>
+              <a class="footer-top__link" href="#">Блог</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">Что нового?</a>
+            </li>
+            <li>
+              <a class="footer-top__link" href="#">Карта сайта</a>
+            </li>
           </ul>
 
           <div class="footer-top__all-media">
             <ul class="footer-top__feedback">
-              <li><a class="footer-top__adress" href="#">ул. Т.Г.Шевченко, 1</a></li>
-              <li><a class="footer-top__tel" href="#">380501112233</a></li>
-              <li><a class="footer-top__email" href="#">support@sfood.com</a></li>
+              <li>
+                <a class="footer-top__adress" href="#">ул. Т.Г.Шевченко, 1</a> 
+              </li>
+              <li>
+                <a class="footer-top__tel" href="#">380501112233</a></li>
+              <li>
+                <a class="footer-top__email" href="#">support@sfood.com</a> 
+              </li>
             </ul>
 
             <ul class="footer-top__socuailmedias">
-              <li><a class="footer-top__socialmedia" style="background-image: url('images/icons/icon-facebook.svg');"
+              <li>
+                <a class="footer-top__socialmedia" style="background-image: url('images/icons/icon-facebook.svg');"
                   href="#"><span class="sr-only">ссылка на телеграм</span></a>
               </li>
 
-              <li><a class="footer-top__socialmedia" style="background-image: url('images/icons/icon-twitter.svg');"
+              <li>
+                <a class="footer-top__socialmedia" style="background-image: url('images/icons/icon-twitter.svg');"
                   href="#"><span class="sr-only">ссылка на твитер</span></a>
               </li>
-              <li><a class="footer-top__socialmedia" style="background-image: url('images/icons/icon-instagram.svg');"
-                  href="#"><span class="sr-only">ссылка на инстаграм</span></a>
+              <li>
+                <a class="footer-top__socialmedia" style="background-image: url('images/icons/icon-instagram.svg');"
+                  href="#"><span class="sr-only">ссылка на инстаграм</span> 
+                </a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -279,5 +311,4 @@
   </main>
 
 </body>
-
 </html>

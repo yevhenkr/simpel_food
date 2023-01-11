@@ -70,7 +70,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.hero__top {
+.hero__nav {
   height: 160px;
   display: flex;
   justify-content: flex-end;
@@ -86,7 +86,7 @@ body {
   top: 58px;
 }
 
-.hero__top-right {
+.hero__nav-right {
   display: flex;
 }
 
@@ -98,11 +98,6 @@ body {
 
 .hero-btn:not(:last-child) {
   margin-right: 45px;
-}
-
-.hero-btn:not(:nth-child(3)) {
-  margin-right: 45px;
-  transition: all 0.3s;
 }
 
 .hero__link {
@@ -218,13 +213,13 @@ body {
   color: #fff;
 }
 
-.button--order {
+.headear--button {
   margin-right: 35px;
   width: 147px;
   height: 47px;
 }
 
-.button--order:focus {
+.headear--button:focus {
   outline: none;
   border-radius: 5px;
   border: solid 2px #ff9573;
@@ -232,7 +227,7 @@ body {
   color: #ff6838;
 }
 
-.button--order:hover {
+.headear--button:hover {
   background-color: #ffffff;
   border: solid 2px #ff9573;
   color: #ff6838;
@@ -240,7 +235,7 @@ body {
   box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2);
 }
 
-.button--order:active {
+.headear--button:active {
   background-color: #fff2ee;
   color: #ff6838;
   border: none;
@@ -306,7 +301,7 @@ body {
   max-width: 1122px;
 }
 
-.category__item {
+.category-item {
   display: flex;
   flex-direction: row;
   border-color: transparent;
@@ -435,7 +430,7 @@ body {
 
 .grid-item__button {
   display: flex;
-  max-width: 100px;
+  width: 100px;
   height: 32px;
   margin-bottom: 20px;
 }
