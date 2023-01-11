@@ -81,14 +81,13 @@ body {
   max-width: 200px;
 }
 
-.logo__hero{
-position: absolute;
-top: 58px;
-} 
+.logo__hero {
+  position: absolute;
+  top: 58px;
+}
 
 .hero__top-right {
   display: flex;
-
 }
 
 .hero__menu {
@@ -99,6 +98,11 @@ top: 58px;
 
 .hero-btn:not(:last-child) {
   margin-right: 45px;
+}
+
+.hero-btn:not(:nth-child(3)) {
+  margin-right: 45px;
+  transition: all 0.3s;
 }
 
 .hero__link {
@@ -112,15 +116,31 @@ top: 58px;
 .hero__icons {
   display: flex;
   justify-content: space-between;
+  transition: all 0.3s;
+}
+
+.hero__icons :focus,
+.hero-btn :focus {
+  outline: none;
+  border-radius: 5px;
+  border: solid 2px #ff9573;
+}
+
+.hero-btn :hover {
+  color: #ff6838;
+  border-radius: 5px;
+}
+
+.hero-btn :active {
+  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  color: #31352b;
+  border: none;
+  box-shadow: none;
 }
 
 .hero__search {
-  display: block;
   margin-left: 68px;
   margin-right: 10px;
-}
-
-.hero__search {
   display: flex;
   position: relative;
   width: 45px;
@@ -204,12 +224,54 @@ top: 58px;
   height: 47px;
 }
 
+.button--order:focus {
+  outline: none;
+  border-radius: 5px;
+  border: solid 2px #ff9573;
+  background-color: #fff2ee;
+  color: #ff6838;
+}
+
+.button--order:hover {
+  background-color: #ffffff;
+  border: solid 2px #ff9573;
+  color: #ff6838;
+  border-radius: 5px;
+  box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2);
+}
+
+.button--order:active {
+  background-color: #fff2ee;
+  color: #ff6838;
+  border: none;
+  box-shadow: none;
+}
 
 .hero__detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  height: 23px;
+  margin-top: 10px;
   text-decoration: underline;
+  color: #313853;
+  border-radius: 5px;
+}
+
+.hero__detail:focus {
+  /* outline: none; */
+  text-decoration: none;
+  outline: solid 2px #ff9573;
+}
+
+.hero__detail:hover {
+  color: #ff6838;
+  outline: none;
+}
+
+.hero__detail:active {
+  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  color: #31352b;
+  background-color: #ffffff;
+  text-decoration: none;
 }
 
 .sr-only {
