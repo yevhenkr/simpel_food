@@ -550,7 +550,17 @@ body {
   border-radius: 50%;
 }
 
-.footter {
+.footer-top {
   display: flex;
   flex-direction: row;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  font-size: 14px;
+  border: solid 1px #eeeff3;
+  line-height: 1;
 }
