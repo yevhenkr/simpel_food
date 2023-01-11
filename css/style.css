@@ -73,14 +73,18 @@ body {
 .hero__top {
   height: 160px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   text-align: center;
 }
 
 .logo {
-  display: flex;
   max-width: 200px;
 }
+
+.logo__hero{
+position: absolute;
+top: 58px;
+} 
 
 .hero__top-right {
   display: flex;
