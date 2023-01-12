@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'Rubik';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url('../fonts/rubik-v23-cyrillic-300.woff2') format('woff2'),
+    url('../fonts/rubik-v23-cyrillic-300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/rubik-v23-cyrillic-regular.woff2') format('woff2'),
+    url('../fonts/rubik-v23-cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('../fonts/rubik-v23-cyrillic-500.woff2') format('woff2'),
+    url('../fonts/rubik-v23-cyrillic-500.woff') format('woff');
+}
+
 html {
   box-sizing: border-box;
 }
