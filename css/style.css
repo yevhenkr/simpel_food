@@ -138,6 +138,10 @@ body {
   color: #31352b;
 }
 
+.hero-btn:last-child {
+  margin-right: 68px;
+}
+
 .hero__icons {
   display: flex;
   justify-content: space-between;
@@ -164,7 +168,6 @@ body {
 }
 
 .hero__search {
-  margin-left: 68px;
   margin-right: 10px;
   display: flex;
   position: relative;
