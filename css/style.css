@@ -133,13 +133,12 @@ body {
   transform: translateY(50%);
   font-size: 18px;
   color: #31352b;
+  outline: 0 solid transparent;
+  border: solid 2px transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-.hero__icons {
-  display: flex;
-  justify-content: space-between;
-  transition: all 0.3s;
-}
+
 
 .hero-btn:last-child {
   margin-right: 68px;
@@ -149,7 +148,6 @@ body {
   margin-right: 45px;
 }
 
-.hero__icons :focus,
 .hero-btn :focus {
   outline: transparent;
   border-radius: 5px;
@@ -159,24 +157,45 @@ body {
 .hero-btn :hover {
   color: #ff6838;
   border-radius: 5px;
+  border: solid 2px transparent;
 }
 
 .hero-btn :active {
   text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   color: #31352b;
-  border: none;
+  border: solid 2px transparent;
   box-shadow: none;
 }
 
+.hero__icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__icons :focus {
+  border-radius: 5px;
+  outline: 1px solid transparent;
+  border: solid 2px #ff9573;
+}
+
 .hero__search {
-  margin-right: 10px;
   display: flex;
   position: relative;
+  margin-right: 10px;
   width: 45px;
   height: 28px;
   top: 35%;
   transform: translateY(50%);
   background-repeat: no-repeat;
+  border: solid 2px transparent;
+  outline: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero__search :focus {
+  border-radius: 5px;
+  outline: 1px solid transparent;
+  border: solid 2px #ff9573;
 }
 
 .hero__cart {
@@ -187,6 +206,15 @@ body {
   top: 34%;
   transform: translateY(50%);
   background-repeat: no-repeat;
+  border: solid 2px transparent;
+  outline: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero__cart :focus {
+  border-radius: 5px;
+  outline: 1px solid transparent;
+  border: solid 2px #ff9573;
 }
 
 .hero__center {
@@ -245,6 +273,8 @@ body {
   border-radius: 6px;
   background-color: #ff6838;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+
 }
 
 .headear--button {
