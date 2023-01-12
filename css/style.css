@@ -126,9 +126,6 @@ body {
   align-items: center;
 }
 
-.hero-btn:not(:last-child) {
-  margin-right: 45px;
-}
 
 .hero__link {
   position: relative;
@@ -138,14 +135,18 @@ body {
   color: #31352b;
 }
 
-.hero-btn:last-child {
-  margin-right: 68px;
-}
-
 .hero__icons {
   display: flex;
   justify-content: space-between;
   transition: all 0.3s;
+}
+
+.hero-btn:last-child {
+  margin-right: 68px;
+}
+
+.hero-btn:not(:last-child) {
+  margin-right: 45px;
 }
 
 .hero__icons :focus,
