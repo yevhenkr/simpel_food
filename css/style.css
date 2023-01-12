@@ -146,7 +146,7 @@ body {
 
 .hero__icons :focus,
 .hero-btn :focus {
-  outline: none;
+  outline: transparent;
   border-radius: 5px;
   border: solid 2px #ff9573;
 }
@@ -250,7 +250,7 @@ body {
 }
 
 .headear--button:focus {
-  outline: none;
+  outline: transparent;
   border-radius: 5px;
   border: solid 2px #ff9573;
   background-color: #fff2ee;
@@ -282,14 +282,14 @@ body {
 }
 
 .hero__detail:focus {
-  /* outline: none; */
+  /* outline: transparent; */
   text-decoration: none;
   outline: solid 2px #ff9573;
 }
 
 .hero__detail:hover {
   color: #ff6838;
-  outline: none;
+  outline: transparent;
 }
 
 .hero__detail:active {
@@ -351,7 +351,7 @@ body {
 }
 
 .category__btn:focus {
-  outline: none;
+  outline: transparent;
   border: 2px solid #ff6838;
   color: #FFF2EE;
 
@@ -536,7 +536,7 @@ body {
   background-color: #fff2ee;
   color: #ff6838;
   border: 2px solid #ff9674;
-  outline: none;
+  outline: transparent;
 }
 
 .footer-top__btn:hover {
@@ -561,12 +561,12 @@ body {
 .footer-top__input:focus {
   color: #c2c2c2;
   border: 2px solid #ff6838;
-  outline: none;
+  outline: transparent;
 }
 
 .footer-top__input:hover {
   color: #363853;
-  outline: none;
+  outline: transparent;
 }
 
 .footer-top__all-media {
