@@ -138,10 +138,8 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 .hero-btn:last-child {
-  margin-right: 68px;
+  margin-right: 41px;
 }
 
 .hero-btn:not(:last-child) {
@@ -168,56 +166,83 @@ body {
 }
 
 .hero__icons {
+  height: 45px;
+  position: relative;
   display: flex;
   justify-content: space-between;
+  top: 54px;
 }
 
 .hero__search,
 .hero__cart {
-  display: flex;
-  position: relative;
-  background-position: center center;
-  width: 44px;
-  height: 44px;
-  border-radius: 5px;
-  outline: 1px solid transparent;
-  border: solid 2px transparent;
-  transform: translateY(50%);
-  background-repeat: no-repeat;
-  transition: all 0.3s ease-in-out;
-}
-
-.hero__search {
+  display: block;
   margin-right: 10px;
-  top: 24%;
+  height: 44px;
+  width: 44px;
+  border-radius: 5px;
+  border: solid 2px transparent;
+  transition: all 0.3s;
 }
 
 .hero__cart {
-  top: 23%;
+  margin-right: 5px;
 }
 
-.hero__search:focus,
+.hero__search:focus {
+  background-color: #FFF2EE;
+  border: solid 2px #ff9573;
+}
+
+.hero__search:hover {
+  background-color: #FF7A50;
+}
+
+.hero__search:active {
+  background-color: #FFF2EE;
+}
+
+
 .hero__cart:focus {
-  background-color: rgba(255, 122, 80, 0.1);
-  border: solid 2px #ff9573;
-}
-
-.hero__search:hover,
-.hero__cart:hover {
-  background-color: rgba(255, 122, 80, 1);
-  border: solid 2px transparent;
-}
-
-.hero__search:active,
-.hero__cart:active {
-  background-color: rgba(255, 122, 80, 0.1);
-}
-
-.hero__cart :focus {
-  border-radius: 5px;
-  outline: 1px solid transparent;
-  border: solid 2px #ff9573;
   background-color: #fff2ee;
+  border: solid 2px #ff9573;
+}
+
+.hero__cart:hover {
+  background-color: #fff2ee;
+}
+
+.hero__cart:active {
+  background-color: #FFF2EE;
+}
+
+.hero__search-icon,
+.hero__cart-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(20%) sepia(38%) saturate(436%) hue-rotate(196deg) brightness(97%) contrast(93%);
+  transform: translate(45%, 45%);
+  width: 23px;
+  height: 23px;
+}
+
+.hero__search-icon {
+  background-image: url('../images/icons/search_icon.svg');
+}
+
+.hero__cart-icon {
+  background-image: url('../images/icons/cart_icon.svg');
+}
+
+
+.category__btn:active {
+  background-color: #fff2ee;
+  color: #363853;
+  border: transparent;
+  box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
+}
+
+.category__btn:focus .category__icon {
+  filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
 }
 
 .hero__center {
