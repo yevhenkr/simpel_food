@@ -194,6 +194,7 @@ body {
 
 .hero__search:hover {
   background-color: #ff7a50;
+  border: solid 2px transparent;
 }
 
 .hero__search:active {
@@ -216,6 +217,7 @@ body {
 
 .hero__cart:active {
   background-color: #fff2ee;
+  border: solid 2px transparent;
 }
 
 .hero__search-icon,
@@ -235,9 +237,13 @@ body {
   filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
 }
 
-.hero__search-icon:hover {
+.hero__search:hover .hero__search-icon {
   filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
+  border-color: transparent;
+}
 
+.hero__search:active .hero__search-icon {
+  filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
 }
 
 .hero__search-icon:active {
@@ -270,12 +276,17 @@ body {
   filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
 }
 
+.hero__cart:active .hero__cart-icon {
+  filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
+}
+
 .hero__cart:hover .hero__cart-num {
-  color: #ffffff;
+  color: #ff6838;
   background-color: #ffffff;
 }
 
 .hero__cart:active .hero__cart-num {
+  color: #ffffff;
   background-color: #ff6838;
 }
 
