@@ -185,20 +185,21 @@ body {
 }
 
 .hero__cart {
-  margin-right: 5px;
+  position: relative;
+  margin-right: 3px;
 }
 
 .hero__search:focus {
-  background-color: #FFF2EE;
+  background-color: #fff2ee;
   border: solid 2px #ff9573;
 }
 
 .hero__search:hover {
-  background-color: #FF7A50;
+  background-color: #ff7a50;
 }
 
 .hero__search:active {
-  background-color: #FFF2EE;
+  background-color: #fff2ee;
 }
 
 
@@ -208,18 +209,17 @@ body {
 }
 
 .hero__cart:hover {
-  background-color: #fff2ee;
+  background-color: #ff7a50;
 }
 
 .hero__cart:active {
-  background-color: #FFF2EE;
+  background-color: #fff2ee;
 }
 
 .hero__search-icon,
 .hero__cart-icon {
   background-repeat: no-repeat;
   background-size: contain;
-  filter: invert(20%) sepia(38%) saturate(436%) hue-rotate(196deg) brightness(97%) contrast(93%);
   transform: translate(45%, 45%);
   width: 23px;
   height: 23px;
@@ -227,12 +227,36 @@ body {
 
 .hero__search-icon {
   background-image: url('../images/icons/search_icon.svg');
+  transition: filter 0.3s;
 }
+
+.hero__search-icon:hover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(105%) contrast(102%);
+}
+
+.hero__search-icon:active {
+  filter: none;
+}
+
 
 .hero__cart-icon {
   background-image: url('../images/icons/cart_icon.svg');
+  transform: translate(41%, 45%);
 }
 
+.hero__cart-icon::after {
+  position: absolute;
+  content: '4';
+  top: -5px;
+  right: -7px;
+  background-color: #ff6838;
+  border-radius: 50%;
+  color: #ececec;
+  width: 14px;
+  height: 14px;
+  font-size: 10px;
+  line-height: 14px;
+}
 
 .category__btn:active {
   background-color: #fff2ee;
