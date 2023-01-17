@@ -258,6 +258,7 @@ body {
   line-height: 14px;
 }
 
+/* 
 .category__btn:active {
   background-color: #fff2ee;
   color: #363853;
@@ -267,7 +268,7 @@ body {
 
 .category__btn:focus .category__icon {
   filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
-}
+} */
 
 .hero__center {
   display: flex;
@@ -453,6 +454,7 @@ body {
   color: #363853;
   border: transparent;
   box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
+  transition: all 0.2s;
 }
 
 .category__btn:focus .category__icon {
@@ -724,12 +726,59 @@ body {
   height: 50px;
   width: 50px;
   background-color: #ececec;
+  border: solid 2px transparent;
   border-radius: 50%;
+  transition: all 0.3s;
 }
 
-.footer-top {
-  display: flex;
-  flex-direction: row;
+.footer-top__socialmedia:focus {
+  border-color: #ff9674;
+  background-color: #fff2ed;
+}
+
+.footer-top__socialmedia:hover {
+  background-color: #ff7a50;
+  border: solid 2px transparent;
+}
+
+.footer-top__socialmedia:active {
+  background-color: #fff2ed;
+  border: solid 2px transparent;
+}
+
+.footer-top__facebook,
+.footer-top__twitter,
+.footer-top__instagram {
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.footer-top__facebook {
+  background-image: url('../images/icons/icon-facebook.svg');
+}
+
+.footer-top__twitter {
+  background-image: url('../images/icons/icon-twitter.svg');
+}
+
+.footer-top__instagram {
+  background-image: url('../images/icons/icon-instagram.svg');
+}
+
+.footer-top__socialmedia:hover .footer-top__facebook,
+.footer-top__socialmedia:hover .footer-top__twitter,
+.footer-top__socialmedia:hover .footer-top__instagram {
+  filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
+}
+
+.footer-top__socialmedia:active .footer-top__facebook,
+.footer-top__socialmedia:active .footer-top__twitter,
+.footer-top__socialmedia:active .footer-top__instagram {
+  filter: invert(58%) sepia(64%) saturate(907%) hue-rotate(324deg) brightness(98%) contrast(107%);
 }
 
 .footer-bottom {
