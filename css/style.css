@@ -171,6 +171,7 @@ body {
   display: flex;
   justify-content: space-between;
   top: 54px;
+  margin-right: 4px;
 }
 
 .hero__search,
@@ -182,12 +183,9 @@ body {
   border-radius: 5px;
   border: solid 2px transparent;
   transition: all 0.3s;
+  outline: 0 solid transparent;
 }
 
-.hero__cart {
-  position: relative;
-  margin-right: 3px;
-}
 
 .hero__search:focus {
   background-color: #fff2ee;
@@ -202,6 +200,10 @@ body {
   background-color: #fff2ee;
 }
 
+.hero__cart {
+  position: relative;
+  margin-right: 4px;
+}
 
 .hero__cart:focus {
   background-color: #fff2ee;
@@ -223,52 +225,59 @@ body {
   transform: translate(45%, 45%);
   width: 23px;
   height: 23px;
+  transition: all 0.3s;
 }
 
 .hero__search-icon {
   background-image: url('../images/icons/search_icon.svg');
   transition: filter 0.3s;
+  transform: translate(42%, 42%);
+  filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
 }
 
 .hero__search-icon:hover {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(105%) contrast(102%);
+  filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
+
 }
 
 .hero__search-icon:active {
-  filter: none;
+  filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(156deg) brightness(95%) contrast(98%);
 }
-
 
 .hero__cart-icon {
   background-image: url('../images/icons/cart_icon.svg');
-  transform: translate(41%, 45%);
+  transform: translate(27%, 45%);
+  filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
+  transition: all 0.3s;
 }
 
-.hero__cart-icon::after {
+.hero__cart-num {
   position: absolute;
-  content: '4';
-  top: -5px;
-  right: -7px;
+  top: 8px;
+  right: 0;
   background-color: #ff6838;
   border-radius: 50%;
   color: #ececec;
   width: 14px;
   height: 14px;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 15px;
+  transition: all 0.3s;
+
 }
 
-/* 
-.category__btn:active {
-  background-color: #fff2ee;
-  color: #363853;
-  border: transparent;
-  box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
-}
-
-.category__btn:focus .category__icon {
+.hero__cart:hover .hero__cart-icon {
   filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
-} */
+}
+
+.hero__cart:hover .hero__cart-num {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+.hero__cart:active .hero__cart-num {
+  background-color: #ff6838;
+}
 
 .hero__center {
   display: flex;
