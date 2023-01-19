@@ -4,8 +4,8 @@
   font-style: normal;
   font-weight: 300;
   src: local(''),
-    url('../fonts/rubik-v23-cyrillic-300.woff2') format('woff2'),
-    url('../fonts/rubik-v23-cyrillic-300.woff') format('woff');
+    url('../fonts/rubik-300.woff2') format('woff2'),
+    url('../fonts/rubik-300.woff') format('woff');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-    url('../fonts/rubik-v23-cyrillic-regular.woff2') format('woff2'),
-    url('../fonts/rubik-v23-cyrillic-regular.woff') format('woff');
+    url('../fonts/rubik-400.woff2') format('woff2'),
+    url('../fonts/rubik-400.woff') format('woff');
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-style: normal;
   font-weight: 500;
   src: local(''),
-    url('../fonts/rubik-v23-cyrillic-500.woff2') format('woff2'),
-    url('../fonts/rubik-v23-cyrillic-500.woff') format('woff');
+    url('../fonts/rubik-500.woff2') format('woff2'),
+    url('../fonts/rubik-500.woff') format('woff');
 }
 
 html {
@@ -146,19 +146,19 @@ body {
   margin-right: 45px;
 }
 
-.hero-btn :focus {
+.hero-btn:focus {
   outline: transparent;
   border-radius: 5px;
   border: solid 2px #ff9573;
 }
 
-.hero-btn :hover {
+.hero-btn:hover {
   color: #ff6838;
   border-radius: 5px;
   border: solid 2px transparent;
 }
 
-.hero-btn :active {
+.hero-btn:active {
   text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   color: #31352b;
   border: solid 2px transparent;
@@ -269,7 +269,6 @@ body {
   font-size: 10px;
   line-height: 15px;
   transition: all 0.3s;
-
 }
 
 .hero__cart:hover .hero__cart-icon {
