@@ -401,6 +401,7 @@
     height: 44px;
     margin-right: 10px;
     margin-left: 32px;
+    transition: all 0.3 ease-in-out;
   }
 
   &__icon--burger {
@@ -429,6 +430,30 @@
 
   &__icon--dish {
     background-image: url('../images/icons/icon-category-dish.svg');
+  }
+
+  &__btn:focus &__icon--burger,
+  &__btn:focus &__icon--pizza,
+  &__btn:focus &__icon--sandwiches,
+  &__btn:focus &__icon--asia,
+  &__btn:focus &__icon--dish {
+    filter: invert(85%) sepia(5%) saturate(526%) hue-rotate(321deg) brightness(108%) contrast(110%);
+  }
+
+  &__btn:hover &__icon--burger,
+  &__btn:hover &__icon--pizza,
+  &__btn:hover &__icon--sandwiches,
+  &__btn:hover &__icon--asia,
+  &__btn:hover &__icon--dish {
+    filter: invert(48%) sepia(95%) saturate(1562%) hue-rotate(336deg) brightness(100%) contrast(102%);
+  }
+
+  &__btn:active &__icon--burger,
+  &__btn:active &__icon--pizza,
+  &__btn:active &__icon--sandwiches,
+  &__btn:active &__icon--asia,
+  &__btn:active &__icon--dish {
+    filter: invert(19%) sepia(9%) saturate(2386%) hue-rotate(198deg) brightness(97%) contrast(87%);
   }
 
   &__grid {
