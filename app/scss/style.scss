@@ -4,6 +4,28 @@
 @import 'global';
 
 .hero {
+  &__logo {
+    position: absolute;
+    top: 58px;
+    outline: 0 solid transparent;
+    outline: transparent;
+    border-radius: 5px;
+    border: solid 2px transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__logo:focus {
+    border: solid 2px $btn-color;
+  }
+
+  &__logo:hover {
+    opacity: 0.5;
+  }
+
+  &__logo:active {
+    opacity: 0.2;
+  }
+
   &__nav {
     height: 160px;
     display: flex;
@@ -243,12 +265,6 @@
   margin: 0 auto;
 }
 
-.logo {
-  &__hero {
-    position: absolute;
-    top: 58px;
-  }
-}
 
 .hero-btn:last-child {
   margin-right: 41px;
