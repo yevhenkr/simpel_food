@@ -27,9 +27,26 @@
     transform: translateY(50%);
     font-size: 18px;
     color: $text-color;
-    outline: 0 solid transparent;
+    outline: transparent;
+    border-radius: 5px;
     border: solid 2px transparent;
     transition: all 0.3s ease-in-out;
+  }
+
+  &__link:focus {
+    border: solid 2px $btn-color;
+  }
+
+  &__link:hover {
+    color: $btn-color;
+    border: solid 2px $border-color;
+  }
+
+  &__link:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    color: $text-color;
+    border: solid 2px transparent;
+    box-shadow: none;
   }
 
   &__icons {
@@ -239,25 +256,6 @@
 
 .hero-btn:not(:last-child) {
   margin-right: 45px;
-}
-
-.hero-btn:focus {
-  outline: transparent;
-  border-radius: 5px;
-  border: solid 2px $border-color;
-}
-
-.hero-btn:hover {
-  color: $btn-color;
-  border-radius: 5px;
-  border: solid 2px transparent;
-}
-
-.hero-btn:active {
-  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-  color: $text-color;
-  border: solid 2px transparent;
-  box-shadow: none;
 }
 
 .sr-only {
