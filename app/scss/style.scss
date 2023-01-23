@@ -264,12 +264,20 @@
   }
 }
 
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+.hat {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  z-index: 1;
+}
 
 .hero-btn:last-child {
   margin-right: 41px;
