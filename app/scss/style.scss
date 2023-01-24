@@ -57,13 +57,13 @@
 
   &__link:focus {
     border: solid 2px $btn-color;
-  }
-
-  &__link:hover {
-    color: $btn-color;
     border: solid 2px $border-color;
   }
-
+  
+  &__link:hover {
+    color: $btn-color;
+  }
+  
   &__link:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     color: $text-color;
@@ -111,7 +111,7 @@
     background-size: contain;
     width: 23px;
     height: 23px;
-    -webkit-mask-image: url('../images/sprite.svg#search_icon'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#search_icon');
     background-color: $title-color;
     transform: translate(42%, 42%);
     transition: all 0.3s ease-in-out;
@@ -155,7 +155,7 @@
     width: 44px;
     height: 23px;
     transition: all 0.3s;
-    -webkit-mask-image: url('../images/sprite.svg#icon-cart'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#icon-cart');
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
@@ -425,29 +425,29 @@
   }
 
   &__icon--burger {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-burger'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-burger');
     transition: all 0.3s ease-in-out;
   }
 
   &__icon--pizza {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-pizza'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-pizza');
     transition: all 0.3s ease-in-out;
   }
 
   &__icon--sandwiches {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-sandvich'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-sandvich');
     transition: all 0.3s ease-in-out;
   }
 
   &__icon--asia {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-asia'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-asia');
     transition: all 0.3s ease-in-out;
     width: 50px;
     height: 50px;
   }
 
   &__icon--dish {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-dish'); // замените на своё изображение
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-dish');
     transition: all 0.3s ease-in-out;
   }
 
