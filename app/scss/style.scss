@@ -620,7 +620,8 @@
     width: 100%;
     height: 44px;
     background-color: $icon-color;
-
+    border: solid 2px transparent;
+    outline: transparent;
     transition: all 0.3s;
   }
 
@@ -629,9 +630,11 @@
     content: '';
     width: 16px;
     height: 15px;
-    background-image: url('../Images/icons/icon-send.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-send');
+    background-color: $white-color;
     background-repeat: no-repeat;
     left: 30px;
+    transition: all 0.3s ease-in-out;
   }
 
   &__btn:focus {
@@ -650,14 +653,13 @@
   &__btn:active {
     background-color: $focus-bg-color;
     color: $btn-color;
-    border: transparent;
-
+    border-color: transparent;
   }
 
   &__btn:focus:before,
   &__btn:hover:before,
   &__btn:active:before {
-    filter: invert(59%) sepia(61%) saturate(4545%) hue-rotate(338deg) brightness(104%) contrast(101%);
+    background-color: $icon-color;
   }
 
   &__btn-text {
