@@ -98,7 +98,7 @@
 
   &__search:hover {
 
-    background-color: $border-color;
+    background-color: $icon-color;
     border: solid 2px transparent;
   }
 
@@ -111,23 +111,21 @@
     background-size: contain;
     width: 23px;
     height: 23px;
-    background-image: url('../images/icons/search_icon.svg');
-    transition: filter 0.3s;
+    -webkit-mask-image: url('../images/sprite.svg#search_icon'); // замените на своё изображение
+    background-color: $title-color;
     transform: translate(42%, 42%);
-    filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
+    transition: all 0.3s ease-in-out;
   }
 
   &__search:hover &__search-icon {
-    filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
-  }
-
-  &__search:active &__search-icon {
-    filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
+    background-color: $white-color;
   }
 
   &__cart {
     display: block;
-    margin-right: 5px;
+    position: relative;
+    left: 4px;
+    // margin-right: 5px;
     height: 44px;
     width: 44px;
     border-radius: 5px;
@@ -153,27 +151,26 @@
   &__cart-icon {
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translate(9px, 8px);
+    transform: translate(-2px, 8px);
     width: 44px;
     height: 23px;
     transition: all 0.3s;
-    background-image: url('../images/icons/cart_icon.svg');
-    filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
-    transition: all 0.3s;
+    -webkit-mask-image: url('../images/sprite.svg#icon-cart'); // замените на своё изображение
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: $title-color;
+    transition: all 0.3s ease-in-out;
   }
 
   &__cart:hover &__cart-icon {
-    filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
-  }
-
-  &__cart:active &__cart-icon {
-    filter: invert(20%) sepia(13%) saturate(1405%) hue-rotate(198deg) brightness(97%) contrast(91%);
+    background-color: $white-color;
   }
 
   &__cart-num {
     position: absolute;
-    top: 8px;
-    right: 9px;
+    top: 4px;
+    right: 3px;
     background-color: $btn-color;
     border-radius: 50%;
     color: $cart-num-color;
@@ -184,10 +181,9 @@
     transition: all 0.3s;
   }
 
-  &__cart:hover &__cart-num,
-  &__cart:active &__cart-num {
-    color: $white-color;
-    background-color: $btn-color;
+  &__cart:hover &__cart-num{
+    color: $icon-color;
+    background-color: $white-color;
   }
 
   &__center {
@@ -414,12 +410,13 @@
     height: 44px;
     margin-right: 10px;
     margin-left: 32px;
+    background-color: #000000;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
     transition: all 0.3 ease-in-out;
   }
 
-  &__icon--burger {
-    background-image: url('../images/icons/icon-category-burger.svg');
-  }
 
   &__text {
     margin-right: 32px;
@@ -427,22 +424,31 @@
     font-size: 20px;
   }
 
+  &__icon--burger {
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-burger'); // замените на своё изображение
+    transition: all 0.3s ease-in-out;
+  }
+
   &__icon--pizza {
-    background-image: url('../images/icons/icon-category-pizza.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-pizza'); // замените на своё изображение
+    transition: all 0.3s ease-in-out;
   }
 
   &__icon--sandwiches {
-    background-image: url('../images/icons/icon-category-sandvich.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-sandvich'); // замените на своё изображение
+    transition: all 0.3s ease-in-out;
   }
 
   &__icon--asia {
-    background-image: url('../images/icons/icon-category-asia.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-asia'); // замените на своё изображение
+    transition: all 0.3s ease-in-out;
     width: 50px;
     height: 50px;
   }
 
   &__icon--dish {
-    background-image: url('../images/icons/icon-category-dish.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-dish'); // замените на своё изображение
+    transition: all 0.3s ease-in-out;
   }
 
   &__btn:focus &__icon--burger,
@@ -450,7 +456,7 @@
   &__btn:focus &__icon--sandwiches,
   &__btn:focus &__icon--asia,
   &__btn:focus &__icon--dish {
-    filter: invert(85%) sepia(5%) saturate(526%) hue-rotate(321deg) brightness(108%) contrast(110%);
+    background-color: $focus-bg-color;
   }
 
   &__btn:hover &__icon--burger,
@@ -458,7 +464,7 @@
   &__btn:hover &__icon--sandwiches,
   &__btn:hover &__icon--asia,
   &__btn:hover &__icon--dish {
-    filter: invert(48%) sepia(95%) saturate(1562%) hue-rotate(336deg) brightness(100%) contrast(102%);
+    background-color: $btn-color;
   }
 
   &__btn:active &__icon--burger,
@@ -466,7 +472,7 @@
   &__btn:active &__icon--sandwiches,
   &__btn:active &__icon--asia,
   &__btn:active &__icon--dish {
-    filter: invert(19%) sepia(9%) saturate(2386%) hue-rotate(198deg) brightness(97%) contrast(87%);
+    background-color: $title-color;
   }
 
   &__grid {
@@ -521,6 +527,7 @@
   display: flex;
   flex-direction: row;
   border-color: transparent;
+  outline: transparent;
 }
 
 .product__logo {
@@ -644,6 +651,7 @@
     background-color: $focus-bg-color;
     color: $btn-color;
     border: transparent;
+
   }
 
   &__btn:focus:before,
