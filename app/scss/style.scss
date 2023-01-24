@@ -181,7 +181,7 @@
     transition: all 0.3s;
   }
 
-  &__cart:hover &__cart-num{
+  &__cart:hover &__cart-num {
     color: $icon-color;
     background-color: $white-color;
   }
@@ -780,21 +780,22 @@
   }
 
   &__socialmedia {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: transparent;
     background-repeat: no-repeat;
-    background-position: center center;
     height: 50px;
     width: 50px;
     background-color: $cart-num-color;
     border: solid 2px transparent;
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
   }
 
   &__socialmedia:focus {
     border-color: $border-color;
-    background-color: $white-color;
+    background-color: $focus-bg-color;
   }
 
   &__socialmedia:hover {
@@ -803,43 +804,45 @@
   }
 
   &__socialmedia:active {
-    background-color: $white-color;
+    background-color: $focus-bg-color;
     border: solid 2px transparent;
   }
 
   &__facebook,
   &__twitter,
   &__instagram {
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: block;
+    display: flex;
     width: 100%;
-    height: 100%;
-    transition: all 0.3s;
+    height: 20px;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: $text-color;
+    transition: all 0.3s ease-in-out;
   }
 
   &__facebook {
-    background-image: url('../images/icons/icon-facebook.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-facebook');
   }
 
   &__twitter {
-    background-image: url('../images/icons/icon-twitter.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-twitter');
   }
 
   &__instagram {
-    background-image: url('../images/icons/icon-instagram.svg');
+    -webkit-mask-image: url('../images/sprite.svg#icon-instagram');
   }
 
   &__socialmedia:hover &__facebook,
   &__socialmedia:hover &__twitter,
   &__socialmedia:hover &__instagram {
-    filter: invert(90%) sepia(2%) saturate(1850%) hue-rotate(327deg) brightness(107%) contrast(102%);
+    background-color: $white-color;
   }
 
   &__socialmedia:active &__facebook,
   &__socialmedia:active &__twitter,
   &__socialmedia:active &__instagram {
-    filter: invert(58%) sepia(64%) saturate(907%) hue-rotate(324deg) brightness(98%) contrast(107%);
+    background-color: $icon-color;
   }
 }
 
