@@ -66,16 +66,15 @@
     height: 45px;
     position: relative;
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     top: 58px;
-    margin-right: 4px;
   }
 
-  &__search {
+  &__button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
     height: 44px;
     width: 44px;
     border-radius: 5px;
@@ -84,96 +83,50 @@
     outline: 0 solid transparent;
   }
 
-  &__search:focus {
+  &__button:focus {
     background-color: $focus-bg-color;
     border: solid 2px $border-color;
   }
 
-  &__search:hover {
+  &__button:hover {
 
     background-color: $icon-color;
     border: solid 2px transparent;
   }
 
-  &__search:active {
+  &__button:active {
     background-color: $focus-bg-color;
   }
 
   &__search-icon {
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 23px;
-    height: 23px;
     -webkit-mask-image: url('../images/sprite.svg#search_icon');
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-    background-color: $title-color;
-    transition: all 0.3s ease-in-out;
   }
 
-  &__search:hover &__search-icon {
+  &__button:hover &__search-icon {
     background-color: $white-color;
   }
 
-  &__search:active &__search-icon {
+  &__button:active &__search-icon {
     background-color: $text-color;
   }
 
-  &__cart {
-    display: flex;
-    position: relative;
-    left: 4px;
-    height: 44px;
-    width: 44px;
-    border-radius: 5px;
-    border: solid 2px transparent;
-    transition: all 0.3s ease-in-out;
-    outline: 0 solid transparent;
-
-  }
-
-  &__cart:focus {
-    background-color: $focus-bg-color;
-    border: solid 2px $border-color;
-  }
-
-  &__cart:hover {
-    background-color: $icon-color;
-  }
-
-  &__cart:active {
-    background-color: $focus-bg-color;
-    border: solid 2px transparent;
-  }
-
   &__cart-icon {
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: translate(-2px, 8px);
-    width: 44px;
-    height: 23px;
+    transform: translate(1px, 1px);
     transition: all 0.3s;
     -webkit-mask-image: url('../images/sprite.svg#icon-cart');
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-    background-color: $title-color;
-    transition: all 0.3s ease-in-out;
   }
 
-  &__cart:hover &__cart-icon {
+  &__button:hover &__cart-icon {
     background-color: $white-color;
   }
 
-  &__cart:active &__cart-icon {
+  &__button:active &__cart-icon {
     background-color: $text-color;
   }
 
   &__cart-num {
     position: absolute;
-    top: 4px;
+    top: 6px;
     right: 3px;
     background-color: $btn-color;
     border-radius: 50%;
@@ -185,12 +138,22 @@
     transition: all 0.3s ease-in-out;
   }
 
-  &__cart:hover &__cart-num {
+  &__button:hover &__cart-num {
     color: $icon-color;
     background-color: $white-color;
   }
+}
 
-
+.header-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 23px;
+  width: 23px;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: $title-color;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero {
@@ -298,11 +261,8 @@
   opacity: 0.2;
 }
 
-
-
-
 .hero-btn:last-child {
-  margin-right: 47px;
+  margin-right: 53px;
 }
 
 .hero-btn:not(:last-child) {
