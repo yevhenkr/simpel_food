@@ -2,7 +2,7 @@ $(function() {
 
   const headearHeight = $('.header').outerHeight();
 
-  $('.hero__link').on('click', function (event) {
+  $('.header__link').on('click', function (event) {
     event.preventDefault();
 
     const scrollAnchor = $(this).attr('href');

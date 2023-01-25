@@ -3,18 +3,25 @@
 @import 'reset';
 @import 'global';
 
-.hero {
-  &__logo {
-    position: absolute;
-    top: 58px;
-  }
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  z-index: 1;
 
+  &__logo {
+    display: flex;
+    max-height: 39px;
+    margin: auto 0;
+  }
 
   &__nav {
     height: 160px;
     display: flex;
     justify-content: flex-end;
     text-align: center;
+    justify-content: space-between;
   }
 
   &__nav-right {
@@ -110,6 +117,10 @@
     background-color: $white-color;
   }
 
+  &__search:active &__search-icon {
+    background-color: $text-color;
+  }
+
   &__cart {
     display: flex;
     position: relative;
@@ -120,7 +131,7 @@
     border: solid 2px transparent;
     transition: all 0.3s ease-in-out;
     outline: 0 solid transparent;
-    
+
   }
 
   &__cart:focus {
@@ -156,6 +167,10 @@
     background-color: $white-color;
   }
 
+  &__cart:active &__cart-icon {
+    background-color: $text-color;
+  }
+
   &__cart-num {
     position: absolute;
     top: 4px;
@@ -174,6 +189,11 @@
     color: $icon-color;
     background-color: $white-color;
   }
+
+
+}
+
+.hero {
 
   &__center {
     display: flex;
@@ -279,16 +299,10 @@
 }
 
 
-.header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  background-color: $white-color;
-  z-index: 1;
-}
+
 
 .hero-btn:last-child {
-  margin-right: 41px;
+  margin-right: 47px;
 }
 
 .hero-btn:not(:last-child) {
