@@ -3,6 +3,13 @@
 @import 'reset';
 @import 'global';
 
+
+.title-h1 {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
 .header {
   position: sticky;
   top: 0;
