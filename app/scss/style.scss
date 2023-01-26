@@ -365,8 +365,8 @@
   }
 
   &__btn {
-    border: 1px solid $cart-num-color;
-    outline: 2px solid transparent;
+    border: 1px solid transparent;
+    outline: 1px solid $cart-num-color;
     background-color: $white-color;
     display: flex;
     justify-content: center;
@@ -377,12 +377,12 @@
   }
 
   &__btn:focus {
-    outline: transparent;
-    border: 2px solid $btn-color;
+    outline: 2px solid $border-color;
     color: $focus-bg-color;
   }
 
   &__btn:hover {
+    outline: 2px solid $border-color;
     background-color: $focus-bg-color;
     color: $btn-color;
   }
@@ -390,8 +390,7 @@
   &__btn:active {
     background-color: $focus-bg-color;
     color: $title-color;
-    border: 2px solid transparent;
-
+    outline: 2px solid transparent;
     box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
     transition: all 0.2s;
   }
