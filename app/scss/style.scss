@@ -588,6 +588,9 @@
 
   &__input {
     border-radius: 5px;
+    margin-bottom: 12px;
+    border-color: transparent;
+    outline: 1px solid $cart-num-color;
     position: relative;
     width: 100%;
     height: 44px;
@@ -596,13 +599,12 @@
 
   &__input:focus {
     color: $text-input;
-    border: 2px solid $border-color;
-    outline: transparent;
+    outline: 2px solid $btn-color;
   }
 
   &__input:hover {
     color: $title-color;
-    outline: transparent;
+    outline: 2px solid $border-color;
   }
 
   &__btn {
