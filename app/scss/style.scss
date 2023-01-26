@@ -248,14 +248,13 @@
 
 .logo {
   outline: 0 solid transparent;
-  outline: transparent;
+  outline: solid 2px transparent;
   border-radius: 5px;
-  border: solid 2px transparent;
   transition: all 0.3s ease-in-out;
 }
 
 .logo:focus {
-  border: solid 2px $border-color;
+  outline: solid 2px $border-color;
 }
 
 .logo:hover {
@@ -523,7 +522,7 @@
   outline: solid 2px transparent;
 }
 
-.product__logo {
+.product-cart {
   object-fit: cover;
   height: auto;
   width: auto;
