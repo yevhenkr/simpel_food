@@ -1,5 +1,6 @@
 $(function() {
-
+  var mixer = mixitup('.category__grid');
+  
   const headearHeight = $('.header').outerHeight();
 
   $('.header__link').on('click', function (event) {
@@ -14,5 +15,6 @@ $(function() {
     }, 200);
     return false;
   });
+
 
 });

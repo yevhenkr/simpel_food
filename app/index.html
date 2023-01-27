@@ -97,35 +97,35 @@
 
         <ul class="category__list">
           <li class="category-item">
-            <button class="category__btn" type="button">
+            <button class="category__btn" data-filter=".burger" type="button">
               <div class="category__icon category__icon--burger"></div>
               <p class="category__text">Бургеры</p>
             </button>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" type="button">
+            <button class="category__btn" data-filter=".pizza" type="button">
               <div class="category__icon category__icon--pizza"></div>
               <p class="category__text">Пицца</p>
             </button>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" type="button">
+            <button class="category__btn" data-filter=".sandwiches" type="button">
               <div class="category__icon category__icon--sandwiches"></div>
               <p class="category__text">Сендвичи</p>
             </button>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" type="button">
+            <button class="category__btn" data-filter=".asia" type="button">
               <div class="category__icon category__icon--asia"></div>
               <p class="category__text">Азиатская кухня</p>
             </button>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" type="button">
+            <button class="category__btn" data-filter=".dish" type="button">
               <div class="category__icon category__icon--dish"></div>
               <p class="category__text">Cеты</p>
             </button>
@@ -135,7 +135,7 @@
 
         <ul class="category__grid">
 
-          <li>
+          <li class="mix burger">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/cheese_burger.png"
                 style="height: 140; width: 140;" alt="Чизбургер с листьями салата">
@@ -145,7 +145,7 @@
             </article>
           </li>
 
-          <li>
+          <li class="mix burger">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/bifburger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -155,7 +155,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix pizza">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/royal_burger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -165,7 +165,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix pizza">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/black_burger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -175,7 +175,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix sandwiches">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/chiken_burger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -185,7 +185,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix sandwiches">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/cheese_burger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -195,7 +195,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix asia">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/bifburger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -205,7 +205,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix asia">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/royal_burger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -215,7 +215,7 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix dish">
             <article class="product-cart">
               <img class="product-cart__icon" src="images/burger_icons/black_burger.png" height="100" width="140"
                 alt="Чизбургер с листьями салата">
@@ -225,15 +225,15 @@
               <article>
           </li>
 
-          <li>
+          <li class="mix dish">
             <article class="product-cart">
-              <a class="product-car__link" href="#" >
+              <a class="product-car__link" href="#">
                 <img class="product-cart__icon" src="images/burger_icons/chiken_burger.png" height="100" width="140"
                   alt="Чизбургер с листьями салата">
                 <p class="product-cart__text">Чикен бургер</p>
               </a>
-                <p class="product-cart__cost">180 грн</p>
-                <button class="product-cart__button button" type="button">В корзину</button>
+              <p class="product-cart__cost">180 грн</p>
+              <button class="product-cart__button button" type="button">В корзину</button>
               <article>
           </li>
 
@@ -353,7 +353,9 @@
     </footer>
     </div>
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <script src="js/mixitup.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
