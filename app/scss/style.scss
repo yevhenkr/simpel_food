@@ -354,13 +354,13 @@
 
   &__title {
     padding-top: 120px;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     max-width: 1122px;
   }
 
@@ -470,7 +470,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px;
+    gap: 29px;
     margin-bottom: 60px;
   }
 
@@ -547,9 +547,11 @@
   }
 
   &__text {
-    display: flex;
-    padding-bottom: 32px;
+    display: inline-block;
+    height: 43px;
+    max-width: 166px;
     font-size: 15px;
+    margin-bottom: 7px;
   }
 
   &__cost {
