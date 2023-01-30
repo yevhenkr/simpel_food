@@ -388,7 +388,7 @@
   }
 
   &__btn:active {
-    background-color: $focus-bg-color;
+    background-color: $btn-color;
     color: $title-color;
     outline: 2px solid transparent;
     box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
@@ -505,6 +505,10 @@
     color: $text-color;
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
+}
+
+.mixitup-control-active {
+  background-color: $btn-color;
 }
 
 .title {

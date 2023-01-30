@@ -1,6 +1,7 @@
 $(function() {
   var mixer = mixitup('.category__grid');
-  
+  mixer.filter('.burger');
+
   const headearHeight = $('.header').outerHeight();
 
   $('.header__link').on('click', function (event) {
