@@ -271,6 +271,11 @@
   color: $text-color;
 }
 
+.footer-top-middel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .footer-bottom {
   display: flex;
   color: $text-color;
