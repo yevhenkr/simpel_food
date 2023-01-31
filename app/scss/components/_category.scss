@@ -178,6 +178,8 @@
   background-color: $white-color;
   border: 1px solid $cart-num-color;
   font-size: 15px;
+  outline: transparent;
+  transition: all 0.3s ease-in-out;
 
   &__icon {
     display: flex;
@@ -216,8 +218,15 @@
   &__link {
     text-decoration: none;
   }
+
+  &__link:focus{
+    outline: none !important;
+  }
 }
 
+.product-cart:hover {
+  outline: 2px solid $border-color;
+}
 
 .mixitup-control-active {
   background-color: $btn-color;
