@@ -1,18 +1,57 @@
 .order {
 
-  &__wrapper {}
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 90px;
+  }
 
-  &__img {}
+  &__img {
+    // display: flex;
+    height: 585px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: 69px;
+    margin-right: 120px;
+    max-width: 440px;
+  }
 
-  &__description {}
+  &__description {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    max-width: 470px;
 
-  &__title {}
+  }
 
-  &__text {}
+  &__title {
+    display: flex;
+    font-size: 36px;
+    line-height: 1.3;
+    margin-top: 60px;
 
-  &__benefits {}
+  }
 
-  &__benefit {}
+  &__text {
+    display: flex;
 
-  &__button {}
+  }
+
+  &__benefits {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  &__benefit {
+    display: flex;
+
+  }
+
+  &__button {
+    display: flex;
+max-width: 165px;
+height: 47px;
+  }
 }
