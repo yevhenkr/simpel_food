@@ -1,0 +1,235 @@
+.category {
+  position: relative;
+  margin-bottom: 120px;
+  transition: all 0.3s ease-in-out;
+
+  &__title {
+    padding-top: 120px;
+    margin-bottom: 57px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+    max-width: 1122px;
+  }
+
+  &__btn {
+    border: 1px solid transparent;
+    outline: 1px solid $cart-num-color;
+    background-color: $white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__btn:focus {
+    outline: 2px solid $border-color;
+    color: $focus-bg-color;
+  }
+
+  &__btn:hover {
+    outline: 2px solid $border-color;
+    background-color: $focus-bg-color;
+    color: $btn-color;
+  }
+
+  &__btn:active {
+    background-color: $btn-color;
+    color: $white-color;
+    outline: 2px solid transparent;
+    box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
+    transition: all 0.2s;
+  }
+
+  &__icon {
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    margin-left: 32px;
+    background-color: #000000;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  &__text {
+    margin-right: 32px;
+    @extend %rubik-400;
+    font-size: 20px;
+  }
+
+  &__icon--burger {
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-burger');
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icon--pizza {
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-pizza');
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icon--sandwiches {
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-sandvich');
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icon--asia {
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-asia');
+    transition: all 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__icon--dish {
+    -webkit-mask-image: url('../images/sprite.svg#icon-category-dish');
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__btn:focus &__icon--burger,
+  &__btn:focus &__icon--pizza,
+  &__btn:focus &__icon--sandwiches,
+  &__btn:focus &__icon--asia,
+  &__btn:focus &__icon--dish {
+    background-color: $focus-bg-color;
+  }
+
+  &__btn:hover &__icon--burger,
+  &__btn:hover &__icon--pizza,
+  &__btn:hover &__icon--sandwiches,
+  &__btn:hover &__icon--asia,
+  &__btn:hover &__icon--dish {
+    background-color: $btn-color;
+  }
+
+  &__btn:active &__icon--burger,
+  &__btn:active &__icon--pizza,
+  &__btn:active &__icon--sandwiches,
+  &__btn:active &__icon--asia,
+  &__btn:active &__icon--dish {
+    background-color: $white-color;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 29px;
+    margin-bottom: 60px;
+  }
+
+  &__show-more {
+    position: absolute;
+    color: $text-color;
+    line-height: 1.5;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    text-decoration: underline;
+    outline: transparent;
+    border: solid 2px transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__show-more:focus {
+    border-radius: 5px;
+    border: solid 2px $border-color;
+    text-decoration: none;
+  }
+
+  &__show-more:hover {
+    border: solid 2px transparent;
+    color: $btn-color;
+    text-decoration: none;
+  }
+
+  &__show-more:active {
+    text-decoration: none;
+    border: solid 2px transparent;
+    color: $text-color;
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
+
+.category-item {
+  display: flex;
+  flex-direction: row;
+  border: solid 2px transparent;
+  outline: solid 2px transparent;
+}
+
+.product-cart {
+  object-fit: cover;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $white-color;
+  border: 1px solid $cart-num-color;
+  font-size: 15px;
+
+  &__icon {
+    display: flex;
+    max-width: 140px;
+    height: auto;
+    margin: 20px auto 6px;
+  }
+
+  &__text {
+    display: inline-block;
+    height: 43px;
+    max-width: 166px;
+    font-size: 15px;
+    color: $text-color;
+    margin-bottom: 7px;
+  }
+
+  &__cost {
+    display: flex;
+    padding-bottom: 10px;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  &__button {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.3;
+    outline: transparent;
+    width: 100px;
+    height: 32px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+
+.mixitup-control-active {
+  background-color: $btn-color;
+  color: $white-color;
+  transition: all 0.3s ease-in-out;
+
+  .category__icon--burger {
+    background-color: $white-color;
+  }
+}
+
+.mixitup-control-active:active {
+  color: $white-color;
+  border-color: transparent;
+}

@@ -1,0 +1,113 @@
+.hero {
+  &__center {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    max-width: 450px;
+  }
+
+  &__title {
+    color: $title-color;
+    font-size: 66px;
+    @extend %rubik-500;
+    text-transform: uppercase;
+  }
+
+  &__title span {
+    display: inline-block;
+    color: $btn-color;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    display: flex;
+    display: inline-block;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+  }
+
+  &__detail {
+    display: block;
+    height: 23px;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: $title-color;
+    border-radius: 5px;
+    outline: transparent;
+    transition: all 0.3s ease-out;
+  }
+
+  &__detail:focus {
+    text-decoration: none;
+    outline: solid 2px $border-color;
+  }
+
+  &__detail:hover {
+    color: $btn-color;
+    outline: transparent;
+  }
+
+  &__detail:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    color: $text-color;
+    background-color: $white-color;
+    text-decoration: none;
+  }
+
+  &__img {
+    display: block;
+    display: flex;
+    min-width: 560px;
+    height: 660px;
+    background-image: url('../images/skills_content.jpg');
+    background-repeat: no-repeat;
+  }
+}
+
+.hero-btn:last-child {
+  margin-right: 53px;
+}
+
+.hero-btn:not(:last-child) {
+  margin-right: 45px;
+}
+
+.headear--button {
+  margin-right: 35px;
+  width: 147px;
+  height: 47px;
+}
+
+.headear--button:focus {
+  outline: transparent;
+  border-radius: 5px;
+  border: solid 2px $border-color;
+  background-color: $focus-bg-color;
+  color: $btn-color;
+}
+
+.headear--button:hover {
+  background-color: $white-color;
+  border: solid 2px $border-color;
+  color: $btn-color;
+  border-radius: 5px;
+  box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2);
+}
+
+.headear--button:active {
+  background-color: $focus-bg-color;
+  color: $btn-color;
+  border: none;
+  box-shadow: none;
+}
