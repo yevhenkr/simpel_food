@@ -219,8 +219,12 @@
     text-decoration: none;
   }
 
-  &__link:focus{
+  &__link:focus {
     outline: none !important;
+  }
+
+  &__currency {
+    padding-left: 4px;
   }
 }
 
