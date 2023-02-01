@@ -1,6 +1,18 @@
 .restaurants {
 
-  &__list {}
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 29px;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    padding-bottom: 45px;
+    @extend %rubik-500;
+
+  }
 }
 
 .container {}
@@ -8,16 +20,113 @@
 .title {}
 
 .restaurant-cart {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  outline: solid 2px transparent;
 
   &__link {}
 
-  &__icon {}
+  &__icon {
+    margin-bottom: 15px;
+  }
 
-  &__name {}
+  &__name,
+  &__name-kfs {
+    position: relative;
+    left: 18px;
+    font-size: 24;
+    text-transform: capitalize;
+    margin-bottom: 23px;
+    color: $text-color;
+  }
 
-  &__time {}
+  &__name-kfs {
+    text-transform: uppercase;
+  }
 
-  &__button {}
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+
+  &__time {
+    position: relative;
+    display: flex;
+    left: 27px;
+    font-size: 18px;
+    @extend %rubik-300;
+  }
+
+  &__time::before {
+    position: relative;
+    content: '';
+    height: 23px;
+    width: 23px;
+    left: -8px;
+    background-image: url('../images/sprite.svg#icon-littel-timer');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__button {
+    display: flex;
+    position: relative;
+    background-color: $btn-color;
+    right: 22px;
+    bottom: 3px;
+    width: 79px;
+    height: 33px;
+    border-radius: 50px;
+    outline: solid 2px transparent;
+    border: solid 2px transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__button:focus {
+    border: solid 2px $btn-color;
+    background-color: $focus-bg-color;
+  }
+
+  &__button:hover {
+    border: solid 2px $btn-color;
+    background-color: $white-color;
+  }
+
+  &__button:active {
+    border: solid 2px transparent;
+    background-color: $focus-bg-color;
+  }
+
+
+  &__button::before {
+    position: relative;
+    content: '';
+    left: 27px;
+    top: 4px;
+    height: 23px;
+    width: 23px;
+    -webkit-mask-image: url('../images/sprite.svg#icon_restaurants_arrov');
+    background-color: $white-color;
+    background-repeat: no-repeat;
+  }
+
+  &__button:focus::before {
+    background-color: $btn-color;
+  }
+
+  &__button:hover::before {
+    background-color: $btn-color;
+
+  }
+
+  &__button:active::before {
+    background-color: $btn-color;
+  }
 }
 
 .button {}
