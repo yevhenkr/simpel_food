@@ -278,7 +278,7 @@
 
         </ul>
 
-        <button class="category__show-more" href="#">Показать ещё</button>
+        <button class="category__show-more" href="#" type="button">Показать ещё</button>
       </div>
     </section>
     <section class="order">
@@ -296,18 +296,35 @@
               доставкой прямо сейчас и получитескиидку!</div>
 
             <ul class="order__benefits">
-              <li>
-                <p class="benefit benefit-time">Быстрая доставка за 15 минут</p>
+              <li class="benefit">
+                <div>
+                  <svg class="benefit-icon">
+                    <use xlink:href="images/sprite.svg#icon-order-timer" width="34" height="34"> </use>
+                  </svg>
+                </div>
+                <span>Быстрая доставка за 15 минут</span>
               </li>
-              <li>
-                <p class="benefit benefit-courier">Вежливые курьеры</p>
-              </li>
-              <li>
-                <p class="benefit benefit-restorant">Более 500 заведений</p>
+
+              <li class="benefit">
+                <div>
+                  <svg class="benefit-icon">
+                    <use xlink:href="images/sprite.svg#icon-order-delivery" width="34" height="34"> </use>
+                  </svg>
+                </div>
+                <span>Вежливые курьеры</span>
+                </li>
+
+              <li class="benefit">
+                <div>
+                  <svg class="benefit-icon">
+                    <use xlink:href="images/sprite.svg#icon-order-resturent" width="34" height="34"> </use>
+                  </svg>
+                </div>
+                <span>Более 500</span>
               </li>
             </ul>
 
-            <button class="button order__button">Подробнее</button>
+            <button class="button order__button" href="#" type="button">Подробнее</button>
 
           </div>
         </div>
