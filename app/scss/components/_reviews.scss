@@ -1,0 +1,72 @@
+.reviews {
+
+  &__title {
+    padding-top: 120px;
+  }
+
+  &__container {
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__inner {}
+
+  &__item {
+    display: flex;
+    padding-top: 37px;
+  }
+
+  &__icon {
+    position: relative;
+    top: 9px;
+    right: 1px;
+    border-radius: 50%;
+  }
+
+  &__figure {
+    margin-right: 21px;
+  }
+
+  &__text {
+    position: relative;
+    font-size: 20px;
+    line-height: 1.5;
+    @extend %rubik-italic;
+    margin-bottom: 30px;
+  }
+
+  &__text::before {
+    position: absolute;
+    content: '';
+    height: 23px;
+    width: 23px;
+    right: 8px;
+    bottom: 10px;
+    background-image: url('../images/sprite.svg#icon_quote');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__pearson {
+    @extend %rubik-500;
+    padding-left: 40px;
+    margin-bottom: 16px;
+  }
+
+
+  &__about-pearson {
+    padding-left: 38px;
+    font-size: 14px;
+    @extend %rubik-400;
+
+  }
+
+}
+
+.review {
+
+  /* .review_s */
+
+  &_s {}
+}

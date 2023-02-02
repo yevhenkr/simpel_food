@@ -2,8 +2,8 @@
   font-family: 'rubik-300';
   font-weight: 300;
   font-style: normal;
-  src: url('../fonts/rubik-300.woff2') format('woff2');
-  src: url('../fonts/rubik-300.woff') format('woff');
+  src: url('../fonts/rubik-300.woff2');
+  src: url('../fonts/rubik-300.woff');
   font-display: swap;
 }
 
@@ -22,5 +22,14 @@
   src: url('../fonts/rubik-500.woff');
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'rubik-italic';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/rubik-italic.woff2');
+  src: url('../fonts/rubik-italic.woff');
   font-display: swap;
 }
