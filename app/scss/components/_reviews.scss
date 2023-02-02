@@ -36,16 +36,27 @@
     margin-bottom: 30px;
   }
 
-  &__text::before {
+  &__text::before,
+  &__text::after {
     position: absolute;
     content: '';
     height: 23px;
     width: 23px;
-    right: 8px;
-    bottom: 10px;
-    background-image: url('../images/sprite.svg#icon_quote');
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  &__text::before {
+    left: -41px;
+    bottom: 125px;
+    background-image: url('../images/sprite.svg#icon_quote');
+  }
+
+  &__text::after {
+    right: -59px;
+    bottom: -5px;
+    background-image: url('../images/sprite.svg#icon_quote');
+    transform: scale(-1, 1);
   }
 
   &__pearson {
