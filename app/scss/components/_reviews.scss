@@ -1,7 +1,6 @@
 .reviews {
-
   &__title {
-    padding-top: 120px;
+    padding-top: 118px;
   }
 
   &__container {
@@ -10,17 +9,20 @@
     margin-right: auto;
   }
 
-  &__inner {}
+  &__inner {
+    border-color: transparent;
+    margin-bottom: 135px;
+  }
 
   &__item {
     display: flex;
     padding-top: 37px;
+    flex-direction: row;
   }
 
   &__icon {
     position: relative;
     top: 9px;
-    right: 1px;
     border-radius: 50%;
   }
 
@@ -48,13 +50,13 @@
 
   &__text::before {
     left: -41px;
-    bottom: 125px;
+    bottom: 131px;
     background-image: url('../images/sprite.svg#icon_quote');
   }
 
   &__text::after {
-    right: -59px;
-    bottom: -5px;
+    right: -60px;
+    bottom: -1px;
     background-image: url('../images/sprite.svg#icon_quote');
     transform: scale(-1, 1);
   }
@@ -72,12 +74,78 @@
     @extend %rubik-400;
 
   }
-
 }
 
-.review {
+.slick-next,
+.slick-prev {
+  width: 40px;
+  height: 40px;
+  border: solid 3px $text-input;
+  border-radius: 50%;
+  line-height: 0;
+  font-size: 0;
+}
 
-  /* .review_s */
+.slick-next {
+  position: relative;
+  left: 567px;
+  top: 26px;
+}
 
-  &_s {}
+.slick-prev {
+  position: absolute;
+  bottom: -26px;
+  left: 382px;
+}
+
+.slick-prev::after,
+.slick-next::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url('../images/sprite.svg#icon-slider-arrow');
+}
+
+.slick-prev::after {
+  right: 9px;
+  bottom: 7px;
+  transform: scaleX(-1);
+}
+
+.slick-next::after {
+  left: 8px;
+  bottom: 7px;
+}
+
+.slick-slide {
+  margin-bottom: 20px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+  margin-right: 17px;
+
+  li {
+    padding: 0 15px;
+    button {
+      padding: 0;
+      font-size: 0;
+      background-color: $text-input;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border-color: transparent;
+      position: absolute;
+    }
+
+    &.slick-active {
+      button {
+        background-color: $btn-color;
+      }
+    }
+  }
 }

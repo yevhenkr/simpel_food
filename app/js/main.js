@@ -1,4 +1,9 @@
-$(function() {
+$(function () {
+  $('.reviews__inner').slick({
+    dots: true,
+    arrows: true
+  });
+
   var mixer = mixitup('.category__grid');
   mixer.filter('.burger');
 
