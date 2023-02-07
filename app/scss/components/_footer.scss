@@ -3,7 +3,6 @@
 .footer-top {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 
   &__logo {
     margin-bottom: 30px;
@@ -49,7 +48,7 @@
     -webkit-mask-image: url('../images/sprite.svg#icon-send');
     background-color: $white-color;
     background-repeat: no-repeat;
-    left: 30px;
+    left: 37px;
     transition: all 0.3s ease-in-out;
   }
 
@@ -79,13 +78,17 @@
   }
 
   &__btn-text {
-    padding-left: 25px;
+    padding-left: 32px;
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.3;
+    @extend %rubik-500;
   }
 
   &__link {
     color: $text-color;
+    font-size: 18px;
+    line-height: 1.3;
     margin-bottom: 20px;
     display: inline-block;
     position: relative;
@@ -120,6 +123,8 @@
   &__tel,
   &__email {
     color: $text-color;
+    top: 5px;
+    font-size: 16px;
     margin-bottom: 20px;
     display: block;
     position: relative;
@@ -133,9 +138,10 @@
   &__email::before {
     position: absolute;
     content: '';
-    left: -36px;
-    width: 28px;
-    height: 30px;
+    height: 21px;
+    width: 18px;
+    left: -28px;
+    top: -2px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -150,17 +156,18 @@
   }
 
   &__adress::before {
-    height: 31px;
     background-image: url('../images/icons/icon-location.svg');
   }
 
   &__tel::before {
-    height: 26px;
     background-image: url('../images/icons/icon-call.svg');
   }
 
   &__email::before {
-    height: 25px;
+    height: 20px;
+    left: -30px;
+    width: 21px;
+    top: 2px;
     background-image: url('../images/icons/icon-message.svg');
   }
 
@@ -191,20 +198,25 @@
   }
 
   &__socuailmedias {
+    position: relative;
+    top: 5px;
     display: flex;
     flex-direction: row;
     gap: 13px;
     max-width: 143px;
+    max-height: 39px;
   }
 
   &__socialmedia {
+    position: relative;
+    right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: transparent;
     background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
+    height: 39px;
+    width: 39px;
     background-color: $cart-num-color;
     border: solid 2px transparent;
     border-radius: 50%;
@@ -269,14 +281,23 @@
   flex-direction: column;
   font-size: 18px;
   color: $text-color;
+  max-width: 200px;
+  margin-right: 69px;
 }
 
 .footer-top-middel {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 221px 163px 287px;
+  max-height: 166px;
+}
+
+.footer-top-middel li {
+  height: 42px;
 }
 
 .footer-bottom {
+  position: relative;
+  padding-top: 103px;
   display: flex;
   color: $text-color;
   justify-content: center;
@@ -285,4 +306,15 @@
   font-size: 14px;
   border: solid 2px transparent;
   line-height: 1;
+}
+
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 38px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  color: $text-input;
+  background-color: rgba(35, 82, 222, 0.1);
 }
