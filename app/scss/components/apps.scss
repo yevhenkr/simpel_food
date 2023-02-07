@@ -1,0 +1,49 @@
+.apps {
+
+  &_inner {
+    display: flex;
+    margin-bottom: 120px;
+  }
+
+  &__left {}
+
+  &__title {
+    padding-top: 43px;
+    text-align: left;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    width: 535px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: $text-color;
+  }
+
+  &__apstor {
+    display: inline-block;
+    background-image: url('../images/app-apple.jpg');
+    position: relative;
+    height: 40px;
+    width: 120px;
+    margin-right: 25px;
+    background-repeat: no-repeat;
+  }
+
+  &__pleymarket {
+    display: inline-block;
+    background-image: url('../images/app-android.jpg');
+    position: relative;
+    height: 40px;
+    width: 135px;
+    background-repeat: no-repeat;
+  }
+
+  &__img {
+    position: relative;
+    height: 380px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
