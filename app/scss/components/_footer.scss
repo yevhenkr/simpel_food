@@ -155,15 +155,16 @@
     position: relative;
   }
 
-  &__adress::before {
+  &__adress:before {
     background-image: url('../images/icons/icon-location.svg');
   }
 
-  &__tel::before {
+  &__tel:before {
     background-image: url('../images/icons/icon-call.svg');
+    width: 21px;
   }
 
-  &__email::before {
+  &__email:before {
     height: 20px;
     left: -30px;
     width: 21px;
