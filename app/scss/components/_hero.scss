@@ -27,6 +27,7 @@
   &__text {
     display: flex;
     display: inline-block;
+    color: $text-color;
     line-height: 1.5;
     margin-bottom: 20px;
   }

@@ -127,7 +127,7 @@
 
   &__show-more {
     position: absolute;
-    color: $text-color;
+    color: $title-color;
     line-height: 1.5;
     left: 50%;
     transform: translate(-50%, 0);
@@ -181,6 +181,7 @@
   outline: transparent;
   transition: all 0.3s ease-in-out;
 
+
   &__icon {
     display: flex;
     max-width: 140px;
@@ -213,6 +214,7 @@
     width: 100px;
     height: 32px;
     margin-bottom: 20px;
+    @extend %rubik-400;
   }
 
   &__link {

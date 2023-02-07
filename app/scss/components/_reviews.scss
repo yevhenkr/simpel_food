@@ -32,6 +32,7 @@
 
   &__text {
     position: relative;
+    color: $text-color;
     font-size: 20px;
     line-height: 1.5;
     @extend %rubik-italic;
@@ -63,6 +64,7 @@
 
   &__pearson {
     @extend %rubik-500;
+    color: $btn-color;
     padding-left: 40px;
     margin-bottom: 16px;
   }
