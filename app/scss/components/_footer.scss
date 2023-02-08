@@ -297,7 +297,7 @@
 
 .footer-bottom {
   position: relative;
-  padding-top: 103px;
+  padding-top: 212px;
   display: flex;
   color: $dark;
   justify-content: center;
@@ -306,6 +306,8 @@
   font-size: 14px;
   border: solid 2px transparent;
   line-height: 1;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .footer-bottom::before {
