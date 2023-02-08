@@ -17,7 +17,7 @@
 
   &__btn {
     border: 1px solid transparent;
-    outline: 1px solid $cart-num-color;
+    outline: 1px solid $silver-200;
     background-color: $white-color;
     display: flex;
     justify-content: center;
@@ -35,11 +35,11 @@
   &__btn:hover {
     outline: 2px solid $border-color;
     background-color: $focus-bg-color;
-    color: $btn-color;
+    color: $orange-900;
   }
 
   &__btn:active {
-    background-color: $btn-color;
+    background-color: $orange-900;
     color: $white-color;
     outline: 2px solid transparent;
     box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
@@ -106,7 +106,7 @@
   &__btn:hover &__icon--sandwiches,
   &__btn:hover &__icon--asia,
   &__btn:hover &__icon--dish {
-    background-color: $btn-color;
+    background-color: $orange-900;
   }
 
   &__btn:active &__icon--burger,
@@ -127,7 +127,7 @@
 
   &__show-more {
     position: absolute;
-    color: $title-color;
+    color: $darkBlue-900;
     line-height: 1.5;
     left: 50%;
     transform: translate(-50%, 0);
@@ -146,14 +146,14 @@
 
   &__show-more:hover {
     border: solid 2px transparent;
-    color: $btn-color;
+    color: $orange-900;
     text-decoration: none;
   }
 
   &__show-more:active {
     text-decoration: none;
     border: solid 2px transparent;
-    color: $text-color;
+    color: $dark;
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
 }
@@ -176,7 +176,7 @@
   text-align: center;
   border-radius: 5px;
   background-color: $white-color;
-  border: 1px solid $cart-num-color;
+  border: 1px solid $silver-200;
   font-size: 15px;
   outline: transparent;
   transition: all 0.3s ease-in-out;
@@ -194,7 +194,7 @@
     height: 43px;
     max-width: 166px;
     font-size: 15px;
-    color: $text-color;
+    color: $dark;
     margin-bottom: 7px;
   }
 
@@ -235,7 +235,7 @@
 }
 
 .mixitup-control-active {
-  background-color: $btn-color;
+  background-color: $orange-900;
   color: $white-color;
   transition: all 0.3s ease-in-out;
 

@@ -32,7 +32,7 @@
 
   &__text {
     position: relative;
-    color: $text-color;
+    color: $dark;
     font-size: 20px;
     line-height: 1.5;
     @extend %rubik-italic;
@@ -64,7 +64,7 @@
 
   &__pearson {
     @extend %rubik-500;
-    color: $btn-color;
+    color: $orange-900;
     padding-left: 40px;
     margin-bottom: 16px;
   }
@@ -82,7 +82,7 @@
 .slick-prev {
   width: 40px;
   height: 40px;
-  border: solid 3px $text-input;
+  border: solid 3px $grey;
   border-radius: 50%;
   line-height: 0;
   font-size: 0;
@@ -140,7 +140,7 @@
     button {
       padding: 0;
       font-size: 0;
-      background-color: $text-input;
+      background-color: $grey;
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -150,7 +150,7 @@
 
     &.slick-active {
       button {
-        background-color: $btn-color;
+        background-color: $orange-900;
       }
     }
   }

@@ -12,7 +12,7 @@
   }
 
   &__title {
-    color: $title-color;
+    color: $darkBlue-900;
     font-size: 66px;
     @extend %rubik-500;
     text-transform: uppercase;
@@ -20,14 +20,14 @@
 
   &__title span {
     display: inline-block;
-    color: $btn-color;
+    color: $orange-900;
     margin-bottom: 20px;
   }
 
   &__text {
     display: flex;
     display: inline-block;
-    color: $text-color;
+    color: $dark;
     line-height: 1.5;
     margin-bottom: 20px;
   }
@@ -44,7 +44,7 @@
     height: 23px;
     margin-top: 10px;
     text-decoration: underline;
-    color: $title-color;
+    color: $darkBlue-900;
     border-radius: 5px;
     outline: transparent;
     transition: all 0.3s ease-out;
@@ -56,13 +56,13 @@
   }
 
   &__detail:hover {
-    color: $btn-color;
+    color: $orange-900;
     outline: transparent;
   }
 
   &__detail:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    color: $text-color;
+    color: $dark;
     background-color: $white-color;
     text-decoration: none;
   }
@@ -96,20 +96,20 @@
   border-radius: 5px;
   border: solid 2px $border-color;
   background-color: $focus-bg-color;
-  color: $btn-color;
+  color: $orange-900;
 }
 
 .headear--button:hover {
   background-color: $white-color;
   border: solid 2px $border-color;
-  color: $btn-color;
+  color: $orange-900;
   border-radius: 5px;
   box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2);
 }
 
 .headear--button:active {
   background-color: $focus-bg-color;
-  color: $btn-color;
+  color: $orange-900;
   border: none;
   box-shadow: none;
 }

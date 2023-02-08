@@ -34,7 +34,7 @@
     top: 50%;
     transform: translateY(50%);
     font-size: 18px;
-    color: $text-color;
+    color: $dark;
     outline: transparent;
     border-radius: 5px;
     border: solid 2px transparent;
@@ -42,17 +42,17 @@
   }
 
   &__link:focus {
-    border: solid 2px $btn-color;
+    border: solid 2px $orange-900;
     border: solid 2px $border-color;
   }
 
   &__link:hover {
-    color: $btn-color;
+    color: $orange-900;
   }
 
   &__link:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    color: $text-color;
+    color: $dark;
     border: solid 2px transparent;
     box-shadow: none;
   }
@@ -87,7 +87,7 @@
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
-    background-color: $title-color;
+    background-color: $darkBlue-900;
     transition: all 0.3s ease-in-out;
   }
 
@@ -105,9 +105,9 @@
     position: absolute;
     top: 6px;
     right: 3px;
-    background-color: $btn-color;
+    background-color: $orange-900;
     border-radius: 50%;
-    color: $cart-num-color;
+    color: $silver-200;
     width: 14px;
     height: 14px;
     font-size: 10px;
@@ -137,7 +137,7 @@
 
 .icon-btn:active .icon-btn__cart,
 .icon-btn:active .icon-btn__search {
-  background-color: $text-color;
+  background-color: $dark;
 }
 
 .icon-btn:hover .icon-btn__cart-num {
@@ -147,7 +147,7 @@
 
 .icon-btn:active .icon-btn__cart-num {
   color: $white-color;
-  background-color: $btn-color;
+  background-color: $orange-900;
 }
 
 

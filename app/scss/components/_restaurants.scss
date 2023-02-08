@@ -41,7 +41,7 @@
     font-size: 24px;
     text-transform: capitalize;
     margin-bottom: 26px;
-    color: $text-color;
+    color: $dark;
   }
 
   &__name-kfs {
@@ -78,7 +78,7 @@
   &__button {
     display: flex;
     position: relative;
-    background-color: $btn-color;
+    background-color: $orange-900;
     right: 19px;
     bottom: 7px;
     width: 79px;
@@ -90,12 +90,12 @@
   }
 
   &__button:focus {
-    border: solid 2px $btn-color;
+    border: solid 2px $orange-900;
     background-color: $focus-bg-color;
   }
 
   &__button:hover {
-    border: solid 2px $btn-color;
+    border: solid 2px $orange-900;
     background-color: $white-color;
   }
 
@@ -118,16 +118,16 @@
   }
 
   &__button:focus::before {
-    background-color: $btn-color;
+    background-color: $orange-900;
   }
 
   &__button:hover::before {
-    background-color: $btn-color;
+    background-color: $orange-900;
 
   }
 
   &__button:active::before {
-    background-color: $btn-color;
+    background-color: $orange-900;
   }
 }
 
