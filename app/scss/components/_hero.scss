@@ -27,7 +27,6 @@
   &__text {
     display: flex;
     display: inline-block;
-    color: $dark;
     line-height: 1.5;
     margin-bottom: 20px;
   }
@@ -62,7 +61,7 @@
 
   &__detail:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    color: $dark;
+    color: $darkBlue-900;
     background-color: $white-color;
     text-decoration: none;
   }
