@@ -169,3 +169,76 @@
 .logo:active {
   opacity: 0.2;
 }
+
+.burger {
+  background-color: #ffffff00;
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+  .header {
+    &__menu {
+      opacity: 0;
+      display: none;
+    }
+
+    &__logo {
+      max-width: 115px;
+    }
+
+    &__icons {
+      gap: 0;
+      margin-right: 4px;
+    }
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .burger {
+    position: relative;
+    display: inline;
+    width: 45px;
+    height: 45px;
+    top: 40px;
+    border: none;
+    z-index: 2;
+
+    &__line {
+      position: absolute;
+      left: 11px;
+      top: 17px;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 2px;
+      background-color: $darkBlue-900;
+    }
+  }
+
+  .burger:before,
+  .burger::after {
+    content: "";
+    top: 6px;
+    position: absolute;
+    left: 11px;
+    width: 30px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out,
+  }
+
+  .burger::after {
+    content: "";
+    top: 27px;
+  }
+}
