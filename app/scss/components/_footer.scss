@@ -41,18 +41,18 @@
     border: solid 2px transparent;
     outline: transparent;
     transition: all 0.3s ease-in-out;
-  }
 
-  &__btn::before {
-    position: absolute;
-    content: '';
-    width: 16px;
-    height: 15px;
-    -webkit-mask-image: url('../images/sprite.svg#icon-send');
-    background-color: $white-color;
-    background-repeat: no-repeat;
-    left: 37px;
-    transition: all 0.3s ease-in-out;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 15px;
+      -webkit-mask-image: url('../images/sprite.svg#icon-send');
+      background-color: $white-color;
+      background-repeat: no-repeat;
+      left: 37px;
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   &__btn:focus {

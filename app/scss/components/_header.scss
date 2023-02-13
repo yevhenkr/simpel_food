@@ -237,22 +237,22 @@
       height: 2px;
       background-color: $darkBlue-900;
     }
-  }
 
-  .burger:before,
-  .burger::after {
-    content: "";
-    top: 6px;
-    position: absolute;
-    left: 11px;
-    width: 30px;
-    height: 2px;
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out,
-  }
+    &::before,
+    &::after {
+      content: "";
+      top: 6px;
+      position: absolute;
+      left: 11px;
+      width: 30px;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.3s ease-in-out,
+    }
 
-  .burger::after {
-    content: "";
-    top: 27px;
+    &::after {
+      content: "";
+      top: 27px;
+    }
   }
 }

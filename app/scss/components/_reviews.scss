@@ -35,29 +35,29 @@
     line-height: 1.5;
     @extend %rubik-italic;
     margin-bottom: 30px;
-  }
 
-  &__text::before,
-  &__text::after {
-    position: absolute;
-    content: '';
-    height: 23px;
-    width: 23px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      height: 23px;
+      width: 23px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
-  &__text::before {
-    left: -41px;
-    bottom: 131px;
-    background-image: url('../images/sprite.svg#icon_quote');
-  }
+    &::before {
+      left: -41px;
+      bottom: 131px;
+      background-image: url('../images/sprite.svg#icon_quote');
+    }
 
-  &__text::after {
-    right: -60px;
-    bottom: -1px;
-    background-image: url('../images/sprite.svg#icon_quote');
-    transform: scale(-1, 1);
+    &::after {
+      right: -60px;
+      bottom: -1px;
+      background-image: url('../images/sprite.svg#icon_quote');
+      transform: scale(-1, 1);
+    }
   }
 
   &__pearson {
@@ -66,7 +66,6 @@
     padding-left: 40px;
     margin-bottom: 16px;
   }
-
 
   &__about-pearson {
     padding-left: 38px;
@@ -88,19 +87,26 @@
 }
 
 .slick-next {
-
-
-
-  
   position: relative;
   left: 567px;
   top: 26px;
+
+  &::after {
+    left: 8px;
+    bottom: 7px;
+  }
 }
 
 .slick-prev {
   position: absolute;
   bottom: -26px;
   left: 382px;
+
+  &::after {
+    right: 9px;
+    bottom: 7px;
+    transform: scaleX(-1);
+  }
 }
 
 .slick-prev::after,
@@ -113,16 +119,7 @@
   background-image: url('../images/sprite.svg#icon-slider-arrow');
 }
 
-.slick-prev::after {
-  right: 9px;
-  bottom: 7px;
-  transform: scaleX(-1);
-}
 
-.slick-next::after {
-  left: 8px;
-  bottom: 7px;
-}
 
 .slick-slide {
   margin-bottom: 20px;
@@ -136,6 +133,7 @@
 
   li {
     padding: 0 15px;
+
     button {
       padding: 0;
       font-size: 0;
