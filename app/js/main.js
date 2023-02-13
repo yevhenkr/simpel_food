@@ -26,5 +26,12 @@ $(function () {
     return false;
   });
 
-
+  var firstScroll = true;
+    $(window).on('scroll', function () {
+      if (firstScroll) {
+        $(".header__nav").animate({ height: "60px" }, 500);
+        firstScroll = false;
+      }
+    });
+  
 });
