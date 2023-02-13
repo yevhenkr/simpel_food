@@ -1,4 +1,8 @@
 $(function () {
+  $('.burger').on('click', function () {
+    $('.header__menu').toggleClass('header__menu--сurtain');
+  });
+
   $('.reviews__inner').slick({
     dots: true,
     arrows: true

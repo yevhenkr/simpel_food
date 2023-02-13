@@ -191,6 +191,19 @@
       display: none;
     }
 
+    &__menu--сurtain {
+      position: fixed;
+      display: block;
+      height: 100%;
+      width: 100vh;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      background-color: aqua;
+      z-index: 2;
+    }
+
     &__logo {
       max-width: 115px;
     }
@@ -199,46 +212,55 @@
       gap: 0;
       margin-right: 4px;
     }
-  }
 
-  .container {
-    padding: 0 5px;
-  }
+    // &__menu--horisontal {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     opacity: 1;
+    //     transition: all 0.3s ease-in-out;
+    //     z-index: 2;
+    //   }
+    }
 
-  .burger {
-    position: relative;
-    display: inline;
-    width: 45px;
-    height: 45px;
-    top: 40px;
-    border: none;
-    z-index: 2;
+    .container {
+      padding: 0 5px;
+    }
 
-    &__line {
+    .burger {
+      position: relative;
+      display: inline;
+      width: 45px;
+      height: 45px;
+      top: 40px;
+      border: none;
+      z-index: 2;
+
+      &__line {
+        position: absolute;
+        left: 11px;
+        top: 17px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 2px;
+        background-color: $darkBlue-900;
+      }
+    }
+
+    .burger:before,
+    .burger::after {
+      content: "";
+      top: 6px;
       position: absolute;
       left: 11px;
-      top: 17px;
-      transform: translateY(-50%);
       width: 30px;
       height: 2px;
-      background-color: $darkBlue-900;
+      background-color: currentColor;
+      transition: transform 0.3s ease-in-out,
+    }
+
+    .burger::after {
+      content: "";
+      top: 27px;
     }
   }
-
-  .burger:before,
-  .burger::after {
-    content: "";
-    top: 6px;
-    position: absolute;
-    left: 11px;
-    width: 30px;
-    height: 2px;
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out,
-  }
-
-  .burger::after {
-    content: "";
-    top: 27px;
-  }
-}
