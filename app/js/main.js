@@ -10,7 +10,7 @@ $(function () {
   });
 
   var mixer = mixitup('.category__grid');
-  mixer.filter('.burger');
+  mixer.filter('.burger-cat');
 
   const headearHeight = $('.header').outerHeight();
 
