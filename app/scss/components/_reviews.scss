@@ -91,6 +91,18 @@
   outline: solid 2px $border-color;
 }
 
+.slick-next:hover,
+.slick-prev:hover {
+  background-color: $focus-bg-color;
+  border-color: $slider-borrder-focus;
+}
+
+.slick-next:active,
+.slick-prev:active {
+  outline-color: transparent;
+  border-color: transparent;
+}
+
 .slick-next {
   position: relative;
   left: 567px;
@@ -166,5 +178,17 @@
         outline-color: transparent;
       }
     }
+  }
+}
+
+.slick-disabled {
+  border-color: $grey;
+  outline-color: transparent;
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: $grey;
+    outline-color: transparent;
+    background-color: transparent;
   }
 }
