@@ -5,6 +5,7 @@ $(function () {
 
   $('.reviews__inner').slick({
     dots: true,
+    infinite: false,
     arrows: true
   });
 
@@ -27,11 +28,10 @@ $(function () {
   });
 
   var firstScroll = true;
-    $(window).on('scroll', function () {
-      if (firstScroll) {
-        $(".header__nav").animate({ height: "60px" }, 500);
-        firstScroll = false;
-      }
-    });
-  
+  $(window).on('scroll', function () {
+    if (firstScroll) {
+      $(".header__nav").animate({ height: "60px" }, 500);
+      firstScroll = false;
+    }
+  });
 });
