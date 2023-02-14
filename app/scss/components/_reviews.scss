@@ -80,7 +80,7 @@
 .slick-prev {
   width: 40px;
   height: 40px;
-  border: solid 3px $grey;
+  border: solid 3px $orange-900;
   border-radius: 50%;
   line-height: 0;
   font-size: 0;
@@ -134,6 +134,7 @@
   height: 20px;
   background-repeat: no-repeat;
   background-image: url('../images/sprite.svg#icon-slider-arrow');
+  color: $orange-900;
 }
 
 .slick-slide {
