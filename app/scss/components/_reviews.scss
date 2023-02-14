@@ -86,6 +86,11 @@
   font-size: 0;
 }
 
+.slick-next:focus,
+.slick-prev:focus {
+  outline: solid 2px $border-color;
+}
+
 .slick-next {
   position: relative;
   left: 567px;
@@ -113,13 +118,11 @@
 .slick-next::after {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 20px;
   height: 20px;
   background-repeat: no-repeat;
   background-image: url('../images/sprite.svg#icon-slider-arrow');
 }
-
-
 
 .slick-slide {
   margin-bottom: 20px;
@@ -143,11 +146,24 @@
       border-radius: 50%;
       border-color: transparent;
       position: absolute;
+      outline: solid 2px transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:focus {
+        background-color: $grey;
+        outline: solid 2px $orange-900;
+      }
+
+      &:hover {
+        background-color: $focus-bg-color;
+        outline-color: $icon-color;
+      }
     }
 
     &.slick-active {
       button {
         background-color: $orange-900;
+        outline-color: transparent;
       }
     }
   }
