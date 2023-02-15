@@ -1,5 +1,3 @@
-.footer {}
-
 .footer-top {
   display: flex;
   flex-direction: row;
@@ -119,8 +117,6 @@
 }
 
 .feedback {
-  &__all-media {}
-
   &__adress,
   &__tel,
   &__email {

@@ -1,4 +1,5 @@
 $(function () {
+
   $('.burger').on('click', function () {
     $('.header__menu').toggleClass('header__menu--сurtain');
   });
@@ -6,7 +7,9 @@ $(function () {
   $('.reviews__inner').slick({
     dots: true,
     infinite: false,
-    arrows: true
+    arrows: true,
+    appendDots: '.slider-management',
+    appendArrows: '.slider-management'
   });
 
   var mixer = mixitup('.category__grid');

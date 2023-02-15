@@ -5,7 +5,6 @@
 
   &__inner {
     border-color: transparent;
-    margin-bottom: 147px;
   }
 }
 
@@ -74,8 +73,8 @@
     padding-left: 38px;
     padding-top: 14px;
     font-size: 14px;
+    margin-bottom: 45px;
     @extend %rubik-400;
-
   }
 }
 
@@ -108,8 +107,9 @@
 
 .slick-next {
   position: relative;
-  left: 54%;
-  top: 26px;
+  left: 53%;
+  transform: translate(35%, 0);
+  top: -11px;
 
   &::after {
     left: 8px;
@@ -119,8 +119,8 @@
 
 .slick-prev {
   position: absolute;
-  bottom: -26px;
   left: 44%;
+  top: -11px;
 
   &::after {
     right: 9px;
@@ -151,11 +151,22 @@
   }
 }
 
+.slider-management {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 110px;
+}
+
 .slick-slide {
   margin-bottom: 20px;
 }
 
 .slick-dots {
+  top: 1px;
+  left: 50%;
+  transform: translate(-57%, 0);
+  position: absolute;
   display: flex;
   justify-content: center;
   line-height: 0;
