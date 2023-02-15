@@ -3,16 +3,19 @@
     padding-top: 118px;
   }
 
-  &__container {
-    max-width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   &__inner {
     border-color: transparent;
     margin-bottom: 147px;
   }
+}
+
+.review {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 
   &__item {
     display: flex;
@@ -105,7 +108,7 @@
 
 .slick-next {
   position: relative;
-  left: 567px;
+  left: 54%;
   top: 26px;
 
   &::after {
@@ -117,7 +120,7 @@
 .slick-prev {
   position: absolute;
   bottom: -26px;
-  left: 382px;
+  left: 44%;
 
   &::after {
     right: 9px;
@@ -196,6 +199,7 @@
 .slick-disabled {
   border-color: $grey;
   outline-color: transparent;
+
   &:focus,
   &:hover,
   &:active {
