@@ -132,9 +132,13 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-repeat: no-repeat;
-  background-image: url('../images/sprite.svg#icon-slider-arrow');
-  color: $orange-900;
+  -webkit-mask-image: url('../images/sprite.svg#icon-slider-arrow');
+  background-color: $orange-900;
+}
+
+.slick-disabled.slick-prev::after,
+.slick-disabled.slick-next::after {
+  background-color: $grey;
 }
 
 .slick-slide {
