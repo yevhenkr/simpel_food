@@ -141,6 +141,13 @@
   background-color: $grey;
 }
 
+.slick-prev:not(.slick-disabled):hover,
+.slick-next:not(.slick-disabled):hover {
+  &:after {
+    background-color: $border-color;
+  }
+}
+
 .slick-slide {
   margin-bottom: 20px;
 }
