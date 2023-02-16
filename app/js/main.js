@@ -8,8 +8,8 @@ $(function () {
     dots: true,
     infinite: false,
     arrows: true,
-    appendDots: '.slider-management',
-    appendArrows: '.slider-management'
+    appendDots: '.review-scroller',
+    appendArrows: '.review-scroller'
   });
 
   var mixer = mixitup('.category__grid');

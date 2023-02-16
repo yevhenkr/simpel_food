@@ -50,7 +50,6 @@
 
     &::before {
       left: -41px;
-      bottom: 131px;
       background-image: url('../images/sprite.svg#icon_quote');
     }
 
@@ -68,7 +67,7 @@
     padding-left: 40px;
     margin-bottom: 16px;
   }
-
+  
   &__about-pearson {
     padding-left: 38px;
     padding-top: 14px;
@@ -78,15 +77,12 @@
   }
 }
 
-.slick-next,
-.slick-prev {
-  width: 40px;
-  height: 40px;
-  border: solid 3px $orange-900;
-  border-radius: 50%;
-  line-height: 0;
-  font-size: 0;
-}
+.review-scroller {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 110px;
+
 
 .slick-next:focus,
 .slick-prev:focus {
@@ -151,71 +147,76 @@
   }
 }
 
-.slider-management {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin-bottom: 110px;
-}
 
-.slick-slide {
-  margin-bottom: 20px;
-}
+  .slick-next,
+  .slick-prev {
+    width: 40px;
+    height: 40px;
+    border: solid 3px $orange-900;
+    border-radius: 50%;
+    line-height: 0;
+    font-size: 0;
+  }
 
-.slick-dots {
-  top: 1px;
-  left: 50%;
-  transform: translate(-57%, 0);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  line-height: 0;
-  margin-right: 17px;
+  .slick-slide {
+    margin-bottom: 20px;
+  }
 
-  li {
-    padding: 0 15px;
+  .slick-dots {
+    top: 1px;
+    left: 50%;
+    transform: translate(-57%, 0);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    margin-right: 17px;
 
-    button {
-      padding: 0;
-      font-size: 0;
-      background-color: $grey;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      border-color: transparent;
-      position: absolute;
-      outline: solid 2px transparent;
-      transition: all 0.3s ease-in-out;
+    li {
+      padding: 0 15px;
 
-      &:focus {
-        background-color: $grey;
-        outline: solid 2px $orange-900;
-      }
-
-      &:hover {
-        background-color: $focus-bg-color;
-        outline-color: $icon-color;
-      }
-    }
-
-    &.slick-active {
       button {
-        background-color: $orange-900;
-        outline-color: transparent;
+        padding: 0;
+        font-size: 0;
+        background-color: $grey;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border-color: transparent;
+        position: absolute;
+        outline: solid 2px transparent;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+          background-color: $grey;
+          outline: solid 2px $orange-900;
+        }
+
+        &:hover {
+          background-color: $focus-bg-color;
+          outline-color: $icon-color;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $orange-900;
+          outline-color: transparent;
+        }
       }
     }
   }
-}
 
-.slick-disabled {
-  border-color: $grey;
-  outline-color: transparent;
-
-  &:focus,
-  &:hover,
-  &:active {
+  .slick-disabled {
     border-color: $grey;
     outline-color: transparent;
-    background-color: transparent;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $grey;
+      outline-color: transparent;
+      background-color: transparent;
+    }
   }
 }

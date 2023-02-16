@@ -48,7 +48,7 @@
 
   &__icon {
     background-repeat: no-repeat;
-    width: 44px;
+    min-width: 44px;
     height: 44px;
     margin-right: 10px;
     margin-left: 32px;
@@ -57,13 +57,6 @@
     mask-size: contain;
     mask-position: center;
     transition: all 0.3s ease-in-out;
-  }
-
-
-  &__text {
-    margin-right: 32px;
-    @extend %rubik-400;
-    font-size: 20px;
   }
 
   &__icon--burger {
@@ -91,6 +84,12 @@
   &__icon--dish {
     mask-image: url('../images/sprite.svg#icon-category-dish');
     transition: all 0.3s ease-in-out;
+  }
+
+  &__text {
+    margin-right: 32px;
+    @extend %rubik-400;
+    font-size: 20px;
   }
 
   &__btn:focus &__icon--burger,
