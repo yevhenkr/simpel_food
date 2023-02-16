@@ -26,6 +26,8 @@
     position: relative;
     top: 9px;
     border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
   }
 
   &__figure {
@@ -67,7 +69,7 @@
     padding-left: 40px;
     margin-bottom: 16px;
   }
-  
+
   &__about-pearson {
     padding-left: 38px;
     padding-top: 14px;
@@ -84,68 +86,68 @@
   margin-bottom: 110px;
 
 
-.slick-next:focus,
-.slick-prev:focus {
-  outline: solid 2px $border-color;
-}
-
-.slick-next:hover,
-.slick-prev:hover {
-  background-color: $focus-bg-color;
-  border-color: $slider-borrder-focus;
-}
-
-.slick-next:active,
-.slick-prev:active {
-  outline-color: transparent;
-  border-color: transparent;
-}
-
-.slick-next {
-  position: relative;
-  left: 53%;
-  transform: translate(35%, 0);
-  top: -11px;
-
-  &::after {
-    left: 8px;
-    bottom: 7px;
+  .slick-next:focus,
+  .slick-prev:focus {
+    outline: solid 2px $border-color;
   }
-}
 
-.slick-prev {
-  position: absolute;
-  left: 44%;
-  top: -11px;
-
-  &::after {
-    right: 9px;
-    bottom: 7px;
-    transform: scaleX(-1);
+  .slick-next:hover,
+  .slick-prev:hover {
+    background-color: $focus-bg-color;
+    border-color: $slider-borrder-focus;
   }
-}
 
-.slick-prev::after,
-.slick-next::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  -webkit-mask-image: url('../images/sprite.svg#icon-slider-arrow');
-  background-color: $orange-900;
-}
-
-.slick-disabled.slick-prev::after,
-.slick-disabled.slick-next::after {
-  background-color: $grey;
-}
-
-.slick-prev:not(.slick-disabled):hover,
-.slick-next:not(.slick-disabled):hover {
-  &:after {
-    background-color: $border-color;
+  .slick-next:active,
+  .slick-prev:active {
+    outline-color: transparent;
+    border-color: transparent;
   }
-}
+
+  .slick-next {
+    position: relative;
+    left: 53%;
+    transform: translate(35%, 0);
+    top: -11px;
+
+    &::after {
+      left: 8px;
+      bottom: 7px;
+    }
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: 44%;
+    top: -11px;
+
+    &::after {
+      right: 9px;
+      bottom: 7px;
+      transform: scaleX(-1);
+    }
+  }
+
+  .slick-prev::after,
+  .slick-next::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    -webkit-mask-image: url('../images/sprite.svg#icon-slider-arrow');
+    background-color: $orange-900;
+  }
+
+  .slick-disabled.slick-prev::after,
+  .slick-disabled.slick-next::after {
+    background-color: $grey;
+  }
+
+  .slick-prev:not(.slick-disabled):hover,
+  .slick-next:not(.slick-disabled):hover {
+    &:after {
+      background-color: $border-color;
+    }
+  }
 
 
   .slick-next,
