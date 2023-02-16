@@ -95,11 +95,11 @@
   &__cart {
     transform: translate(1px, 1px);
     transition: all 0.3s;
-    -webkit-mask-image: url('../images/sprite.svg#icon-cart');
+    mask-image: url('../images/sprite.svg#icon-cart');
   }
 
   &__search {
-    -webkit-mask-image: url('../images/sprite.svg#search_icon');
+    mask-image: url('../images/sprite.svg#search_icon');
   }
 
   &__cart-num {

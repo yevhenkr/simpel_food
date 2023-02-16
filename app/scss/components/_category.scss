@@ -67,29 +67,29 @@
   }
 
   &__icon--burger {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-burger');
+    mask-image: url('../images/sprite.svg#icon-category-burger');
     transition: all 0.3s ease-in-out;
   }
 
   &__icon--pizza {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-pizza');
+    mask-image: url('../images/sprite.svg#icon-category-pizza');
     transition: all 0.3s ease-in-out;
   }
 
   &__icon--sandwiches {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-sandvich');
+    mask-image: url('../images/sprite.svg#icon-category-sandvich');
     transition: all 0.3s ease-in-out;
   }
 
   &__icon--asia {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-asia');
+    mask-image: url('../images/sprite.svg#icon-category-asia');
     transition: all 0.3s ease-in-out;
     width: 50px;
     height: 50px;
   }
 
   &__icon--dish {
-    -webkit-mask-image: url('../images/sprite.svg#icon-category-dish');
+    mask-image: url('../images/sprite.svg#icon-category-dish');
     transition: all 0.3s ease-in-out;
   }
 

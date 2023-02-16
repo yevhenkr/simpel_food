@@ -45,7 +45,7 @@
       content: '';
       width: 16px;
       height: 15px;
-      -webkit-mask-image: url('../images/sprite.svg#icon-send');
+      mask-image: url('../images/sprite.svg#icon-send');
       background-color: $white-color;
       background-repeat: no-repeat;
       left: 37px;
@@ -251,15 +251,15 @@
   }
 
   &__facebook {
-    -webkit-mask-image: url('../images/sprite.svg#icon-facebook');
+    mask-image: url('../images/sprite.svg#icon-facebook');
   }
 
   &__twitter {
-    -webkit-mask-image: url('../images/sprite.svg#icon-twitter');
+    mask-image: url('../images/sprite.svg#icon-twitter');
   }
 
   &__instagram {
-    -webkit-mask-image: url('../images/sprite.svg#icon-instagram');
+    mask-image: url('../images/sprite.svg#icon-instagram');
   }
 
   &__socialmedia:hover &__facebook,
