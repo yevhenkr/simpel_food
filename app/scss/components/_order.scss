@@ -57,7 +57,12 @@
 
 .benefit {
   display: flex;
+  flex-direction: row;
   padding-bottom: 12px;
+
+  &__text {
+    @include line-clamp(1);
+  }
 }
 
 .benefit-icon {
