@@ -194,6 +194,7 @@
     font-size: 15px;
     color: $darkBlue-900;
     margin-bottom: 7px;
+    @include line-clamp(2);
   }
 
   &__cost {

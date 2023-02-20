@@ -10,6 +10,7 @@
   &__title {
     padding-bottom: 41px;
     @extend %rubik-500;
+    @include line-clamp(3);
   }
 }
 
