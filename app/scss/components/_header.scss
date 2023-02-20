@@ -16,7 +16,7 @@
   }
   
   &__nav {
-    height: 160px;
+    height: 158px;
     display: flex;
     justify-content: flex-end;
     text-align: center;
@@ -108,13 +108,14 @@
 
   &__cart-num {
     position: absolute;
+    min-width: 14px;
+    height: 14px;
+    padding: 0 2px;
     top: 6px;
     right: 3px;
     background-color: $orange-900;
-    border-radius: 50%;
+    border-radius: 7px;
     color: $silver-200;
-    width: 14px;
-    height: 14px;
     font-size: 10px;
     line-height: 15px;
     transition: all 0.3s ease-in-out;
