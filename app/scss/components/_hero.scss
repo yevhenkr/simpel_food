@@ -16,12 +16,14 @@
     font-size: 66px;
     @extend %rubik-500;
     text-transform: uppercase;
+    @include line-clamp(2);
   }
 
   &__title span {
     display: inline-block;
     color: $orange-900;
     margin-bottom: 20px;
+    @include line-clamp(2);
   }
 
   &__text {
@@ -29,6 +31,7 @@
     display: inline-block;
     line-height: 1.5;
     margin-bottom: 20px;
+    @include line-clamp(7);
   }
 
   &__bottom {
@@ -68,10 +71,10 @@
 
   &__img {
     display: block;
+    position: relative;
     display: flex;
     min-width: 560px;
     height: 660px;
-    background-image: url('../images/skills_content.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
