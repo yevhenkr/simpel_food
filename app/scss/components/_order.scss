@@ -19,7 +19,6 @@
   }
 
   &__description {
-    display: flex;
     flex-direction: column;
     max-width: 470px;
   }
@@ -47,9 +46,8 @@
   }
 
   &__button {
-    display: flex;
-    max-width: 165px;
-    height: 47px;
+    display: inline-block;
+    padding: 10px 32px 10px 32px;
     font-size: 18px;
     line-height: 1.3;
   }
