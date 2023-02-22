@@ -1,5 +1,12 @@
 $(function () {
 
+  $('img').on('error', function () {
+    $(this).attr('src', '../images/no-image.jpg');
+    $(this).css({
+      'border-radius': '0 0 0 0'
+    });
+  });
+
   $('.burger').on('click', function () {
     $('.header__menu').toggleClass('header__menu--сurtain');
   });
