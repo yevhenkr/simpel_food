@@ -7,7 +7,7 @@ $(function () {
     });
   });
 
-  $('.burger').on('click', function () {
+  $('.burger-btn').on('click', function () {
     $('.header__menu').toggleClass('header__menu--сurtain');
   });
 

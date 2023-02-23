@@ -15,6 +15,7 @@
   &__img-logo {
     object-fit: contain;
     position: relative;
+
     &:after {
       content: "";
       display: block;
@@ -192,12 +193,10 @@
   opacity: 0.2;
 }
 
-.burger {
+.burger-btn {
   background-color: #ffffff00;
   display: none;
   position: relative;
-  top: 50%;
-  transform: translateY(50%);
 }
 
 @media (max-width: 1200px) {}
@@ -240,12 +239,12 @@
     padding: 0 5px;
   }
 
-  .burger {
+  .burger-btn {
     position: relative;
     display: inline;
     width: 45px;
     height: 45px;
-    top: 40px;
+    top: 20%;
     border: none;
     z-index: 2;
 
