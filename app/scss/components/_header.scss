@@ -193,6 +193,14 @@
   opacity: 0.2;
 }
 
+.hero-btn:last-child {
+  margin-right: 53px;
+}
+
+.hero-btn:not(:last-child) {
+  margin-right: 39px;
+}
+
 .burger-btn {
   background-color: #ffffff00;
   display: none;
@@ -206,27 +214,48 @@
 @media (max-width: 768px) {}
 
 @media (max-width: 576px) {
+
   .header {
+    &__nav {
+      height: 60px;
+    }
+
     &__menu {
-      opacity: 0;
-      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 20%;
+      padding-bottom: 100vh;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 85%;
+      align-items: left;
+      background-color: aquamarine;
+      transform: translateX(-300%);
+      transition: all .3s ease-in-out;
     }
 
     &__menu--сurtain {
-      position: fixed;
-      display: block;
-      height: 100%;
-      width: 100vh;
-      left: 0;
-      justify-content: center;
-      align-items: center;
-      opacity: 1;
-      background-color: aqua;
-      z-index: 2;
+      transform: translateX(0);
+      z-index: 1;
+      padding-left: 15px;
     }
 
     &__logo {
       max-width: 115px;
+      min-width: 115px;
+      max-height: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__logo--сurtain {
+      position: relative;
+      min-width: 130px;
+      z-index: 2;
+    }
+
+    &__nav-right {
+      margin-top: 12px;
     }
 
     &__icons {
@@ -235,8 +264,9 @@
     }
   }
 
-  .container {
-    padding: 0 5px;
+  .hero-btn:last-child,
+  .hero-btn:not(:last-child) {
+    margin-right: 0;
   }
 
   .burger-btn {
@@ -244,7 +274,7 @@
     display: inline;
     width: 45px;
     height: 45px;
-    top: 20%;
+    top: 13%;
     border: none;
     z-index: 2;
 
