@@ -9,9 +9,10 @@ $(function () {
 
   $('.burger-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
-    // $('.header__menu').toggleClass('header__menu--сurtain');
-    // $('.header__logo').toggleClass('header__logo--сurtain');
+  });
 
+  $('.cross-btn').on('click', function () {
+    $('.curtain').toggleClass('curtain-onscreen');
   });
 
   $('.reviews__inner').slick({

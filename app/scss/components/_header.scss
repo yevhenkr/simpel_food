@@ -334,25 +334,11 @@
       transition: all .3s ease-in-out;
     }
 
-    &__menu--сurtain {
-      transform: translateX(0);
-      z-index: 1;
-      padding-left: 15px;
-    }
-
     &__logo {
       max-width: 115px;
       min-width: 115px;
       max-height: 30px;
       transition: all 0.3s ease-in-out;
-    }
-
-    &__logo--сurtain {
-      position: relative;
-      margin-top: 16px;
-      margin-left: 15px;
-      min-width: 130px;
-      z-index: 2;
     }
 
     &__nav-right {
