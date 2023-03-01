@@ -8,9 +8,9 @@ $(function () {
   });
 
   $('.burger-btn').on('click', function () {
-    $('.header__menu').toggleClass('header__menu--сurtain');
-    $('.header__logo').toggleClass('header__logo--сurtain');
-    
+    // $('.header__menu').toggleClass('header__menu--сurtain');
+    // $('.header__logo').toggleClass('header__logo--сurtain');
+
   });
 
   $('.reviews__inner').slick({
