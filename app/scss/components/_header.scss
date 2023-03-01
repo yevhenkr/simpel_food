@@ -209,6 +209,7 @@
 
 .curtain {
   display: none;
+  transform: translateX(-100%);
 }
 
 @media (max-width: 1200px) {}
@@ -226,6 +227,7 @@
     background-color: #a7a2a2;
     display: inline-block;
     z-index: 3;
+    transition: all 0.3s ease-in-out;
 
     &__top {
       display: flex;
@@ -263,6 +265,10 @@
     &__menu:last-child {
       margin-bottom: 10px;
     }
+  }
+
+  .curtain-onscreen {
+    transform: translateX(0%);
   }
 
   .cross-btn {
@@ -386,7 +392,8 @@
 
     &__tel {
       margin-bottom: 20px !important;
-      &::before{
+
+      &::before {
         left: -29px !important;
       }
     }
