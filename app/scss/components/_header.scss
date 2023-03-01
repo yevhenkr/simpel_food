@@ -223,7 +223,7 @@
     width: 80.5%;
     height: 600px;
     padding-left: 15px;
-    background-color: burlywood;
+    background-color: #a7a2a2;
     display: inline-block;
     z-index: 3;
 
@@ -237,7 +237,11 @@
     &__line {
       border-bottom: 1px solid #eeeff3;
       margin-left: -20px;
-      margin-bottom: 42px;
+      margin-bottom: 22px;
+    }
+
+    &__line:nth-of-type(4) {
+      margin-bottom: 14px;
     }
 
     &__logo {
@@ -253,7 +257,6 @@
 
     &__link {
       display: inline-block;
-      color: red;
       font-size: 18px;
     }
 
@@ -360,6 +363,11 @@
     margin-bottom: 40px;
   }
 
+  .hero-btn:nth-of-type(3) {
+    margin-right: 39px;
+    margin-bottom: 24px;
+  }
+
   .feedback {
     &__curtain-list {
       padding-left: 30px;
@@ -370,6 +378,17 @@
       padding-left: 30px;
       display: flex;
       gap: 13px;
+    }
+
+    &__adress {
+      margin-bottom: 23px !important;
+    }
+
+    &__tel {
+      margin-bottom: 20px !important;
+      &::before{
+        left: -29px !important;
+      }
     }
   }
 
