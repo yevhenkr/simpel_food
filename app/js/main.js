@@ -9,10 +9,12 @@ $(function () {
 
   $('.burger-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
+    document.body.style.overflow = 'hidden';
   });
 
   $('.cross-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
+    document.body.style.overflow = 'auto'
   });
 
   $('.reviews__inner').slick({
