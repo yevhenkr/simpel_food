@@ -209,7 +209,16 @@
 
 .curtain {
   display: none;
-  transform: translateX(-100%);
+  transform: translateX(-150%);
+}
+
+.curtaine-fadeout {
+  display: none;
+  position: absolute;
+  width: 50vh;
+  height: 100vh;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 @media (max-width: 1200px) {}
@@ -224,7 +233,7 @@
     width: 80.5%;
     height: 100vh;
     padding-left: 15px;
-    background-color: #a7a2a2;
+    background-color: #fff;
     display: inline-block;
     z-index: 3;
     transition: all 0.3s ease-in-out;
@@ -269,6 +278,13 @@
 
   .curtain-onscreen {
     transform: translateX(0%);
+  }
+
+  .fadeout-appear {
+    display: block;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 1s ease-in-out;
   }
 
   .cross-btn {
