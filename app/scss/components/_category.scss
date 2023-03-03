@@ -271,6 +271,11 @@
       font-size: 24px;
     }
 
+    &__list {
+      margin-bottom: 26px;
+      gap: 8px;
+    }
+
     &__text {
       padding: 10px 8px 10px 0;
       font-size: 14px;
@@ -298,8 +303,34 @@
       min-width: 20px;
     }
 
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 8px 5px;
+      margin-bottom: 25px;
+    }
+
+    &__show-more{
+      font-size: 20px;
+    }
   }
 
+  .product-cart {
+    &__link {
+      margin-bottom: -2px;
+    }
+
+    &__cost{
+      padding-bottom: 8px;
+    }
+    &__icon {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      padding: 0 5px;
+    }
+  }
 
   .category-item {
     display: block;
