@@ -132,3 +132,70 @@
 .restaurant-cart:hover {
   box-shadow: 0px 3px 15px 0px rgba(255, 104, 56, 0.5);
 }
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .restaurants {
+    &__title {
+      padding-top: 66px;
+      padding-bottom: 15px;
+      font-size: 24px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 20px;
+
+      .slick-dots {
+        position: relative;
+        bottom: 3px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .slick-dots li button {
+        margin: 0 7px;
+        height: 16px;
+        width: 10px;
+        font-size: 0;
+        border-radius: 50%;
+        border-color: transparent;
+        background-color: #c2c2c2;
+
+        &:focus {
+          border: solid 2px $orange-900;
+        }
+
+        &:hover {
+          border: solid 2px $slider-borrder-focus;
+          background-color: $focus-bg-color;
+        }
+
+        &:active {
+          background-color: $slider-borrder-focus;
+        }
+      }
+    }
+
+    .slick-dots li.slick-active button {
+      background-color: #ff6838;
+    }
+  }
+
+  .restaurant-cart{
+    &__icon{
+      margin-bottom: 27px;
+    }
+  }
+}
