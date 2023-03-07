@@ -222,3 +222,89 @@
     }
   }
 }
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+  .reviews {
+    &__container {
+      position: relative;
+      padding: 0 15px;
+    }
+
+    &__title {
+      padding-top: 38px;
+      font-size: 24px;
+    }
+  }
+
+  .review {
+    &__item {
+      align-items: center;
+      flex-direction: column;
+      padding-top: 30px;
+    }
+
+    &__icon {
+      max-width: 100px;
+      max-height: 100px;
+      top: 0;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin-bottom: 17px;
+
+      &:before {
+        left: -34px;
+        top: -10px;
+      }
+
+      &:after {
+        right: -34px;
+        bottom: 9px;
+      }
+    }
+
+    &__pearson {
+      font-size: 16px;
+    }
+
+    &__about-pearson {
+      padding-top: 10px;
+      margin-bottom: 0;
+    }
+
+    &__figure {
+      margin-right: 1px;
+      margin-left: 0;
+      margin-top: 13px;
+      margin-bottom: 0;
+    }
+  }
+
+  .review-scroller {
+    position: absolute;
+    top: 128px;
+    width: 100%;
+
+    .slick-dots {
+    opacity: 0;
+    }
+
+    .slick-prev {
+      top: 0;
+      left: 14%;
+      transform: translate(0, 0);
+    }
+
+    .slick-next {
+      top: 0;
+      left: 72%;
+    }
+  }
+}
