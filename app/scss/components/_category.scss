@@ -253,19 +253,20 @@
   border-color: transparent;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: $xl) {}
 
-@media (max-width: 992px) {}
+@media (max-width: $lg) {}
 
-@media (max-width: 768px) {}
+@media (max-width: $md) {}
 
-@media (max-width: 576px) {
+@media (max-width: $sm) {
   .container {
     padding: 0 15px;
   }
 
   .category {
-    margin-bottom: 98px;
+    margin-bottom: 36px;
+
     &__title {
       padding-top: 66px;
       margin-bottom: 28px;
@@ -275,10 +276,11 @@
     &__list {
       margin-bottom: 26px;
       gap: 8px;
+      overflow: auto;
     }
 
     &__text {
-      padding: 10px 8px 10px 0;
+      padding: 10px 15px 10px 0;
       font-size: 14px;
     }
 
@@ -293,7 +295,7 @@
     &__icon--dish {
       height: 20px;
       min-width: 20px;
-      margin-left: 7px;
+      margin-left: 13px;
       margin-right: 5px;
     }
 
@@ -311,7 +313,8 @@
       margin-bottom: 25px;
     }
 
-    &__show-more{
+    &__show-more {
+      position: relative;
       font-size: 20px;
     }
   }
@@ -321,9 +324,10 @@
       margin-bottom: -2px;
     }
 
-    &__cost{
+    &__cost {
       padding-bottom: 8px;
     }
+
     &__icon {
       margin-bottom: 10px;
     }

@@ -109,24 +109,18 @@
   box-shadow: none;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: $xl) {}
 
-@media (max-width: 992px) {}
+@media (max-width: $lg) {}
 
-@media (max-width: 768px) {}
+@media (max-width: $md) {}
 
-@media (max-width: 576px) {
+@media (max-width: $sm) {
   .hero {
-    &__title {
-      font-size: 40px;
-    }
-
     &__center {
       position: relative;
     }
-  }
 
-  .hero {
     &__img {
       position: absolute;
       width: 100%;
@@ -141,13 +135,15 @@
     &__text {
       font-size: 16px;
     }
-    
-    &__title{
+
+    &__title {
+      font-size: 40px;
       padding-top: 23px;
     }
 
     &__detail {
       font-size: 16px;
+      line-height: 1.5;
     }
   }
 

@@ -73,13 +73,13 @@
   font-size: 40px;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: $xl) {}
 
-@media (max-width: 992px) {}
+@media (max-width: $lg) {}
 
-@media (max-width: 768px) {}
+@media (max-width: $md) {}
 
-@media (max-width: 576px) {
+@media (max-width: $sm) {
   .container {
     padding: 0 15px;
   }
@@ -103,6 +103,7 @@
 
     &__description {
       padding-top: 1px;
+      position: relative;
     }
 
     &__title {
@@ -112,8 +113,12 @@
     }
 
     &__text {
-      padding-bottom: 35px;
+      padding-bottom: 36px;
       font-size: 16px;
+      -webkit-line-clamp: 6;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     &__benefits {

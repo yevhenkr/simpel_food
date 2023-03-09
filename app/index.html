@@ -39,7 +39,7 @@
       <ul class="curtain__menu">
         <li class="hero-btn">
           <a class="curtain__link" href="#hero-section">Главная</a>
-          
+
         </li>
 
         <li class="hero-btn">
@@ -116,18 +116,19 @@
 
           <ul class="header__icons">
             <li>
-              <button class="icon-btn" type="button">
+              <div class="icon-btn" >
+                <button type="button" class="sr-only">поиск блюд</button>
                 <div class="icon-btn__search"></div>
-                <span class="sr-only">поиск блюд</span>
-              </button>
+                <span class="sr-only"></span>
+              </div>
             </li>
 
             <li>
-              <button class="icon-btn" type="button">
+              <div class="icon-btn">
+                <button type="button" class="sr-only">переход в корзину с заказами</button>
                 <div class="icon-btn__cart"></div>
                 <div class="icon-btn__cart-num">4</div>
-                <span class="sr-only">переход в корзину с заказами</span>
-              </button>
+              </div>
             </li>
           </ul>
 
@@ -172,43 +173,45 @@
 
         <ul class="category__list">
           <li class="category-item">
-            <button class="category__btn" data-filter=".burger-cat" type="button">
+            <div class="category__btn" data-filter=".burger-cat">
+              <button class="sr-only" type="button" aria-label="Показать все виды бургеров">
+              </button>
               <div class="category__icon category__icon--burger"></div>
               <p class="category__text">Бургеры</p>
-              <span class="sr-only">Показать все виды бургеров</span>
-            </button>
+            </div>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" data-filter=".pizza" type="button">
+            <div class="category__btn" data-filter=".pizza">
+              <button class="sr-only" type="button" aria-label="Показать все виды пицц"></button>
               <div class="category__icon category__icon--pizza"></div>
               <p class="category__text">Пицца</p>
-              <span class="sr-only">Показать все виды пицц</span>
-            </button>
+            </div>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" data-filter=".sandwiches" type="button">
+            <div class="category__btn" data-filter=".sandwiches">
+              <button class="sr-only" type="button" aria-label="Показать все виды сендвичей"></button>
               <div class="category__icon category__icon--sandwiches"></div>
               <p class="category__text">Сендвичи</p>
-              <span class="sr-only">Показать все виды сендвичей</span>
-            </button>
+            </div>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" data-filter=".asia" type="button">
+            <div class="category__btn" data-filter=".asia">
+              <button class="sr-only" type="button" aria-label="Показать всю азиатскую кухню"></button>
               <div class="category__icon category__icon--asia"></div>
               <p class="category__text--asia">Азиатская кухня</p>
-              <span class="sr-only">Показать всю азиатскую кухню</span>
-            </button>
+            </div>
           </li>
 
           <li class="category-item">
-            <button class="category__btn" data-filter=".dish" type="button">
+            <div class="category__btn" data-filter=".dish">
+              <button class="sr-only" type="button" aria-label="Показать все виды сетов"></button>
               <div class="category__icon category__icon--dish"></div>
               <p class="category__text">Cеты</p>
-              <span class="sr-only">Показать все виды сетов</span>
-            </button>
+            </div>
+
           </li>
 
         </ul>
