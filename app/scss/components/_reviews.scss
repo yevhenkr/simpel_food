@@ -11,7 +11,7 @@
     padding-top: 118px;
 
     @include r($sm) {
-      padding-top: 38px;
+      padding-top: 34px;
       font-size: 24px;
     }
   }
@@ -75,6 +75,8 @@
     @include r($sm) {
       font-size: 14px;
       margin-bottom: 17px;
+      margin-left: 54px;
+      margin-right: 52px;
     }
 
     &::before,
@@ -118,6 +120,7 @@
 
     @include r($sm) {
       font-size: 16px;
+      padding-left: 55px;
     }
   }
 
@@ -131,6 +134,8 @@
     @include r($sm) {
       padding-top: 10px;
       margin-bottom: 0;
+      padding-left: 55px;
+
     }
   }
 }
@@ -143,7 +148,7 @@
 
   @include r($sm) {
     position: absolute;
-    top: 128px;
+    top: 124px;
     width: 100%;
   }
 

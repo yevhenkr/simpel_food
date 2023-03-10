@@ -3,8 +3,14 @@
   flex-direction: row;
   padding-bottom: 67px;
 
+  @include r($sm) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 34px;
+  }
+
   &__logo {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   &__input {
@@ -15,8 +21,12 @@
     outline: 1px solid $silver-200;
     position: relative;
     width: 100%;
-    height: 44px;
+    height: 42px;
     transition: all 0.3s ease-in-out;
+
+    @include r($sm) {
+      margin-bottom: 14px;
+    }
   }
 
   &__input:focus {
@@ -119,7 +129,22 @@
   }
 }
 
+.footer-top-item {
+  @include r($sm) {
+    margin-bottom: 29px;
+  }
+}
+
 .feedback {
+  @include r($sm) {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+
+  @include r($sm) {
+    padding-left: 31px;
+  }
 
   &__adress,
   &__tel,
@@ -127,13 +152,20 @@
     display: block;
     position: relative;
     top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     border: solid 2px transparent;
     white-space: nowrap;
     color: $dark;
     font-size: 16px;
     outline: transparent;
     transition: all 0.3s ease-in-out;
+
+  }
+
+  &__email {
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
   }
 
   &__adress::before,
@@ -209,6 +241,11 @@
     gap: 13px;
     max-width: 143px;
     max-height: 39px;
+
+    @include r($sm) {
+      right: 0;
+      margin-bottom: 33px;
+    }
   }
 
   &__socialmedia {
@@ -225,6 +262,10 @@
     border: solid 2px transparent;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
+
+    @include r($sm) {
+      margin-bottom: 31px;
+    }
   }
 
   &__socialmedia:focus {
@@ -293,6 +334,66 @@
   display: grid;
   grid-template-columns: 221px 163px 287px;
   max-height: 166px;
+
+  @include r($sm) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-height: none;
+    order: 3;
+
+    li {
+      margin-bottom: 1px;
+    }
+
+    li:nth-child(1) {
+      order: 1;
+    }
+
+    li:nth-child(4) {
+      order: 2;
+    }
+
+    li:nth-child(7) {
+      order: 3;
+    }
+
+    li:nth-child(10) {
+      order: 4;
+    }
+
+    li:nth-child(2) {
+      order: 5;
+    }
+
+    li:nth-child(5) {
+      order: 6;
+    }
+
+    li:nth-child(8) {
+      order: 7;
+    }
+
+    li:nth-child(11) {
+      order: 8;
+    }
+
+    li:nth-child(3) {
+      order: 9;
+    }
+
+    li:nth-child(6) {
+      order: 10;
+    }
+
+    li:nth-child(9) {
+      order: 11;
+    }
+
+    li:nth-child(12) {
+      order: 12;
+    }
+  }
 }
 
 .footer-top-middel li {
@@ -307,108 +408,8 @@
   height: 75px;
   font-size: 14px;
   border-top: solid 1px $grey;
-}
 
-@media (max-width: $xl) {}
-
-@media (max-width: $lg) {}
-
-@media (max-width: $md) {}
-
-@media (max-width: $sm) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .footer-top {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 37px;
-  }
-
-  .footer-top-item {
-    margin-bottom: 31px;
-  }
-
-  .footer-top-middel {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-height: none;
-    order: 3;
-
-    li {
-      margin-bottom: 1px;
-    }
-  }
-
-  .footer-top-middel li:nth-child(1) {
-    order: 1;
-  }
-
-  .footer-top-middel li:nth-child(4) {
-    order: 2;
-  }
-
-  .footer-top-middel li:nth-child(7) {
-    order: 3;
-  }
-
-  .footer-top-middel li:nth-child(10) {
-    order: 4;
-  }
-
-  .footer-top-middel li:nth-child(2) {
-    order: 5;
-  }
-
-  .footer-top-middel li:nth-child(5) {
-    order: 6;
-  }
-
-  .footer-top-middel li:nth-child(8) {
-    order: 7;
-  }
-
-  .footer-top-middel li:nth-child(11) {
-    order: 8;
-  }
-
-  .footer-top-middel li:nth-child(3) {
-    order: 9;
-  }
-
-  .footer-top-middel li:nth-child(6) {
-    order: 10;
-  }
-
-  .footer-top-middel li:nth-child(9) {
-    order: 11;
-  }
-
-  .footer-top-middel li:nth-child(12) {
-    order: 12;
-  }
-
-  .feedback {
-    display: flex;
-    flex-direction: column;
-    order: 2;
-
-    &__list {
-      padding-left: 31px;
-    }
-
-    &__socialmedia {
-      right: 0;
-    }
-
-    &__socuailmedias {
-      margin-bottom: 31px;
-    }
-  }
-
-  .footer-bottom {
+  @include r($sm) {
     border-top: solid 1px $grey;
     height: 54px;
   }

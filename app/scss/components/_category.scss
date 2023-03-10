@@ -171,13 +171,11 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 29px;
     margin-bottom: 60px;
 
     @include r($sm) {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       gap: 8px 5px;
       margin-bottom: 25px;
     }
