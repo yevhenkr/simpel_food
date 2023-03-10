@@ -10,11 +10,15 @@ $(function () {
   $('.burger-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-fadeout').toggleClass('fadeout-appear');
+
+    $("html,body").css("overflow", "hidden");
   });
 
   $('.cross-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-fadeout').toggleClass('fadeout-appear');
+
+    $("html,body").css("overflow", "auto");
   });
 
   $('.reviews__inner').slick({
