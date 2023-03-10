@@ -7,8 +7,6 @@ $(function () {
     });
   });
 
-  $("html,body").css("overflow-x", "hidden");
-
   $('.burger-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-fadeout').toggleClass('fadeout-appear');
