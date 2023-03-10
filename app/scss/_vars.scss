@@ -25,11 +25,6 @@ $grey:#c2c2c2;
   }
 }
 
-$xl: 1200px;
-$lg: 992px;
-$md: 768px;
-$sm: 576px;
-
 %rubik-300 {
   font-family: 'rubik-300', sans-serif;
 }
@@ -44,4 +39,15 @@ $sm: 576px;
 
 %rubik-italic {
   font-family: 'rubik-italic', sans-serif;
+}
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576;
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
 }

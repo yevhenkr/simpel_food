@@ -3,9 +3,19 @@
   margin-bottom: 120px;
   transition: all 0.3s ease-in-out;
 
+  @include r($sm) {
+    margin-bottom: 36px;
+  }
+
   &__title {
     padding-top: 120px;
     margin-bottom: 57px;
+
+    @include r($sm) {
+      padding-top: 66px;
+      margin-bottom: 28px;
+      font-size: 24px;
+    }
   }
 
   &__list {
@@ -13,6 +23,12 @@
     justify-content: space-between;
     margin-bottom: 42px;
     max-width: 1122px;
+
+    @include r($sm) {
+      margin-bottom: 26px;
+      gap: 8px;
+      overflow: auto;
+    }
   }
 
   &__btn {
@@ -85,16 +101,47 @@
     transition: all 0.3s ease-in-out;
   }
 
+  &__icon--burger,
+  &__icon--pizza,
+  &__icon--sandwiches,
+  &__icon--dish {
+    @include r($sm) {
+      height: 20px;
+      min-width: 20px;
+      margin-left: 13px;
+      margin-right: 5px;
+    }
+  }
+
+  &__icon--asia {
+    @include r($sm) {
+      margin-left: 0;
+      margin-right: 0;
+      height: 20px;
+      min-width: 20px;
+    }
+  }
+
   &__text {
     padding: 22px 18px 22px 0;
     @extend %rubik-400;
     font-size: 20px;
+
+    @include r($sm) {
+      padding: 10px 15px 10px 0;
+      font-size: 14px;
+    }
   }
 
   &__text--asia {
     padding: 22px 18px 22px 0;
     @extend %rubik-400;
     font-size: 20px;
+
+    @include r($sm) {
+      font-size: 14px;
+      padding: 2px 0;
+    }
   }
 
   &__btn:focus &__icon--burger,
@@ -127,6 +174,13 @@
     grid-template-rows: 1fr 1fr;
     gap: 29px;
     margin-bottom: 60px;
+
+    @include r($sm) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 8px 5px;
+      margin-bottom: 25px;
+    }
   }
 
   &__show-more {
@@ -140,6 +194,11 @@
     outline: transparent;
     border: solid 2px transparent;
     transition: all 0.3s ease-in-out;
+
+    @include r($sm) {
+      position: relative;
+      font-size: 20px;
+    }
   }
 
   &__show-more:focus {
@@ -167,6 +226,10 @@
   flex-direction: row;
   border: solid 2px transparent;
   outline: solid 2px transparent;
+
+  @include r($sm) {
+    display: block;
+  }
 }
 
 .product-cart {
@@ -191,6 +254,10 @@
     height: auto;
     margin: 20px auto 6px;
     position: relative;
+
+    @include r($sm) {
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -201,6 +268,10 @@
     color: $darkBlue-900;
     margin-bottom: 7px;
     @include line-clamp(2);
+
+    @include r($sm) {
+      padding: 0 5px;
+    }
   }
 
   &__cost {
@@ -209,6 +280,10 @@
     @extend %rubik-500;
     font-size: 15px;
     line-height: 1.4;
+
+    @include r($sm) {
+      padding-bottom: 8px;
+    }
   }
 
   &__button {
@@ -223,6 +298,10 @@
 
   &__link {
     text-decoration: none;
+
+    @include r($sm) {
+      margin-bottom: -2px;
+    }
   }
 
   &__link:focus {
@@ -251,93 +330,4 @@
 .mixitup-control-active:active {
   color: $white-color;
   border-color: transparent;
-}
-
-@media (max-width: $xl) {}
-
-@media (max-width: $lg) {}
-
-@media (max-width: $md) {}
-
-@media (max-width: $sm) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .category {
-    margin-bottom: 36px;
-
-    &__title {
-      padding-top: 66px;
-      margin-bottom: 28px;
-      font-size: 24px;
-    }
-
-    &__list {
-      margin-bottom: 26px;
-      gap: 8px;
-      overflow: auto;
-    }
-
-    &__text {
-      padding: 10px 15px 10px 0;
-      font-size: 14px;
-    }
-
-    &__text--asia {
-      font-size: 14px;
-      padding: 2px 0;
-    }
-
-    &__icon--burger,
-    &__icon--pizza,
-    &__icon--sandwiches,
-    &__icon--dish {
-      height: 20px;
-      min-width: 20px;
-      margin-left: 13px;
-      margin-right: 5px;
-    }
-
-    &__icon--asia {
-      margin-left: 0;
-      margin-right: 0;
-      height: 20px;
-      min-width: 20px;
-    }
-
-    &__grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-      gap: 8px 5px;
-      margin-bottom: 25px;
-    }
-
-    &__show-more {
-      position: relative;
-      font-size: 20px;
-    }
-  }
-
-  .product-cart {
-    &__link {
-      margin-bottom: -2px;
-    }
-
-    &__cost {
-      padding-bottom: 8px;
-    }
-
-    &__icon {
-      margin-bottom: 10px;
-    }
-
-    &__text {
-      padding: 0 5px;
-    }
-  }
-
-  .category-item {
-    display: block;
-  }
 }

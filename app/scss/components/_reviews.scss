@@ -1,6 +1,19 @@
 .reviews {
+  &__container {
+
+    @include r($sm) {
+      position: relative;
+      // padding: 0 15px;
+    }
+  }
+
   &__title {
     padding-top: 118px;
+
+    @include r($sm) {
+      padding-top: 38px;
+      font-size: 24px;
+    }
   }
 
   &__inner {
@@ -20,6 +33,12 @@
     display: flex;
     padding-top: 37px;
     flex-direction: row;
+
+    @include r($sm) {
+      align-items: center;
+      flex-direction: column;
+      padding-top: 30px;
+    }
   }
 
   &__icon {
@@ -28,10 +47,23 @@
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;
+
+    @include r($sm) {
+      max-width: 100px;
+      max-height: 100px;
+      top: 0;
+    }
   }
 
   &__figure {
     margin-right: 21px;
+
+    @include r($sm) {
+      margin-right: 1px;
+      margin-left: 0;
+      margin-top: 13px;
+      margin-bottom: 0;
+    }
   }
 
   &__text {
@@ -39,6 +71,11 @@
     line-height: 1.5;
     @extend %rubik-italic;
     margin-bottom: 30px;
+
+    @include r($sm) {
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
 
     &::before,
     &::after {
@@ -53,6 +90,11 @@
     &::before {
       left: -41px;
       background-image: url('../images/sprite.svg#icon_quote');
+
+      @include r($sm) {
+        left: -34px;
+        top: -10px;
+      }
     }
 
     &::after {
@@ -60,6 +102,11 @@
       bottom: -1px;
       background-image: url('../images/sprite.svg#icon_quote');
       transform: scale(-1, 1);
+
+      @include r($sm) {
+        right: -34px;
+        bottom: 9px;
+      }
     }
   }
 
@@ -68,6 +115,10 @@
     color: $orange-900;
     padding-left: 40px;
     margin-bottom: 16px;
+
+    @include r($sm) {
+      font-size: 16px;
+    }
   }
 
   &__about-pearson {
@@ -76,6 +127,11 @@
     font-size: 14px;
     margin-bottom: 65px;
     @extend %rubik-400;
+
+    @include r($sm) {
+      padding-top: 10px;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -85,6 +141,11 @@
   transform: translate(-50%, 0);
   margin-bottom: 110px;
 
+  @include r($sm) {
+    position: absolute;
+    top: 128px;
+    width: 100%;
+  }
 
   .slick-next:focus,
   .slick-prev:focus {
@@ -149,7 +210,6 @@
     }
   }
 
-
   .slick-next,
   .slick-prev {
     width: 40px;
@@ -158,6 +218,29 @@
     border-radius: 50%;
     line-height: 0;
     font-size: 0;
+  }
+
+  .slick-next {
+    @include r($sm) {
+      top: 0;
+      left: 72%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .slick-prev {
+    @include r($sm) {
+      top: 0;
+      left: 14%;
+      transform: translate(0, 0);
+    }
   }
 
   .slick-slide {
@@ -173,6 +256,10 @@
     justify-content: center;
     line-height: 0;
     margin-right: 17px;
+
+    @include r($sm) {
+      opacity: 0;
+    }
 
     li {
       padding: 0 15px;
@@ -219,92 +306,6 @@
       border-color: $grey;
       outline-color: transparent;
       background-color: transparent;
-    }
-  }
-}
-
-@media (max-width: $xl) {}
-
-@media (max-width: $lg) {}
-
-@media (max-width: $md) {}
-
-@media (max-width: $sm) {
-  .reviews {
-    &__container {
-      position: relative;
-      padding: 0 15px;
-    }
-
-    &__title {
-      padding-top: 38px;
-      font-size: 24px;
-    }
-  }
-
-  .review {
-    &__item {
-      align-items: center;
-      flex-direction: column;
-      padding-top: 30px;
-    }
-
-    &__icon {
-      max-width: 100px;
-      max-height: 100px;
-      top: 0;
-    }
-
-    &__text {
-      font-size: 14px;
-      margin-bottom: 17px;
-
-      &:before {
-        left: -34px;
-        top: -10px;
-      }
-
-      &:after {
-        right: -34px;
-        bottom: 9px;
-      }
-    }
-
-    &__pearson {
-      font-size: 16px;
-    }
-
-    &__about-pearson {
-      padding-top: 10px;
-      margin-bottom: 0;
-    }
-
-    &__figure {
-      margin-right: 1px;
-      margin-left: 0;
-      margin-top: 13px;
-      margin-bottom: 0;
-    }
-  }
-
-  .review-scroller {
-    position: absolute;
-    top: 128px;
-    width: 100%;
-
-    .slick-dots {
-      opacity: 0;
-    }
-
-    .slick-prev {
-      top: 0;
-      left: 14%;
-      transform: translate(0, 0);
-    }
-
-    .slick-next {
-      top: 0;
-      left: 72%;
     }
   }
 }

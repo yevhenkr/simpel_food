@@ -1,20 +1,40 @@
 .apps {
-
   &__inner {
     display: flex;
     margin-bottom: 120px;
+
+    @include r($sm) {
+      margin-bottom: 34px;
+    }
   }
 
   &__title {
     padding-top: 41px;
     text-align: left;
     margin-bottom: 45px;
+
+    @include r($sm) {
+      display: inline-block;
+      padding-top: 39px;
+      margin-bottom: 13px;
+      font-size: 24px;
+    }
   }
 
   &__text {
     width: 535px;
     margin-bottom: 29px;
     line-height: 1.5;
+
+    @include r($sm) {
+      width: 100%;
+      margin-bottom: 16px;
+      font-size: 14px;
+      -webkit-line-clamp: 6;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
   &__apstor {
@@ -42,48 +62,15 @@
     width: 100%;
     background-repeat: no-repeat;
     background-position: right;
-  }
-}
 
-@media (max-width: $xl) {}
-
-@media (max-width: $lg) {}
-
-@media (max-width: $md) {}
-
-@media (max-width: $sm) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .apps {
-    &__title {
-      display: inline-block;
-      padding-top: 39px;
-      margin-bottom: 13px;
-      font-size: 24px;
-    }
-
-    &__inner {
-      margin-bottom: 34px;
-    }
-
-    &__img {
+    @include r($sm) {
       display: none;
     }
+  }
 
-    &__left {
+  &__img {
+    @include r($sm) {
       width: 100%;
-    }
-
-    &__text {
-      width: 100%;
-      margin-bottom: 16px;
-      font-size: 14px;
-      -webkit-line-clamp: 6;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
   }
 }
