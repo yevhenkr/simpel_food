@@ -261,16 +261,24 @@
   }
 
   .feedback {
+
+    &__curtain {
+      @include r($sm) {
+        padding-left: 0;
+        margin-left: -2px;
+      }
+    }
+
     &__curtain-list {
       @include r($sm) {
         padding-left: 30px;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
       }
     }
 
     &__curtain-socuailmedias {
       @include r($sm) {
-        padding-left: 30px;
+        padding-left: 32px;
         display: flex;
         gap: 13px;
       }

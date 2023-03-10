@@ -7,18 +7,20 @@ $(function () {
     });
   });
 
+  $("html,body").css("overflow-x", "hidden");
+
   $('.burger-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-fadeout').toggleClass('fadeout-appear');
 
-    $("html,body").css("overflow", "hidden");
+    $("html,body").css("overflow-y", "hidden");
   });
 
   $('.cross-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-fadeout').toggleClass('fadeout-appear');
 
-    $("html,body").css("overflow", "auto");
+    $("html,body").css("overflow-y", "auto");
   });
 
   $('.reviews__inner').slick({
