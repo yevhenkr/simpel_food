@@ -404,25 +404,25 @@
     }
   }
 
-  .fadeout-appear {
-    @include r($sm) {
-      display: block;
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.5);
-      transition: all 1s ease-in-out;
-    }
-  }
-
-  .curtaine-fadeout {
+  .curtaine-bg-disappear {
     @include r($sm) {
       display: none;
       position: absolute;
       width: 50vh;
       height: 100vh;
-      opacity: 0;
-      transition: all 1s ease-in-out;
+      background-color: black;
+      transition: background-color 1s ease-in-out;
     }
   }
+
+  .curtaine-bg-appear {
+    @include r($sm) {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: background-color 1s ease-in-out;
+    }
+  }
+
 
   .cross-btn {
     @include r($sm) {
