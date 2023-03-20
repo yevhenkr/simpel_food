@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include r($md) {
+      position: relative;
+    }
+
     @include r($sm) {
       position: relative;
     }
@@ -13,6 +17,11 @@
     flex-direction: column;
     margin: auto 0;
     max-width: 450px;
+
+    @include r($md) {
+      max-width: none;
+      width: 100%;
+    }
   }
 
   &__img {
@@ -25,15 +34,24 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @include r($sm) {
+    @include r($xl) {
+      height: 500px;
+    }
+
+    @include r($md) {
       position: absolute;
+      height: 350px;
+      background-position: right top;
+      right: 0;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    @include r($sm) {
       width: 100%;
       height: 100%;
-      background-position: right top;
       min-width: 0;
       min-height: 300px;
-      z-index: -1;
-      opacity: 0.15;
     }
   }
 
@@ -43,6 +61,14 @@
     @extend %rubik-500;
     text-transform: uppercase;
     @include line-clamp(2);
+
+    @include r($xl) {
+      font-size: 60px;
+    }
+
+    @include r($md) {
+      font-size: 50px;
+    }
 
     @include r($sm) {
       font-size: 40px;
@@ -64,84 +90,88 @@
     margin-bottom: 20px;
     @include line-clamp(7);
 
+      @include r($md) {
+        font-size: 18px;
+      }
+
+      @include r($sm) {
+        font-size: 16px;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+      font-size: 18px;
+    }
+
+    &__detail {
+      display: block;
+      font-size: 20px;
+      height: 23px;
+      margin-top: 8px;
+      text-decoration: underline;
+      color: $darkBlue-900;
+      border-radius: 5px;
+      outline: transparent;
+      transition: all 0.3s ease-out;
+
+      @include r($sm) {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+
+    &__detail:focus {
+      text-decoration: none;
+      outline: solid 2px $border-color;
+    }
+
+    &__detail:hover {
+      color: $orange-900;
+      outline: transparent;
+    }
+
+    &__detail:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      color: $darkBlue-900;
+      background-color: $white-color;
+      text-decoration: none;
+    }
+
+
+  }
+
+  .headear--button {
+    margin-right: 35px;
+    padding: 10px 32px;
+
     @include r($sm) {
-      font-size: 16px;
+      font-size: 14px;
+      padding: 6px 24px;
+      margin-right: 29px;
     }
   }
 
-  &__bottom {
-    display: flex;
-    flex-direction: row;
-    font-size: 18px;
-  }
-
-  &__detail {
-    display: block;
-    font-size: 20px;
-    height: 23px;
-    margin-top: 8px;
-    text-decoration: underline;
-    color: $darkBlue-900;
+  .headear--button:focus {
+    outline: transparent;
     border-radius: 5px;
-    outline: transparent;
-    transition: all 0.3s ease-out;
-
-    @include r($sm) {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-  }
-
-  &__detail:focus {
-    text-decoration: none;
-    outline: solid 2px $border-color;
-  }
-
-  &__detail:hover {
+    border: solid 2px $border-color;
+    background-color: $focus-bg-color;
     color: $orange-900;
-    outline: transparent;
   }
 
-  &__detail:active {
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    color: $darkBlue-900;
+  .headear--button:hover {
     background-color: $white-color;
-    text-decoration: none;
+    border: solid 2px $border-color;
+    color: $orange-900;
+    border-radius: 5px;
+    box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2);
   }
 
-
-}
-
-.headear--button {
-  margin-right: 35px;
-  padding: 10px 32px;
-
-  @include r($sm) {
-    font-size: 14px;
-    padding: 6px 24px;
-    margin-right: 29px;
+  .headear--button:active {
+    background-color: $focus-bg-color;
+    color: $orange-900;
+    border: none;
+    box-shadow: none;
   }
-}
-
-.headear--button:focus {
-  outline: transparent;
-  border-radius: 5px;
-  border: solid 2px $border-color;
-  background-color: $focus-bg-color;
-  color: $orange-900;
-}
-
-.headear--button:hover {
-  background-color: $white-color;
-  border: solid 2px $border-color;
-  color: $orange-900;
-  border-radius: 5px;
-  box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2);
-}
-
-.headear--button:active {
-  background-color: $focus-bg-color;
-  color: $orange-900;
-  border: none;
-  box-shadow: none;
-}

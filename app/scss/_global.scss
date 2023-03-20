@@ -5,6 +5,18 @@ body {
   min-height: 100%;
   color: $dark;
   background-color: $white-color;
+
+  @include r($xl) {
+    font-size: 18px;
+  }
+
+  @include r($md) {
+    font-size: 16px;
+  }
+
+  @include r($sm) {
+    font-size: 14px;
+  }
 }
 
 .container {
@@ -64,4 +76,17 @@ body {
   font-size: 36px;
   text-align: center;
   @extend %rubik-500;
+
+  @include r($xl) {
+    font-size: 32px;
+  }
+
+  @include r($md) {
+    font-size: 30px;
+  }
+
+  @include r($sm) {
+    font-size: 28px;
+  }
+
 }

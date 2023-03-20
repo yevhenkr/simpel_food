@@ -11,14 +11,14 @@ $(function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-bg-disappear').toggleClass('curtaine-bg-appear');
 
-    $("html,body").css("overflow-y", "hidden");
+    // $("html,body").css("overflow-y", "hidden");
   });
 
   $('.cross-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-bg-disappear').toggleClass('curtaine-bg-appear');
 
-    $("html,body").css("overflow-y", "auto");
+    // $("html,body").css("overflow-y", "auto");
 
   });
 

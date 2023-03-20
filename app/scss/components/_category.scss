@@ -1,6 +1,5 @@
 .category {
   position: relative;
-  margin-bottom: 120px;
   transition: all 0.3s ease-in-out;
 
   @include r($sm) {
@@ -11,6 +10,16 @@
   &__title {
     padding-top: 120px;
     margin-bottom: 57px;
+
+    @include r($xl) {
+      padding-top: 30px;
+      margin-bottom: 25px;
+    }
+
+    @include r($md) {
+      padding-top: 90px;
+      margin-bottom: 20px;
+    }
 
     @include r($sm) {
       padding-top: 66px;
@@ -24,6 +33,15 @@
     justify-content: space-between;
     margin-bottom: 42px;
     max-width: 1122px;
+
+    @include r($xl) {
+      margin-bottom: 25px;
+    }
+
+    @include r($md) {
+      margin-bottom: 20px;
+      gap: 8px;
+    }
 
     @include r($sm) {
       margin-bottom: 26px;
@@ -106,20 +124,29 @@
   &__icon--pizza,
   &__icon--sandwiches,
   &__icon--dish {
+    @include r($lg) {
+      height: 32px;
+      min-width: 32px;
+      margin-left: 13px;
+      margin-right: 5px;
+    }
+
     @include r($sm) {
       height: 20px;
       min-width: 20px;
-      margin-left: 13px;
-      margin-right: 5px;
     }
   }
 
   &__icon--asia {
-    @include r($sm) {
+    @include r($lg) {
       margin-left: 0;
       margin-right: 0;
-      height: 20px;
+      height: 42px;
       min-width: 20px;
+    }
+
+    @include r($sm) {
+      height: 20px;
     }
   }
 
@@ -127,6 +154,11 @@
     padding: 22px 18px 22px 0;
     @extend %rubik-400;
     font-size: 20px;
+
+    @include r($xl) {
+      padding: 16px 16px 16px 0;
+      font-size: 18px;
+    }
 
     @include r($sm) {
       padding: 10px 15px 10px 0;
@@ -138,6 +170,15 @@
     padding: 22px 18px 22px 0;
     @extend %rubik-400;
     font-size: 20px;
+
+    @include r($xl) {
+      padding: 18px 18px 18px 0;
+    }
+
+    @include r($lg) {
+      line-height: 1;
+      padding: 10px 18px 10px 0;
+    }
 
     @include r($sm) {
       font-size: 14px;
@@ -175,6 +216,21 @@
     gap: 29px;
     margin-bottom: 60px;
 
+    @include r($xl) {
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    @include r($lg) {
+      gap: 2px;
+      margin-bottom: 25px;
+    }
+
+    @include r($md) {
+      margin-bottom: 40px;
+      gap: 8px;
+    }
+
     @include r($sm) {
       grid-template-columns: 1fr 1fr;
       gap: 8px 5px;
@@ -183,7 +239,7 @@
   }
 
   &__show-more {
-    position: absolute;
+    position: relative;
     color: $darkBlue-900;
     line-height: 1.5;
     left: 50%;
