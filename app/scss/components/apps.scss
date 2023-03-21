@@ -3,6 +3,16 @@
     display: flex;
     margin-bottom: 120px;
 
+    @include r($xl) {
+      margin-bottom: 0;
+      margin-top: 30px;
+    }
+
+    @include r($md) {
+      position: relative;
+      margin-bottom: 66px;
+    }
+
     @include r($sm) {
       margin-bottom: 34px;
     }
@@ -62,6 +72,10 @@
     width: 100%;
     background-repeat: no-repeat;
     background-position: right;
+
+    @include r($md) {
+      display: none;
+    }
 
     @include r($sm) {
       display: none;

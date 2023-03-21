@@ -6,12 +6,13 @@
     padding-top: 90px;
     margin-bottom: 120px;
 
-    @include r($lg) {
+    @include r($xl) {
+      padding-top: 0;
       margin-bottom: 0;
     }
 
-    @include r($xl) {
-      padding-top: 0;
+    @include r($lg) {
+      margin-bottom: 0;
     }
 
     @include r($sm) {
@@ -74,6 +75,7 @@
     @include r($sm) {
       font-size: 24px;
       margin-top: 26px;
+      padding-bottom: 29px;
     }
   }
 
@@ -87,7 +89,7 @@
     }
 
     @include r($sm) {
-      padding-bottom: 36px;
+      padding-bottom: 25px;
       font-size: 16px;
       -webkit-line-clamp: 6;
       display: -webkit-box;
@@ -136,7 +138,7 @@
   &__text {
     @include line-clamp(1);
 
-    @include r($lg) {
+    @include r($xl) {
       font-size: 20px;
     }
 

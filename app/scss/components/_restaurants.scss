@@ -5,49 +5,67 @@
     grid-template-rows: 1fr 1fr;
     gap: 29px;
 
+    .slick-track {
+      padding-bottom: 3px;
+    }
+
+    .slick-dots {
+      position: relative;
+      bottom: 6px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .slick-dots li button {
+      margin: 0 7px;
+      height: 16px;
+      width: 10px;
+      font-size: 0;
+      border-radius: 50%;
+      border-color: transparent;
+      background-color: $grey;
+
+      &:focus {
+        border: solid 2px $orange-900;
+      }
+
+      &:hover {
+        border: solid 2px $slider-borrder-focus;
+        background-color: $focus-bg-color;
+      }
+
+      &:active {
+        background-color: $slider-borrder-focus;
+      }
+    }
+
+    .slick-dots li.slick-active button {
+      background-color: $orange-900;
+    }
+
+    @include r($xl) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 18px;
+    }
+
+    @include r($lg) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @include r($md) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    }
+
     @include r($sm) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
-      gap: 20px;
-
-      .slick-track {
-        padding-bottom: 3px;
-      }
-
-      .slick-dots {
-        position: relative;
-        bottom: 6px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-
-      .slick-dots li button {
-        margin: 0 7px;
-        height: 16px;
-        width: 10px;
-        font-size: 0;
-        border-radius: 50%;
-        border-color: transparent;
-        background-color: $grey;
-
-        &:focus {
-          border: solid 2px $orange-900;
-        }
-
-        &:hover {
-          border: solid 2px $slider-borrder-focus;
-          background-color: $focus-bg-color;
-        }
-
-        &:active {
-          background-color: $slider-borrder-focus;
-        }
-      }
-
-      .slick-dots li.slick-active button {
-        background-color: $orange-900;
-      }
+      gap: 27px;
     }
   }
 
@@ -55,6 +73,15 @@
     padding-bottom: 41px;
     @extend %rubik-500;
     @include line-clamp(3);
+
+    @include r($xl) {
+      // padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    @include r($lg) {
+      padding-top: 20px;
+    }
 
     @include r($sm) {
       padding-top: 66px;
@@ -79,6 +106,10 @@
     &__icon {
       margin-bottom: 16px;
       object-fit: contain;
+
+      @include r($lg) {
+        margin: auto;
+      }
 
       @include r($sm) {
         margin-bottom: 27px;

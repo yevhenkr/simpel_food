@@ -10,16 +10,11 @@ $(function () {
   $('.burger-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-bg-disappear').toggleClass('curtaine-bg-appear');
-
-    // $("html,body").css("overflow-y", "hidden");
   });
 
   $('.cross-btn').on('click', function () {
     $('.curtain').toggleClass('curtain-onscreen');
     $('.curtaine-bg-disappear').toggleClass('curtaine-bg-appear');
-
-    // $("html,body").css("overflow-y", "auto");
-
   });
 
   $('.reviews__inner').slick({
@@ -30,14 +25,16 @@ $(function () {
     appendArrows: '.review-scroller'
   });
 
-  $('.restaurants__list').slick({
-    dots: true,
-    infinite: false,
-    arrows: false,
-    vertical: false,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+  if (window.innerWidth < 768) {
+    $('.restaurants__list').slick({
+      dots: true,
+      infinite: false,
+      arrows: false,
+      vertical: false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
 
   var mixer = mixitup('.category__grid');
   mixer.filter('.burger-cat');
