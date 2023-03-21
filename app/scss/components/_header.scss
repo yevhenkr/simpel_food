@@ -408,7 +408,8 @@
     @include r($sm) {
       display: none;
       position: absolute;
-      width: 50vh;
+      right: 1px;
+      width: 43vh;
       height: 100vh;
       background-color: black;
       transition: background-color 1s ease-in-out;
