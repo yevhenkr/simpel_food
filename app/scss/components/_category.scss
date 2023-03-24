@@ -8,21 +8,21 @@
   }
 
   &__title {
-    padding-top: 120px;
+    margin-top: 120px;
     margin-bottom: 57px;
 
     @include r($xl) {
-      padding-top: 30px;
+      margin-top: 30px;
       margin-bottom: 25px;
     }
 
     @include r($md) {
-      padding-top: 90px;
+      margin-top: 90px;
       margin-bottom: 20px;
     }
 
     @include r($sm) {
-      padding-top: 66px;
+      margin-top: 66px;
       margin-bottom: 28px;
       font-size: 24px;
     }
@@ -38,6 +38,10 @@
       margin-bottom: 20px;
     }
 
+    @include r($lg) {
+      overflow-x: auto;
+    }
+
     @include r($md) {
       gap: 8px;
     }
@@ -45,7 +49,6 @@
     @include r($sm) {
       margin-bottom: 26px;
       gap: 8px;
-      overflow-x: auto;
     }
   }
 
@@ -143,7 +146,7 @@
 
   &__icon--asia {
     @include r($lg) {
-      margin-left: 0;
+      margin-left: 13px;
       margin-right: 0;
       height: 42px;
       min-width: 20px;
@@ -177,16 +180,17 @@
 
     @include r($xl) {
       padding: 16px 18px 16px 0;
+      font-size: 18px;
     }
 
     @include r($lg) {
       line-height: 1;
-      padding: 10px 18px 10px 0;
+      padding: 10px 8px 10px 12px;
     }
 
     @include r($sm) {
-      font-size: 14px;
       padding: 2px 0;
+      font-size: 14px;
     }
   }
 
@@ -226,6 +230,7 @@
     }
 
     @include r($lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 2px;
       margin-bottom: 25px;
     }
