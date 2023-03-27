@@ -94,10 +94,10 @@ body {
   overflow: hidden;
 
   &.header:before {
-      @include r($sm) {
-        opacity: 1;
-        visibility: visible;
-        z-index: 10;
+    @include r($sm) {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
     }
   }
 }
