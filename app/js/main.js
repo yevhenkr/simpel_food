@@ -39,13 +39,13 @@ $(function () {
   var mixer = mixitup('.category__grid');
   mixer.filter('.burger-cat');
 
-  const headearHeight =60;
+  const headearHeight = 60;
 
   $('.header__link').on('click', function (event) {
     event.preventDefault();
 
     const scrollAnchor = $(this).attr('href');
-    
+
     let scrollPoint = $(scrollAnchor).offset().top - headearHeight;
 
     $('html, body').animate({
