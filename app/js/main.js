@@ -8,13 +8,13 @@ $(function () {
   });
 
   $('.burger-btn').on('click', function () {
-    $('.curtain').toggleClass('curtain-onscreen');
-    $('.curtaine-bg-disappear').toggleClass('curtaine-bg-appear');
+    $('.mobile-nav').toggleClass('mobile-nav-onscreen');
+    $('.mobile-nav-bg-disappear').toggleClass('mobile-nave-bg-appear');
   });
 
   $('.cross-btn').on('click', function () {
-    $('.curtain').toggleClass('curtain-onscreen');
-    $('.curtaine-bg-disappear').toggleClass('curtaine-bg-appear');
+    $('.mobile-nav').toggleClass('mobile-nav-onscreen');
+    $('.mobile-nav-bg-disappear').toggleClass('mobile-nave-bg-appear');
   });
 
   $('.reviews__inner').slick({
