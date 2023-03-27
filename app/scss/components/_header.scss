@@ -255,6 +255,12 @@
     opacity: 0.2;
   }
 
+  .hero-btn {
+    @include r($md) {
+      font-size: 18px;
+    }
+  }
+
   .hero-btn:last-child {
     margin-right: 53px;
 
@@ -269,8 +275,7 @@
 
   .hero-btn:nth-of-type(3) {
     @include r($sm) {
-      margin-right: 39px;
-      margin-bottom: 24px;
+      margin: 0;
     }
   }
 }

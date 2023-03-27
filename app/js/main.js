@@ -23,9 +23,9 @@ $(function () {
     })
 
     document.addEventListener('click', function (e) {
-      if (e.target !== burger && e.target !== crossBtn && e.target !==mobileNav) {
-        $('.mobile-nav').toggleClass('open');
-        $('.header').toggleClass('lock');
+      if (e.target !== burger && e.target !== crossBtn && e.target !== mobileNav) {
+        $('.mobile-nav').removeClass('open');
+        $('.header').removeClass('lock');
       }
     });
   }
