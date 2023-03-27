@@ -5,6 +5,20 @@
   background-color: $white-color;
   z-index: 1;
 
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($darkBlue-900, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -100;
+    transition: opacity 0.3s ease-in-out;
+  }
+
   &__logo {
     display: flex;
     max-height: 39px;
@@ -259,6 +273,4 @@
       margin-bottom: 24px;
     }
   }
-
-  
 }

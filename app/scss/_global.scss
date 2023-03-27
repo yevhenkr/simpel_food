@@ -88,5 +88,16 @@ body {
   @include r($sm) {
     font-size: 28px;
   }
+}
 
+.lock {
+  overflow: hidden;
+
+  &.header:before {
+      @include r($sm) {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+    }
+  }
 }

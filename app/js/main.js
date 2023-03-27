@@ -7,15 +7,28 @@ $(function () {
     });
   });
 
-  $('.burger-btn').on('click', function () {
-    $('.mobile-nav').toggleClass('mobile-nav-onscreen');
-    $('.mobile-nav-bg-disappear').toggleClass('mobile-nave-bg-appear');
-  });
+  if (window.innerWidth <= 992) {
+    const burger = document.querySelector('.burger-btn');
+    const crossBtn = document.querySelector('.cross-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
 
-  $('.cross-btn').on('click', function () {
-    $('.mobile-nav').toggleClass('mobile-nav-onscreen');
-    $('.mobile-nav-bg-disappear').toggleClass('mobile-nave-bg-appear');
-  });
+    $('.burger-btn').on('click', function () {
+      $('.mobile-nav').toggleClass('open');
+      $('.header').toggleClass('lock');
+    })
+
+    $('.cross-btn').on('click', function () {
+      $('.mobile-nav').toggleClass('open');
+      $('.header').toggleClass('lock');
+    })
+
+    document.addEventListener('click', function (e) {
+      if (e.target !== burger && e.target !== crossBtn && e.target !==mobileNav) {
+        $('.mobile-nav').toggleClass('open');
+        $('.header').toggleClass('lock');
+      }
+    });
+  }
 
   $('.reviews__inner').slick({
     dots: true,
