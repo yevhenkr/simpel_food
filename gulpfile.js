@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel, series} = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp');
 
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -8,6 +8,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require("browser-sync").create();
 const svgSprite = require('gulp-svg-sprite');
+const ttf2woff2 = require('gulp-ttf2woff2');
 
 function svgSprites() {
   return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
@@ -21,6 +22,12 @@ function svgSprites() {
       })
     )
     .pipe(dest('app/images')); // указываем, в какую папку поместить готовый файл спрайта
+}
+
+function convertFonts() {
+  return src('app/fonts/*.ttf')
+    .pipe(ttf2woff2())
+    .pipe(dest('app/fonts'));
 }
 
 function browsersync() {//место для сервера
@@ -55,20 +62,20 @@ function scripts() {
     .pipe(browserSync.stream())
 }
 
-function images(){
+function images() {
   return src('app/images/**/*.*')
-  .pipe(imagemin([
-    imagemin.gifsicle({ interlaced: true }),
-    imagemin.mozjpeg({ quality: 75, progressive: true }),
-    imagemin.optipng({ optimizationLevel: 5 }),
-    imagemin.svgo({
-      plugins: [
-        { removeViewBox: true },
-        { cleanupIDs: false }
-      ]
-    })
-  ]))
-  .pipe(dest('dist/images'))
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false }
+        ]
+      })
+    ]))
+    .pipe(dest('dist/images'))
 }
 
 function build() {
@@ -76,8 +83,8 @@ function build() {
     'app/**/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js'
-  ], {base: 'app'})
-  .pipe(dest('dist'))
+  ], { base: 'app' })
+    .pipe(dest('dist'))
 }
 
 function cleanDist() {
@@ -95,6 +102,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
+exports.convertFonts = convertFonts; //add to exports.default once for convert
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.svgSprites = svgSprites;

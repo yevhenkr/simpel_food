@@ -77,7 +77,7 @@
   &__text {
     position: relative;
     line-height: 1.5;
-    @extend %rubik-italic;
+    @extend %Rubik-Italic;
     margin-bottom: 30px;
 
     @include r($sm) {
@@ -129,7 +129,7 @@
   }
 
   &__pearson {
-    @extend %rubik-500;
+    @extend %Rubik-Medium;
     color: $orange-900;
     padding-left: 40px;
     margin-bottom: 16px;
@@ -145,7 +145,7 @@
     padding-top: 14px;
     font-size: 14px;
     margin-bottom: 65px;
-    @extend %rubik-400;
+    @extend %Rubik-Regular;
 
     @include r($sm) {
       padding-top: 10px;

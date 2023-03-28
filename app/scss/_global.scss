@@ -1,5 +1,5 @@
 body {
-  @extend %rubik-400;
+  @extend %Rubik-Regular;
   font-size: 20px;
   line-height: 1.3;
   min-height: 100%;
@@ -75,7 +75,7 @@ body {
   color: $darkBlue-900;
   font-size: 36px;
   text-align: center;
-  @extend %rubik-500;
+  @extend %Rubik-Medium;
 
   @include r($xl) {
     font-size: 32px;

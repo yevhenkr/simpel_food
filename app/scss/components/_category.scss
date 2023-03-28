@@ -156,7 +156,7 @@
 
   &__text {
     padding: 22px 18px 22px 0;
-    @extend %rubik-400;
+    @extend %Rubik-Regular;
     font-size: 20px;
 
     @include r($xl) {
@@ -172,7 +172,7 @@
 
   &__text--asia {
     padding: 22px 18px 22px 0;
-    @extend %rubik-400;
+    @extend %Rubik-Regular;
     font-size: 20px;
 
     @include r($xl) {
@@ -336,7 +336,7 @@
   &__cost {
     display: flex;
     padding-bottom: 10px;
-    @extend %rubik-500;
+    @extend %Rubik-Medium;
     font-size: 15px;
     line-height: 1.4;
 
@@ -352,7 +352,7 @@
     outline: transparent;
     padding: 5px 14px 5px 14px;
     margin-bottom: 20px;
-    @extend %rubik-400;
+    @extend %Rubik-Regular;
   }
 
   &__link {

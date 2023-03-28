@@ -58,7 +58,7 @@
   &__title {
     color: $darkBlue-900;
     font-size: 66px;
-    @extend %rubik-500;
+    @extend %Rubik-Medium;
     text-transform: uppercase;
     @include line-clamp(2);
 
