@@ -1,0 +1,35 @@
+.catalog {
+  &__container {
+    margin: auto 0;
+    background-color: rgba(255, 122, 80, 0.1);
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 17px;
+  }
+
+  &__item:first-child::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/sprite.svg#icon-arrow-breadcrumbs');
+    // transform: scale(-1
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+  }
+
+  &__links {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

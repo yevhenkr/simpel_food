@@ -1,9 +1,11 @@
 @import 'vars';
 @import 'fonts';
+@import 'mixins';
 @import 'reset';
 @import 'global';
 @import 'libs';
 @import 'components/header';
+@import 'components/mobile-nav';
 @import 'components/hero';
 @import 'components/category';
 @import 'components/footer';
@@ -11,3 +13,4 @@
 @import 'components/restaurants';
 @import 'components/reviews';
 @import 'components/apps';
+@import 'components/catalog';
