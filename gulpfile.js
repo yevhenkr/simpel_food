@@ -40,7 +40,7 @@ function browsersync() {//место для сервера
 
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(scss({ outputStyle: 'expanded' }))
+    .pipe(scss())
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
@@ -94,8 +94,8 @@ function cleanDist() {
 function watching() {
   watch(['app/scss/**/*scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/*.svg'], svgSprites);
+  watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;

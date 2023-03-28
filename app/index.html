@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -13,7 +12,6 @@
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-
   <title>Сервис доставки еды</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -22,6 +20,7 @@
 
 
 <body>
+  <div class="wrapper">
   <header class="header">
     <div class="curtaine-bg-disappear"></div>
     <div class="curtain">
@@ -142,7 +141,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="page">
     <section class="hero" id="hero-section">
       <div class="container">
 
@@ -620,112 +619,113 @@
         </div>
       </div>
     </section>
-    <footer class="footer" id="footer-section">
-      <div class="container">
-        <div class="footer-top">
-
-          <div class="footer-top-item">
-            <a class="logo footer-top__logo" href="#">
-              <img src="Images/logo.svg" alt="логотип" height="39" width="200">
-            </a>
-            <form action="#" method="get">
-              <label for="email"> </label>
-              <input class="footer-top__input" type="email" placeholder="Ваш имейл" name="email" id="email" required>
-              <span class="sr-only">Поле для вводу вашого имейл</span>
-              <button class="button footer-top__btn" type="submit">
-                <span class="footer-top__btn-text">Подписаться</span>
-              </button>
-            </form>
-          </div>
-
-          <ul class="footer-top-middel">
-            <li>
-              <a class="footer-top__link" href="#">Как это работает</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">О нас</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Скачать приложение</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Продукты</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Новости</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Блог</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Блюда</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Партнёры</a>
-            </li>
-            <li><a class="footer-top__link" href="#">Что нового?</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Меню</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">ЧаВо</a>
-            </li>
-            <li>
-              <a class="footer-top__link" href="#">Карта сайта</a>
-            </li>
-          </ul>
-
-          <div class="feedback">
-            <ul class="feedback__list">
-              <li>
-                <a class="feedback__adress" href="#">ул. Т.Г.Шевченко, 1<span class="sr-only">наш адресс</span></a>
-              </li>
-              <li>
-                <a class="feedback__tel" href="tel:+380501112233">380501112233<span class="sr-only">наш
-                    телефон</span></a>
-              </li>
-              <li>
-                <a class="feedback__email" href="mailto:support@sfood.com">support@sfood.com<span class="sr-only">наша
-                    электронная почта</span></a>
-              </li>
-            </ul>
-
-            <ul class="feedback__socuailmedias">
-              <li>
-                <a class="feedback__socialmedia" href="#">
-                  <span class="sr-only">ссылка на телеграм</span>
-                  <div class="feedback__facebook"></div>
-                </a>
-              </li>
-
-              <li>
-                <a class="feedback__socialmedia" href="#">
-                  <span class="sr-only">ссылка на твитер</span>
-                  <div class="feedback__twitter"></div>
-                </a>
-              </li>
-              <li>
-                <a class="feedback__socialmedia" href="#">
-                  <span class="sr-only">ссылка на инстаграм</span>
-                  <div class="feedback__instagram"></div>
-                </a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">© 2022 Simple Food
-        <!-- <p>© 2022 Simple Food</p> -->
-      </div>
-
-    </footer>
+    
   </main>
+<footer class="footer" id="footer-section">
+  <div class="container">
+    <div class="footer-top">
 
+      <div class="footer-top-item">
+        <a class="logo footer-top__logo" href="#">
+          <img src="Images/logo.svg" alt="логотип" height="39" width="200">
+        </a>
+        <form action="#" method="get">
+          <label for="email"> </label>
+          <input class="footer-top__input" type="email" placeholder="Ваш имейл" name="email" id="email" required>
+          <span class="sr-only">Поле для вводу вашого имейл</span>
+          <button class="button footer-top__btn" type="submit">
+            <span class="footer-top__btn-text">Подписаться</span>
+          </button>
+        </form>
+      </div>
+
+      <ul class="footer-top-middel">
+        <li>
+          <a class="footer-top__link" href="#">Как это работает</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">О нас</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Скачать приложение</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Продукты</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Новости</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Блог</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Блюда</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Партнёры</a>
+        </li>
+        <li><a class="footer-top__link" href="#">Что нового?</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Меню</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">ЧаВо</a>
+        </li>
+        <li>
+          <a class="footer-top__link" href="#">Карта сайта</a>
+        </li>
+      </ul>
+
+      <div class="feedback">
+        <ul class="feedback__list">
+          <li>
+            <a class="feedback__adress" href="#">ул. Т.Г.Шевченко, 1<span class="sr-only">наш адресс</span></a>
+          </li>
+          <li>
+            <a class="feedback__tel" href="tel:+380501112233">380501112233<span class="sr-only">наш
+                телефон</span></a>
+          </li>
+          <li>
+            <a class="feedback__email" href="mailto:support@sfood.com">support@sfood.com<span class="sr-only">наша
+                электронная почта</span></a>
+          </li>
+        </ul>
+
+        <ul class="feedback__socuailmedias">
+          <li>
+            <a class="feedback__socialmedia" href="#">
+              <span class="sr-only">ссылка на телеграм</span>
+              <div class="feedback__facebook"></div>
+            </a>
+          </li>
+
+          <li>
+            <a class="feedback__socialmedia" href="#">
+              <span class="sr-only">ссылка на твитер</span>
+              <div class="feedback__twitter"></div>
+            </a>
+          </li>
+          <li>
+            <a class="feedback__socialmedia" href="#">
+              <span class="sr-only">ссылка на инстаграм</span>
+              <div class="feedback__instagram"></div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2022 Simple Food
+    <!-- <p>© 2022 Simple Food</p> -->
+  </div>
+
+</footer>
   <script src="js/mixitup.min.js"></script>
   <script src="js/main.min.js"></script>
+  </div>
 </body>
 
 </html>
