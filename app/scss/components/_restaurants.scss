@@ -71,7 +71,7 @@
 
   &__title {
     padding-bottom: 41px;
-    @extend %rubik-500;
+    @extend %Rubik-Medium;
     @include line-clamp(3);
 
     @include r($xl) {
@@ -154,7 +154,7 @@
       display: flex;
       left: 27px;
       font-size: 18px;
-      @extend %rubik-300;
+      @extend %Rubik-Italic;
 
       &::before {
         position: relative;

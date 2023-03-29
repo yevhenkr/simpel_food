@@ -5,45 +5,61 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-ul,
-ol {
-  padding: 0;
+h1,
+h2,
+h3 {
+  font-weight: normal;
 }
 
-li {
-  list-style-type: none;
-}
-
-body,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-p,
+body,
+figure,
+blockquote,
 ul,
 ol {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+label{
+  display: block;
+}
+
+input,
+textarea,
+select,
+button{
+  appearance: none;
+  outline: 0;
+  // border: 0;
+  font: inherit;
+  padding: 0;
 }
 
 button {
-  background-color: inherit;
+  cursor: pointer;
+  background-color: transparent;
 }
-
-ul,
-li {
-  list-style: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+address {
+  font-style: normal;
 }
