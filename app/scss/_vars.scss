@@ -1,14 +1,3 @@
-$orange-900: #ff6838;
-$border-color: #ff9674;
-$icon-color: #ff7a50;
-$focus-bg-color: #fff2ed;
-$slider-borrder-focus:#ffae94;
-$white-color: #ffffff;
-$silver-200: #ececec;
-$darkBlue-900: #363853;
-$dark: #31352b;
-$grey:#c2c2c2;
-
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
     overflow: hidden;
@@ -25,28 +14,23 @@ $grey:#c2c2c2;
   }
 }
 
-%Rubik-Italic {
-  font-family: 'Rubik-Italic', sans-serif;
+%Rubik {
+  font-family: 'Rubik', sans-serif;
 }
 
-%Rubik-Regular {
-  font-family: 'Rubik-Regular', sans-serif;
+%Rubik {
+  font-family: 'Rubik', sans-serif;
 }
 
-%Rubik-Medium {
-  font-family: 'Rubik-Medium', sans-serif;
+%Rubik {
+  font-family: 'Rubik', sans-serif;
 }
 
-%rubik-italic {
-  font-family: 'Rubik-Italic', sans-serif;
+%Rubik {
+  font-family: 'Rubik', sans-serif;
 }
 
 $xl: 1200;
 $lg: 992;
 $md: 768;
-<<<<<<< HEAD
 $sm: 576;
-=======
-$sm: 576;
-
->>>>>>> dev

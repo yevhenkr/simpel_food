@@ -48,30 +48,16 @@ $(function () {
       slidesToScroll: 1
     });
   }
+});
 
-  var mixer = mixitup('.popular__grid');
-  mixer.filter('.burger-cat');
+document.addEventListener("DOMContentLoaded", () => {
 
-  const headearHeight = 60;
-
-  $('.header__link').on('click', function (event) {
-    event.preventDefault();
-
-    const scrollAnchor = $(this).attr('href');
-
-    let scrollPoint = $(scrollAnchor).offset().top - headearHeight;
-
-    $('html, body').animate({
-      scrollTop: scrollPoint
-    }, 200);
-    return false;
-  });
-
-  var firstScroll = true;
-  $(window).on('scroll', function () {
-    if (firstScroll) {
-      $(".header__nav").animate({ height: "60px" }, 500);
-      firstScroll = false;
+  const header = document.querySelector('.header');
+  window.onscroll = () => {
+    if (window.pageYOffset > 100) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
     }
-  });
+  };
 });

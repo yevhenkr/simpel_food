@@ -54,8 +54,8 @@
 
   &__btn {
     border: 1px solid transparent;
-    outline: 1px solid $silver-200;
-    background-color: $white-color;
+    outline: 1px solid $c-silver-200;
+    background-color: $c-white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,19 +64,19 @@
   }
 
   &__btn:focus {
-    outline: 2px solid $border-color;
-    color: $focus-bg-color;
+    outline: 2px solid $c-border-color;
+    color: $c-focus-bg-color;
   }
 
   &__btn:hover {
-    outline: 2px solid $border-color;
-    background-color: $focus-bg-color;
-    color: $orange-900;
+    outline: 2px solid $c-border-color;
+    background-color: $c-focus-bg-color;
+    color: $c-orange-900;
   }
 
   &__btn:active {
-    background-color: $orange-900;
-    color: $white-color;
+    background-color: $c-orange-900;
+    color: $c-white;
     outline: 2px solid transparent;
     box-shadow: inset 0px 0px 12px rgba(255, 104, 56, 0.2);
     transition: all 0.2s;
@@ -159,7 +159,7 @@
 
   &__text {
     padding: 22px 18px 22px 0;
-    @extend %Rubik-Regular;
+    @extend %Rubik;
     font-size: 20px;
 
     @include r($xl) {
@@ -175,7 +175,7 @@
 
   &__text--asia {
     padding: 22px 18px 22px 0;
-    @extend %Rubik-Regular;
+    @extend %Rubik;
     font-size: 20px;
 
     @include r($xl) {
@@ -199,7 +199,7 @@
   &__btn:focus &__icon--sandwiches,
   &__btn:focus &__icon--asia,
   &__btn:focus &__icon--dish {
-    background-color: $focus-bg-color;
+    background-color: $c-focus-bg-color;
   }
 
   &__btn:hover &__icon--burger,
@@ -207,7 +207,7 @@
   &__btn:hover &__icon--sandwiches,
   &__btn:hover &__icon--asia,
   &__btn:hover &__icon--dish {
-    background-color: $orange-900;
+    background-color: $c-orange-900;
   }
 
   &__btn:active &__icon--burger,
@@ -215,48 +215,13 @@
   &__btn:active &__icon--sandwiches,
   &__btn:active &__icon--asia,
   &__btn:active &__icon--dish {
-    background-color: $white-color;
+    background-color: $c-white;
   }
 
-  // &__grid {
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  //   gap: 29px;
-  //   margin-bottom: 60px;
-
-  //   @include r($xl) {
-  //     gap: 25px;
-  //     margin-bottom: 50px;
-  //   }
-
-<<<<<<< HEAD:app/scss/components/_category.scss
-    @include r($lg) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 2px;
-      margin-bottom: 25px;
-    }
-=======
-  //   @include r($lg) {
-  //     gap: 2px;
-  //     margin-bottom: 25px;
-  //   }
->>>>>>> dev:app/scss/components/_popular.scss
-
-  //   @include r($md) {
-  //     margin-bottom: 40px;
-  //     gap: 8px;
-  //   }
-
-  //   @include r($sm) {
-  //     grid-template-columns: 1fr 1fr;
-  //     gap: 8px 5px;
-  //     margin-bottom: 25px;
-  //   }
-  // }
 
   &__BTN {
     position: relative;
-    color: $darkBlue-900;
+    color: $c-darkBlue-900;
     line-height: 1.5;
     left: 50%;
     transform: translate(-50%, 0);
@@ -274,35 +239,23 @@
 
   &__BTN:focus {
     border-radius: 5px;
-    border: solid 2px $border-color;
+    border: solid 2px $c-border-color;
     text-decoration: none;
   }
 
   &__BTN:hover {
     border: solid 2px transparent;
-    color: $orange-900;
+    color: $c-orange-900;
     text-decoration: none;
   }
 
   &__BTN:active {
     text-decoration: none;
     border: solid 2px transparent;
-    color: $dark;
+    color: $c-dark;
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
 }
-
-// .popular-item {
-//   display: flex;
-//   flex-direction: row;
-//   border: solid 2px transparent;
-//   outline: solid 2px transparent;
-
-//   @include r($sm) {
-//     display: block;
-//   }
-// }
-
 
 .product-cart {
   object-fit: cover;
@@ -314,8 +267,8 @@
   align-items: center;
   text-align: center;
   border-radius: 5px;
-  background-color: $white-color;
-  border: 1px solid $silver-200;
+  background-color: $c-white;
+  border: 1px solid $c-silver-200;
   font-size: 15px;
   outline: transparent;
   transition: all 0.3s ease-in-out;
@@ -337,7 +290,7 @@
     height: 43px;
     max-width: 166px;
     font-size: 15px;
-    color: $darkBlue-900;
+    color: $c-darkBlue-900;
     margin-bottom: 7px;
     @include line-clamp(2);
 
@@ -349,7 +302,7 @@
   &__price {
     display: flex;
     padding-bottom: 10px;
-    @extend %Rubik-Medium;
+    @extend %Rubik;
     font-size: 15px;
     line-height: 1.4;
 
@@ -365,7 +318,7 @@
     outline: transparent;
     padding: 5px 14px 5px 14px;
     margin-bottom: 20px;
-    @extend %Rubik-Regular;
+    @extend %Rubik;
   }
 
   &__link {
@@ -386,20 +339,20 @@
 }
 
 .product-cart:hover {
-  outline: 2px solid $border-color;
+  outline: 2px solid $c-border-color;
 }
 
 .mixitup-control-active {
-  background-color: $orange-900;
-  color: $white-color;
+  background-color: $c-orange-900;
+  color: $c-white;
   transition: all 0.3s ease-in-out;
 
   .popular__icon--burger {
-    background-color: $white-color;
+    background-color: $c-white;
   }
 }
 
 .mixitup-control-active:active {
-  color: $white-color;
+  color: $c-white;
   border-color: transparent;
 }

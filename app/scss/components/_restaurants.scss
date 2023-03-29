@@ -24,24 +24,24 @@
       font-size: 0;
       border-radius: 50%;
       border-color: transparent;
-      background-color: $grey;
+      background-color: $c-grey;
 
       &:focus {
-        border: solid 2px $orange-900;
+        border: solid 2px $c-orange-900;
       }
 
       &:hover {
-        border: solid 2px $slider-borrder-focus;
-        background-color: $focus-bg-color;
+        border: solid 2px $c-slider-borrder-focus;
+        background-color: $c-focus-bg-color;
       }
 
       &:active {
-        background-color: $slider-borrder-focus;
+        background-color: $c-slider-borrder-focus;
       }
     }
 
     .slick-dots li.slick-active button {
-      background-color: $orange-900;
+      background-color: $c-orange-900;
     }
 
     @include r($xl) {
@@ -71,7 +71,7 @@
 
   &__title {
     padding-bottom: 41px;
-    @extend %Rubik-Medium;
+    @extend %Rubik;
     @include line-clamp(3);
 
     @include r($xl) {
@@ -124,7 +124,7 @@
       font-size: 24px;
       text-transform: capitalize;
       margin-bottom: 26px;
-      color: $dark;
+      color: $c-dark;
     }
 
     &__name-kfs {
@@ -154,7 +154,7 @@
       display: flex;
       left: 27px;
       font-size: 18px;
-      @extend %Rubik-Italic;
+      @extend %Rubik;
 
       &::before {
         position: relative;
@@ -171,7 +171,7 @@
     &__button {
       display: flex;
       position: relative;
-      background-color: $orange-900;
+      background-color: $c-orange-900;
       right: 19px;
       bottom: 7px;
       width: 79px;
@@ -188,38 +188,38 @@
         top: 4px;
         height: 23px;
         width: 23px;
-        mask-image: url('../images/sprite.svg#icon_restaurants_arrov');
-        background-color: $white-color;
+        mask-image: url('../images/sprite.svg#icon-restaurants-arrov');
+        background-color: $c-white;
         background-repeat: no-repeat;
       }
     }
 
     &__button:focus {
-      border: solid 2px $orange-900;
-      background-color: $focus-bg-color;
+      border: solid 2px $c-orange-900;
+      background-color: $c-focus-bg-color;
     }
 
     &__button:hover {
-      border: solid 2px $orange-900;
-      background-color: $white-color;
+      border: solid 2px $c-orange-900;
+      background-color: $c-white;
     }
 
     &__button:active {
       border: solid 2px transparent;
-      background-color: $focus-bg-color;
+      background-color: $c-focus-bg-color;
     }
 
     &__button:focus::before {
-      background-color: $orange-900;
+      background-color: $c-orange-900;
     }
 
     &__button:hover::before {
-      background-color: $orange-900;
+      background-color: $c-orange-900;
 
     }
 
     &__button:active::before {
-      background-color: $orange-900;
+      background-color: $c-orange-900;
     }
   }
 

@@ -6,7 +6,7 @@
   bottom: 0;
   z-index: 999;
   width: 300px;
-  background-color: $white-color;
+  background-color: $c-white;
   opacity: 0;
   transform: translateY(-200%);
   transition: all .3s ease-in-out;
@@ -34,8 +34,8 @@
     gap: 19px;
 
     border: {
-      top: 1px solid $silver-200;
-      bottom: 1px solid $silver-200;
+      top: 1px solid $c-silver-200;
+      bottom: 1px solid $c-silver-200;
     }
   }
 
@@ -63,45 +63,6 @@
   }
 }
 
-// .feedback {
-//   &__mobile-nav {
-//     @include r($sm) {
-//       padding-left: 0;
-//       margin-left: -2px;
-//     }
-//   }
-
-//   &__mobile-nav-list {
-//     @include r($sm) {
-//       padding-left: 30px;
-//       margin-bottom: 5px;
-//     }
-//   }
-
-//   &__mobile-nav-socuailmedias {
-//     @include r($sm) {
-//       padding-left: 32px;
-//       display: flex;
-//       gap: 13px;
-//     }
-//   }
-
-//   @include r($sm) {
-//     &__adress {
-//       margin-bottom: 23px !important;
-//     }
-//   }
-
-//   @include r($sm) {
-//     &__tel {
-//       margin-bottom: 20px !important;
-
-//       &::before {
-//         left: -29px !important;
-//       }
-//     }
-//   }
-// }
 
 .cross-btn {
   position: relative;
@@ -120,7 +81,7 @@
     top: 44%;
     left: 54%;
     border-radius: 20px;
-    background-color: $darkBlue-900;
+    background-color: $c-darkBlue-900;
     transform: translate(-50%, -50%);
   }
 
@@ -155,7 +116,7 @@
       transform: translateY(-50%);
       width: 30px;
       height: 2px;
-      background-color: $darkBlue-900;
+      background-color: $c-darkBlue-900;
     }
 
     &::before,
@@ -199,7 +160,7 @@
       transform: translateY(-50%);
       width: 30px;
       height: 2px;
-      background-color: $darkBlue-900;
+      background-color: $c-darkBlue-900;
     }
 
     &::before,
