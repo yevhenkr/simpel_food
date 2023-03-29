@@ -36,7 +36,7 @@ $(function () {
     });
   }
 
-  var mixer = mixitup('.category__grid');
+  var mixer = mixitup('.popular__grid');
   mixer.filter('.burger-cat');
 
   const headearHeight = $('.header').outerHeight();

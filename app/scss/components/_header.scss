@@ -19,24 +19,24 @@
     }
   }
 
-  &__img-logo {
-    object-fit: contain;
-    position: relative;
+  // &__img-logo {
+  //   object-fit: contain;
+  //   position: relative;
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100px;
-      height: 39px;
-      top: 0;
-      background-image: url('../images/no-image.jpg');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 2;
-    }
-  }
+  //   &:after {
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     width: 100px;
+  //     height: 39px;
+  //     top: 0;
+  //     background-image: url('../images/no-image.jpg');
+  //     background-size: contain;
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     z-index: 2;
+  //   }
+  // }
 
   &__nav {
     height: 158px;
@@ -51,65 +51,65 @@
     }
   }
 
-  &__nav-right {
-    display: flex;
+  // &__nav-right {
+  //   display: flex;
 
-    @include r($sm) {
-      margin-top: 12px;
-    }
-  }
+  //   @include r($sm) {
+  //     margin-top: 12px;
+  //   }
+  // }
 
-  &__menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  // &__menu {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   align-items: center;
 
-    @include r($sm) {
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding-top: 20%;
-      padding-bottom: 100vh;
-      align-items: flex-start;
-      flex-direction: column;
-      width: 85%;
-      align-items: left;
-      background-color: aquamarine;
-      transform: translateX(-300%);
-      transition: all .3s ease-in-out;
-    }
-  }
+  //   @include r($sm) {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 0;
+  //     padding-top: 20%;
+  //     padding-bottom: 100vh;
+  //     align-items: flex-start;
+  //     flex-direction: column;
+  //     width: 85%;
+  //     align-items: left;
+  //     background-color: aquamarine;
+  //     transform: translateX(-300%);
+  //     transition: all .3s ease-in-out;
+  //   }
+  // }
 
-  &__link {
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
-    font-size: 18px;
-    color: $dark;
-    outline: transparent;
-    border-radius: 5px;
-    border: solid 2px transparent;
-    transition: all 0.3s ease-in-out;
-  }
+  // &__link {
+  //   position: relative;
+  //   top: 50%;
+  //   transform: translateY(50%);
+  //   font-size: 18px;
+  //   color: $dark;
+  //   outline: transparent;
+  //   border-radius: 5px;
+  //   border: solid 2px transparent;
+  //   transition: all 0.3s ease-in-out;
+  // }
 
-  &__link:focus {
-    border: solid 2px $orange-900;
-    border: solid 2px $border-color;
-  }
+  // &__link:focus {
+  //   border: solid 2px $orange-900;
+  //   border: solid 2px $border-color;
+  // }
 
-  &__link:hover {
-    color: $orange-900;
-  }
+  // &__link:hover {
+  //   color: $orange-900;
+  // }
 
-  &__link:active {
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
-    color: $dark;
-    border: solid 2px transparent;
-    box-shadow: none;
-  }
+  // &__link:active {
+  //   text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  //   color: $dark;
+  //   border: solid 2px transparent;
+  //   box-shadow: none;
+  // }
 
-  &__icons {
+  &__actions {
     height: 45px;
     position: relative;
     display: flex;
@@ -241,24 +241,24 @@
     opacity: 0.2;
   }
 
-  .hero-btn:last-child {
-    margin-right: 53px;
+  // .hero-btn:last-child {
+  //   margin-right: 53px;
 
-    @include r($sm) {
-      margin-bottom: 40px;
-    }
-  }
+  //   @include r($sm) {
+  //     margin-bottom: 40px;
+  //   }
+  // }
 
-  .hero-btn:not(:last-child) {
-    margin-right: 39px;
-  }
+  // .hero-btn:not(:last-child) {
+  //   margin-right: 39px;
+  // }
 
-  .hero-btn:nth-of-type(3) {
-    @include r($sm) {
-      margin-right: 39px;
-      margin-bottom: 24px;
-    }
-  }
+  // .hero-btn:nth-of-type(3) {
+  //   @include r($sm) {
+  //     margin-right: 39px;
+  //     margin-bottom: 24px;
+  //   }
+  // }
 
   .feedback {
 

@@ -1,11 +1,12 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'mixins';
 @import 'global';
 @import 'libs';
 @import 'components/header';
 @import 'components/hero';
-@import 'components/category';
+@import 'components/popular';
 @import 'components/footer';
 @import 'components/order';
 @import 'components/restaurants';

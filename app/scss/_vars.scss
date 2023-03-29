@@ -46,8 +46,3 @@ $lg: 992;
 $md: 768;
 $sm: 576;
 
-@mixin r($width) {
-  @media (max-width: #{$width}px) {
-    @content;
-  }
-}
