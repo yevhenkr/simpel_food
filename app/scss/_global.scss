@@ -214,6 +214,7 @@ body {
   color: $c-darkBlue-900;
   outline: 2px solid transparent;
   border-radius: 5px;
+  border: solid 0 transparent;
   text-decoration: underline;
 
   &:focus {
@@ -226,6 +227,7 @@ body {
 
   &:active {
     outline-color: transparent;
+    color: $c-dark;
     text-shadow: 2px 2px 5px rgba($c-dark, 0.5);
   }
 }
@@ -283,4 +285,19 @@ body {
 
 .mb-120 {
   margin-bottom: 120px;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition-delay: 0.5s;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
