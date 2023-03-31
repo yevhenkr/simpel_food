@@ -3,7 +3,8 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    grid-template: 70px;
+    gap: 70px;
+    margin-bottom: 60px;
   }
 
   &__logo {
@@ -29,18 +30,52 @@
     }
   }
 
-  &__contacs {}
+  &__contacts {
+    margin-left: auto;
+    margin-right: 80px;
+  }
 
-  &__bottom {}
+  &__bottom {
+    font-size: 14px;
+    line-height: 1;
+    color: $c-white;
+    background-color: $c-darkBlue-900;
+    padding: 30px;
+    text-align: center;
+  }
 }
 
 
 .subscription {
 
-  .form__field{
+  .form__field {
+    width: 200px;
     margin-bottom: 12px;
   }
-  &__btn {}
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 200px;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+
+    &::before {
+      min-width: 16px;
+      background-color: $c-white;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      &::before {
+        background-color: $c-orange-900;
+      }
+    }
+  }
 }
 
 .form {
@@ -48,12 +83,13 @@
   &__field {
     border-radius: 5px;
     outline: 1px solid $c-grey;
-    padding: 13px 15px;
+    padding: 11px 15px;
     transition: outline-color 0.3s ease-in-out, outline-width 0.15s ease-in-out;
 
     &::placeholder {
       font-size: 14px;
       color: $c-grey;
+      transition: color 0.3s ease-in-out;
     }
 
     &:focus {
@@ -62,39 +98,90 @@
     }
 
     &:hover {
-      &::placeholder{
+      &::placeholder {
         outline-color: $c-dark;
       }
     }
   }
 }
 
-.icon--send {}
-
-
 .contacts {
 
-  &__list {}
+  &__item {
+    margin-bottom: 15px;
+  }
 
-  &__link {}
+  &__link {
+    line-height: 2;
+    gap: 7px;
+    justify-content: start;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s ease-in-out, color 0.3s ease-in-out, text-shadow 0.4s ease-in-out;
+
+    &:focus {
+      outline-color: rgba($c-orange-900, 0.7);
+    }
+
+    &:hover {
+      color: $c-orange-900;
+
+      &::before {
+        background-color: $c-orange-900;
+      }
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba($c-dark, 0.5);
+      outline-color: transparent;
+    }
+  }
 }
-
-.contacs {
-
-  &__item {}
-}
-
-.icon--address {}
-
-.icon--phone {}
-
-.icon-email {}
 
 .social {
+  display: flex;
+  gap: 13px;
 
-  &__item {}
+  &__link {
+    min-width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-silver-200;
+    border-radius: 50%;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s ease-in-out, background-color 0.15s ease-in-out;
 
-  &__link {}
+    &:focus {
+      outline: 2px solid rgba($c-orange-900, 0.7);
+      background-color: rgba($c-silver-200, 0.1);
+    }
 
-  &__icon {}
+    &:hover {
+      background-color: $c-orange-900;
+
+      .social__icon {
+        background-color: $c-white;
+      }
+    }
+
+    &:active {
+      outline: 2px solid transparent;
+      background-color: rgba($c-orange-900, 0.1);
+
+      .social__icon {
+        background-color: $c-orange-900;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: $c-dark;
+  }
 }

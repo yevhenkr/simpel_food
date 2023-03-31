@@ -40,7 +40,7 @@ body {
   &::before {
     content: '';
     min-width: 24px;
-    height: 22px;
+    height: 24px;
     background-color: $c-darkBlue-900;
     mask-image: url('../images/sprite.svg#icon-check');
     mask-repeat: no-repeat;
@@ -101,6 +101,30 @@ body {
   &:active {
     &::before {
       background-color: $c-darkBlue-900;
+    }
+  }
+
+  &--send {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-telegram');
+    }
+  }
+
+  &--address {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-location');
+    }
+  }
+
+  &--phone {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-call');
+    }
+  }
+
+  &--email {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-message');
     }
   }
 }

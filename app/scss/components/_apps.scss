@@ -1,7 +1,7 @@
 .apps {
   &__inner {
     display: flex;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
 
     @include r($xl) {
       margin-bottom: 0;
