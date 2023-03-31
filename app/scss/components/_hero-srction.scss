@@ -10,11 +10,11 @@ $rightPos: calc((100vw - 1170px) / 2);
   background-position: right $rightPos center;
 
   &__text-wraper {
-    max-width: 450px;
+    max-width: 476px;
   }
 
   &__title {
-    min-width: 480px;
+    max-width: 480px;
     @include fz(66, 40);
     color: $c-darkBlue-900;
     margin: 0;
@@ -27,15 +27,15 @@ $rightPos: calc((100vw - 1170px) / 2);
   }
 
   &__desription {
-    min-width: 450px;
+    max-width: 450px;
     line-height: 1.5;
-    margin-bottom: 20px;
     font-size: 20px;
+    @include line-clamp(4);
   }
 
   &__actions {
     display: flex;
     align-items: center;
-    gap: 33px;
+    gap: 25px;
   }
 }

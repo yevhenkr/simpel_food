@@ -29,6 +29,7 @@
 
   &__title {
     font-size: 15px;
+    @include line-clamp(2);
   }
 
   &__img {
