@@ -37,12 +37,36 @@
 
 .subscription {
 
+  .form__field{
+    margin-bottom: 12px;
+  }
   &__btn {}
 }
 
 .form {
 
-  &__field {}
+  &__field {
+    border-radius: 5px;
+    outline: 1px solid $c-grey;
+    padding: 13px 15px;
+    transition: outline-color 0.3s ease-in-out, outline-width 0.15s ease-in-out;
+
+    &::placeholder {
+      font-size: 14px;
+      color: $c-grey;
+    }
+
+    &:focus {
+      outline-color: $c-orange-900;
+      outline-width: 2px;
+    }
+
+    &:hover {
+      &::placeholder{
+        outline-color: $c-dark;
+      }
+    }
+  }
 }
 
 .icon--send {}
