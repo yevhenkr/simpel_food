@@ -1,0 +1,76 @@
+.footer {
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template: 70px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-flow: column;
+    gap: 20px 90px;
+
+    .menu__item {
+      grid-column: 3;
+
+      &:nth-child(-n+4) {
+        grid-column: 1;
+      }
+
+      &:nth-child(n+5):nth-child(-n+8) {
+        grid-column: 2;
+      }
+    }
+  }
+
+  &__contacs {}
+
+  &__bottom {}
+}
+
+
+.subscription {
+
+  &__btn {}
+}
+
+.form {
+
+  &__field {}
+}
+
+.icon--send {}
+
+
+.contacts {
+
+  &__list {}
+
+  &__link {}
+}
+
+.contacs {
+
+  &__item {}
+}
+
+.icon--address {}
+
+.icon--phone {}
+
+.icon-email {}
+
+.social {
+
+  &__item {}
+
+  &__link {}
+
+  &__icon {}
+}
