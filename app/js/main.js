@@ -1,4 +1,5 @@
-$(function () {
+
+document.addEventListener("DOMContentLoaded", () => {
 
   $('img').on('error', function () {
     $(this).attr('src', '../images/no-image.jpg');
@@ -48,9 +49,8 @@ $(function () {
       slidesToScroll: 1
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // document.addEventListener("DOMContentLoaded", () => {
 
   const header = document.querySelector('.header');
   window.onscroll = () => {

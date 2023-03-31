@@ -40,7 +40,7 @@ body {
   &::before {
     content: '';
     min-width: 24px;
-    height: 24px;
+    height: 22px;
     background-color: $c-darkBlue-900;
     mask-image: url('../images/sprite.svg#icon-check');
     mask-repeat: no-repeat;
@@ -52,13 +52,43 @@ body {
   &--cart {
     &::before {
       mask-image: url('../images/sprite.svg#icon-cart');
+      min-width: 21px;
     }
   }
 
   &--search {
     &::before {
       mask-image: url('../images/sprite.svg#icon-search');
+    }
+  }
 
+  &--burger {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-category-burger');
+    }
+  }
+
+  &--pizza {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-category-pizza');
+    }
+  }
+
+  &--sandwiches {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-category-sandvich');
+    }
+  }
+
+  &--asia {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-category-asia');
+    }
+  }
+
+  &--sets {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-category-sets');
     }
   }
 
@@ -97,24 +127,49 @@ body {
 }
 
 .btn {
-  // display: flex;
-  // justify-content: center;
-  // text-align: center;
-  // align-items: center;
-  // border: solid 2px transparent;
-  // border-radius: 6px;
-  // background-color: $c-orange-900;
-  // color: $c-white;
-  // transition: all 0.3s ease-in-out;
+  display: inline-block;
+  background-color: $c-orange-900;
+  color: $c-white;
+  padding: 12px 32px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  border-radius: 6px;
+  border-color: transparent;
+  transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-  &--md {}
+
+  &:focus {
+    background-color: rgba($c-orange-900, 0.1);
+    color: $c-orange-900;
+    outline-color: rgba($c-orange-900, 0.7);
+
+  }
+
+  &:hover {
+    background-color: $c-white;
+    color: $c-orange-900;
+    box-shadow: 0 5px 12px 0 rgb($c-orange-900, 0.2);
+  }
+
+  &:active {
+    background-color: rgba($c-orange-900, 0.1);
+    color: $c-orange-900;
+    outline-color: transparent;
+  }
+
+  &--md {
+    letter-spacing: 0;
+    font-size: 14px;
+    padding: 5px 13px;
+  }
 }
 
-.btn-sm {
+.btn--sm {
   position: relative;
   min-width: 44px;
   height: 44px;
-  padding: 5px;
+  padding: 3px;
+  border: 0 solid transparent;
   background-color: $c-white;
   border-radius: 5px;
   border-color: transparent;
@@ -140,49 +195,51 @@ body {
 
 .btn-counter {
   position: absolute;
-  top: 4px;
-  right: 1px;
+  top: 8px;
+  right: 4px;
   min-width: 14px;
   height: 14px;
   border-radius: 7px;
   color: $c-white;
-  font-size: 10px;     
+  font-size: 10px;
   line-height: 1.4;
   background-color: $c-orange-900;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
 }
 
-.td-link {}
+.td-link {
+  font-size: 20px;
+  line-height: 1.5;
+  color: $c-darkBlue-900;
+  outline: 2px solid transparent;
+  border-radius: 5px;
+  text-decoration: underline;
 
-.text-ogange {
+  &:focus {
+    outline-color: rgba($c-orange-900, 0.7);
+  }
+
+  &:hover {
+    color: $c-orange-900;
+  }
+
+  &:active {
+    outline-color: transparent;
+    text-shadow: 2px 2px 5px rgba($c-dark, 0.5);
+  }
+}
+
+.text-orange {
   color: $c-orange-900;
 }
 
-// .btn:focus {
-//   color: $c-orange-900;
-//   border: solid 2px $c-border-color;
-//   background-color: $c-focus-bg-color;
-// }
-
-// .btn:hover {
-//   color: $c-orange-900;
-//   border: solid 2px $c-border-color;
-//   background-color: $c-white;
-//   box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-//   box-shadow: 0px 5px 12px 0px rgba(255, 104, 56, 0.2);
-// }
-
-// .btn:active {
-//   color: $c-orange-900;
-//   border: solid 2px transparent;
-//   background-color: $c-focus-bg-color;
-//   box-shadow: none;
-// }
-
 .title {
+  @include fz(36, 24);
   color: $c-darkBlue-900;
-  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: 500;
+  text-align: center;
   text-align: center;
   @extend %Rubik;
 
@@ -222,4 +279,8 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.mb-120 {
+  margin-bottom: 120px;
 }

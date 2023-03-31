@@ -1,0 +1,41 @@
+$rightPos: calc((100vw - 1170px) / 2);
+
+.hero {
+  margin-top: 160px;
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right $rightPos center;
+
+  &__text-wraper {
+    max-width: 450px;
+  }
+
+  &__title {
+    min-width: 480px;
+    @include fz(66, 40);
+    color: $c-darkBlue-900;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__desription {
+    min-width: 450px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+  }
+}
