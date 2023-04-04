@@ -1,0 +1,98 @@
+.content-card {
+  max-width: 370px;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 0 rgb($c-dark, 0.1);
+  overflow: hidden;
+  transition: outline-color 0.3s ease-in-out, outline-width 0.15s ease-in-out;
+
+  &:focus {}
+
+  &:hover {
+    box-shadow: 0 3px 15px 0 rgba($c-orange-900, 0.5);
+
+    .content-card {
+      &__img {
+        transform: scale(1.2) rotate(5deg);
+      }
+    }
+  }
+
+  &:active {}
+
+  &__head {
+    overflow: hidden;
+    @include adaptive-image(370px, 300px);
+  }
+
+  &__img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__content {
+    padding: 15px 20px 22px 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
+
+    gap: 10px;
+
+    &::before {
+      min-width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__time {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    gap: 10px;
+
+    &::before {
+      background-color: $c-dark;
+    }
+  }
+
+  &__btn {
+    min-width: 80px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+
+    &::before {
+      min-width: 14px;
+      height: 12px;
+      background-color: $c-white;
+      transition: background-color 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+    }
+
+    &:focus {
+      &::before {
+        background-color: $c-orange-900;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: $c-orange-900;
+        margin-left: 40px;
+      }
+    }
+
+    &:active {
+      &::before {
+        margin-left: 0;
+
+      }
+    }
+  }
+}

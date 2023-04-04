@@ -92,6 +92,37 @@ body {
     }
   }
 
+  &--delivery {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-timer');
+    }
+  }
+
+  &--courier {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-delivery');
+    }
+
+  }
+
+  &--build {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-restorant');
+    }
+  }
+
+  &--arrow {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-arrow-right');
+    }
+  }
+
+  &--time {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-time');
+    }
+  }
+
   &:hover {
     &::before {
       background-color: $c-white;
@@ -324,4 +355,10 @@ body {
 .show {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }

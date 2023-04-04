@@ -1,346 +1,126 @@
 .reviews {
-  &__container {
-
-    @include r($sm) {
-      position: relative;
-    }
+  &__list {
+    margin-bottom: 28px;
   }
 
-  &__title {
-    padding-top: 118px;
-
-    @include r($xl) {
-      padding-top: 66px;
-    }
-
-    @include r($md) {
-      padding-top: 66px;
-    }
-
-    @include r($sm) {
-      padding-top: 34px;
-      font-size: 24px;
-    }
-  }
-
-  &__inner {
-    border-color: transparent;
-  }
-}
-
-.review {
-  max-width: 990px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-
-  &__item {
+  &__actions {
+    width: fit-content;
+    margin: 0 auto;
     display: flex;
-    padding-top: 37px;
-    flex-direction: row;
-
-    @include r($sm) {
-      align-items: center;
-      flex-direction: column;
-      padding-top: 30px;
-    }
+    align-items: center;
+    gap: 20px;
   }
 
-  &__icon {
-    position: relative;
-    left: 1px;
-    top: 9px;
+  &__btn {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid transparent;
+    border: 3px solid $c-orange-900;
     border-radius: 50%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-
-    @include r($sm) {
-      max-width: 100px;
-      max-height: 100px;
-      top: 0;
-    }
-  }
-
-  &__figure {
-    margin-right: 21px;
-
-    @include r($sm) {
-      margin-right: 1px;
-      margin-left: 0;
-      margin-top: 13px;
-      margin-bottom: 0;
-    }
-  }
-
-  &__text {
-    position: relative;
-    line-height: 1.5;
-    @extend %Rubik;
-    margin-bottom: 30px;
-
-    @include r($sm) {
-      font-size: 14px;
-      margin-bottom: 21px;
-      margin-left: 54px;
-      margin-right: 52px;
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      height: 23px;
-      width: 23px;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+    cursor: pointer;
+    transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
     &::before {
-      left: -41px;
-      background-image: url('../images/sprite.svg#icon-quote');
+      content: '';
+      min-width: 19px;
+      height: 19px;
+      display: inline-block;
+      mask-image: url('../images/sprite.svg#icon-right');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      background-color: $c-orange-900;
+      transition: background-color 0.3s ease-in-out;
+    }
 
-      @include r($sm) {
-        left: -34px;
-        top: -10px;
+    &--prev {
+      &::before {
+        margin-right: auto;
+        margin-left: 7px;
+        mask-image: url('../images/sprite.svg#icon-left');
       }
     }
 
-    &::after {
-      right: -60px;
-      bottom: -1px;
-      background-image: url('../images/sprite.svg#icon-quote');
-      transform: scale(-1, 1);
+    &[disable] {
+      border-color: $c-grey;
 
-      @include r($xl) {
-        right: -23px;
+      &:focus,
+      &:hover,
+      &:active {
+        border-color: inherit;
+        outline-color: transparent;
+        background-color: inherit;
       }
 
-      @include r($md) {
-        right: -32px;
+      &::before {
+        background-color: $c-grey;
       }
+    }
 
-      @include r($sm) {
-        right: -34px;
-        bottom: 9px;
+    &:focus {
+      outline-color: rgba($c-orange-900, 0.5);
+    }
+
+    &:hover {
+      background-color: rgba($c-orange-900, 0.1);
+      border-color: rgba($c-orange-900, 0.5);
+      outline-color: transparent;
+
+      &::before {
+        background-color: rgba($c-orange-900, 0.5);
       }
+    }
+
+    &:active {
+      background-color: rgba($c-orange-900, 0.1);
+      border-color: transparent;
+      outline-color: transparent;
+
+      &::before {
+        background-color: $c-orange-900;
+      }
+    }
+
+  }
+
+  &__dots {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__dot {
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $c-grey;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &--active {
+      background-color: $c-orange-900;
+    }
+
+    &:focus {
+      outline-color: $c-orange-900
+    }
+
+    &:hover {
+      outline-color: rgba($c-orange-900, 0.5);
+      background-color: rgba($c-orange-900, 0.1);
+    }
+
+    &:active {
+      outline-color: transparent;
+      background-color: rgba($c-orange-900, 0.5);
     }
   }
 
-  &__pearson {
-    @extend %Rubik;
-    color: $c-orange-900;
-    padding-left: 40px;
-    margin-bottom: 16px;
-
-    @include r($sm) {
-      font-size: 16px;
-      padding-left: 55px;
-    }
-  }
-
-  &__about-pearson {
-    padding-left: 38px;
-    padding-top: 14px;
-    font-size: 14px;
-    margin-bottom: 65px;
-    @extend %Rubik;
-
-    @include r($sm) {
-      padding-top: 10px;
-      margin-bottom: 0;
-      padding-left: 55px;
-    }
-  }
 }
 
-.review-scroller {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-
-  @include r($sm) {
-    position: absolute;
-    top: 124px;
-    width: 100%;
-  }
-
-  .slick-next:focus,
-  .slick-prev:focus {
-    outline: solid 2px $c-border-color;
-  }
-
-  .slick-next:hover,
-  .slick-prev:hover {
-    background-color: $c-focus-bg-color;
-    border-color: $c-slider-borrder-focus;
-  }
-
-  .slick-next:active,
-  .slick-prev:active {
-    outline-color: transparent;
-    border-color: transparent;
-  }
-
-  .slick-next {
-    position: relative;
-    left: 53%;
-    transform: translate(35%, 0);
-    top: -11px;
-
-    &::after {
-      left: 8px;
-      bottom: 7px;
-    }
-  }
-
-  .slick-prev {
-    position: absolute;
-    left: 44%;
-    top: -11px;
-
-    &::after {
-      right: 9px;
-      bottom: 7px;
-      transform: scaleX(-1);
-    }
-  }
-
-  .slick-prev::after,
-  .slick-next::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    -webkit-mask-image: url('../images/sprite.svg#icon-slider-arrow');
-    background-color: $c-orange-900;
-  }
-
-  .slick-disabled.slick-prev::after,
-  .slick-disabled.slick-next::after {
-    background-color: $c-grey;
-  }
-
-  .slick-prev:not(.slick-disabled):hover,
-  .slick-next:not(.slick-disabled):hover {
-    &:after {
-      background-color: $c-border-color;
-    }
-  }
-
-  .slick-next,
-  .slick-prev {
-    width: 40px;
-    height: 40px;
-    border: solid 3px $c-orange-900;
-    border-radius: 50%;
-    line-height: 0;
-    font-size: 0;
-  }
-
-  .slick-next {
-    @include r($xl) {
-      left: 57%;
-    }
-
-    @include r($md) {
-      left: 57%;
-    }
-
-    @include r($sm) {
-      top: 0;
-      left: 72%;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
-  .slick-prev {
-    @include r($xl) {
-      left: 38%;
-    }
-
-    @include r($md) {
-      left: 36%;
-    }
-
-    @include r($sm) {
-      top: 0;
-      left: 14%;
-      transform: translate(0, 0);
-    }
-  }
-
-  .slick-slide {
-    margin-bottom: 20px;
-  }
-
-  .slick-dots {
-    top: 1px;
-    left: 50%;
-    transform: translate(-57%, 0);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    line-height: 0;
-    margin-right: 17px;
-
-    @include r($sm) {
-      opacity: 0;
-    }
-
-    li {
-      padding: 0 15px;
-
-      button {
-        padding: 0;
-        font-size: 0;
-        background-color: $c-grey;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        border-color: transparent;
-        position: absolute;
-        outline: solid 2px transparent;
-        transition: all 0.3s ease-in-out;
-
-        &:focus {
-          background-color: $c-grey;
-          outline: solid 2px $c-orange-900;
-        }
-
-        &:hover {
-          background-color: $c-focus-bg-color;
-          outline-color: $c-icon-color;
-        }
-      }
-
-      &.slick-active {
-        button {
-          background-color: $c-orange-900;
-          outline-color: transparent;
-        }
-      }
-    }
-  }
-
-  .slick-disabled {
-    border-color: $c-grey;
-    outline-color: transparent;
-
-    &:focus,
-    &:hover,
-    &:active {
-      border-color: $c-grey;
-      outline-color: transparent;
-      background-color: transparent;
-    }
-  }
+.reviews--mb {
+  margin-bottom: 116px;
 }

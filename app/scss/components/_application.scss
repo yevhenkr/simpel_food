@@ -1,0 +1,49 @@
+$rightPos: calc((100vw - 1170px) / 2);
+
+.application {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right $rightPos center;
+
+  &__content {
+    max-width: 470px;
+    padding: 42px 0;
+    background-color: rgba($c-white, 0.85);
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 45px;
+  }
+
+  &__info {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+}
+
+.app-icon {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background-image: url('../images/app-apple.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--google {
+    width: 135px;
+    background-image: url('../images/app-android.jpg');
+  }
+}
+
+.app-icon--apple {}
+
+.app-icon--google {}

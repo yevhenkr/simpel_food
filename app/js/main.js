@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
+
   const header = document.querySelector('.header');
   window.onscroll = () => {
     if (window.pageYOffset > 100) {
@@ -91,4 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("sticky");
     }
   };
+
+  const swiper = new Swiper(".reviews__slider", {
+    pagination: {
+      el: ".reviews__dots",
+      bulletClass: 'reviews__dot',
+      bulletActiveClass: 'reviews__dot--active',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".reviews__btn--next",
+      prevEl: ".reviews__btn--prev",
+    },
+  });
 });
