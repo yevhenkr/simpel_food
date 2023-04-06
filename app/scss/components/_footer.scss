@@ -82,13 +82,13 @@
 
   &__field {
     border-radius: 5px;
-    outline: 1px solid $c-grey;
+    outline: 1px solid $c-gray;
     padding: 11px 15px;
     transition: outline-color 0.3s ease-in-out, outline-width 0.15s ease-in-out;
 
     &::placeholder {
       font-size: 14px;
-      color: $c-grey;
+      color: $c-gray;
       transition: color 0.3s ease-in-out;
     }
 

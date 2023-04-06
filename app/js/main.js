@@ -1,52 +1,42 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  $('img').on('error', function () {
-    $(this).attr('src', '../images/no-image.jpg');
-    $(this).css({
-      'border-radius': '0 0 0 0'
-    });
+  const body = document.querySelector('body');
+  const header = document.querySelector('.header');
+
+  const swiper = new Swiper(".reviews__slider", {
+    pagination: {
+      el: ".reviews__dots",
+      bulletClass: 'reviews__dot',
+      bulletActiveClass: 'reviews__dot--active',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".reviews__btn--next",
+      prevEl: ".reviews__btn--prev",
+    },
   });
 
   if (window.innerWidth <= 992) {
-    const burger = document.querySelector('.burger-btn');
-    const crossBtn = document.querySelector('.cross-btn');
+    const burger = document.querySelector('.burger');
+    closeBtn = document.querySelector('.close-btn');
     const mobileNav = document.querySelector('.mobile-nav');
 
-    $('.burger-btn').on('click', function () {
-      $('.mobile-nav').toggleClass('open');
-      $('.header').toggleClass('lock');
+    burger.addEventListener('click', () => {
+      body.classList.add('lock');
+      mobileNav.classList.add('open');
     })
 
-    $('.cross-btn').on('click', function () {
-      $('.mobile-nav').toggleClass('open');
-      $('.header').toggleClass('lock');
+    closeBtn.addEventListener('click', () => {
+      body.classList.remove('lock');
+      mobileNav.classList.remove('open');
     })
 
-    document.addEventListener('click', function (e) {
-      if (e.target !== burger && e.target !== crossBtn && e.target !== mobileNav) {
-        $('.mobile-nav').removeClass('open');
-        $('.header').removeClass('lock');
+    document.addEventListener('click', function (e) {//click evryver close burger menu
+      if (e.target !== closeBtn && e.target !== burger && e.target !== mobileNav) {
+        body.classList.remove('lock');
+        mobileNav.classList.remove('open');
       }
-    });
-  }
-
-  $('.reviews__inner').slick({
-    dots: true,
-    infinite: false,
-    arrows: true,
-    appendDots: '.review-scroller',
-    appendArrows: '.review-scroller'
-  });
-
-  if (window.innerWidth < 768) {
-    $('.restaurants__list').slick({
-      dots: true,
-      infinite: false,
-      arrows: false,
-      vertical: false,
-      slidesToShow: 1,
-      slidesToScroll: 1
     });
   }
 
@@ -83,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const header = document.querySelector('.header');
+  header = document.querySelector('.header');
   window.onscroll = () => {
     if (window.pageYOffset > 100) {
       header.classList.add("sticky");
@@ -92,16 +82,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const swiper = new Swiper(".reviews__slider", {
-    pagination: {
-      el: ".reviews__dots",
-      bulletClass: 'reviews__dot',
-      bulletActiveClass: 'reviews__dot--active',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".reviews__btn--next",
-      prevEl: ".reviews__btn--prev",
-    },
-  });
+
 });

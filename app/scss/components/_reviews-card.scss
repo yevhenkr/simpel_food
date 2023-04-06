@@ -42,7 +42,7 @@
       mask-repeat: no-repeat;
       mask-size: contain;
       mask-position: center;
-      color: $c-grey;
+      color: $c-gray;
     }
 
     &::before {
@@ -55,20 +55,21 @@
       right: -40px;
       mask-image: url('../images/sprite.svg#icon-quote-close');
     }
-    p{
+
+    p {
       margin-top: 0;
     }
   }
 
-    &__name {
-      font-size: 20px;
-      font-weight: 500;
-      color: $c-orange-900;
-      margin-bottom: 15px;
-    }
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+    color: $c-orange-900;
+    margin-bottom: 15px;
+  }
 
 
-    &__details {
-      font-size: 14px;
+  &__details {
+    font-size: 14px;
   }
 }

@@ -22,15 +22,13 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="curtaine-bg-disappear"></div>
       <div class="container">
-
         <nav class="header__nav">
-          <a class="logo" href="#">
+          <a class="logo header__logo" href="#">
             <img class="logo__img" src="Images/logo.svg" height="39" width="208" alt="логотип">
           </a>
 
-          <ul class="menu">
+          <ul class="menu header__menu">
             <li class="menu__item">
               <a class="menu__link menu--current" href="#hero-section">Головна</a>
             </li>
@@ -52,9 +50,76 @@
               <span class="sr-only">Кількість товварів у кошику</span>
               <span class="btn-counter">4</span>
             </button>
+            <button class="burger icon icon--burger-menu" type="button">
+              <span class="sr-only">Відкрити меню</span>
+            </button>
           </div>
 
         </nav>
+      </div>
+
+      <div class="mobile-nav">
+        <div class="mobile-nav__head">
+          <a class="logo" href="">
+            <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип SimpleFood">
+          </a>
+          <buttton class="close-btn icon icon--close" type="button">
+            <span class="sr-only">Сховати меню</span>
+          </buttton>
+        </div>
+        <ul class="menu mobile-nav__menu">
+          <li class="menu__item">
+            <a class="menu__link  menu__link--current" href="#hero-section">Головна</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="#popular-section">Страви</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="#footer-section">Контакти</a>
+          </li>
+        </ul>
+        <address class="contacts mobile-nav__contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="" class="contacts__link icon icon--address">вул. Т.Г.Шевченко, 1</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:380501112233" class="contacts__link icon icon--phone">380501112233</a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:support@sfood.com" class="contacts__link icon icon--email"> support@sfood.com </a>
+            </li>
+          </ul>
+
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у фейсбук </span>
+                <span class="social__icon"
+                  style="-webkit-mask-image: url('images/sprite.svg#icon-facebook'); mask-image: url('images/sprite.svg#icon-facebook')"></span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у твітер</span>
+                <span class="social__icon"
+                  style="-webkit-mask-image:url('images/sprite.svg#icon-twitter'); mask-image:url('images/sprite.svg#icon-twitter')"></span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у інстгарам</span>
+                <span class="social__icon"
+                  style="-webkit-mask-image: url('images/sprite.svg#icon-instagram'); mask-image: url('images/sprite.svg#icon-instagram')"></span>
+              </a>
+            </li>
+
+          </ul>
+        </address>
       </div>
     </header>
 
@@ -64,19 +129,21 @@
       <section class="hero mb-120" style="background-image: url('images/scooter_guy.png');" id="hero-section">
         <h2 class="sr-only">Переваги сервісу доставки SimpleFood</h2>
         <div class="container">
-          <div class="hero__text-wraper">
-            <p class="hero__title">
-              Доставка <span class="text-orange">за 15 ХВИЛИН</span>
-            </p>
-            <div class="hero__desription">
-              <p>
-                Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
+          <div class="hero__contetnt">
+            <div class="hero__text-wraper">
+              <p class="hero__title">
+                Доставка <span class="text-orange">за 15 ХВИЛИН</span>
               </p>
+              <div class="hero__desription">
+                <p>
+                  Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="hero__actions">
-            <a class="btn headear--button" href="#">Замовити</a>
-            <a class="td-link hero__detail" href="#">Детальніше</a>
+            <div class="hero__actions">
+              <a class="btn headear--button" href="#">Замовити</a>
+              <a class="td-link hero__detail" href="#">Детальніше</a>
+            </div>
           </div>
         </div>
       </section>
@@ -297,7 +364,7 @@
           </div>
         </div>
       </section>
-      <section class="resto mb-120">
+      <!-- <section class="resto mb-120">
 
         <div class="container">
           <h2 class="title">Найкращі ресторани</h2>
@@ -423,8 +490,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="reviews reviews--mb">
+      </section> -->
+      <!-- <section class="reviews reviews--mb">
         <div class="container">
           <h2 class="title">Відгуки кліентів</h2>
           <div class="reviews__slider swiper">
@@ -537,7 +604,7 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
 
     </main>
     <footer class="footer" id="footer-section">

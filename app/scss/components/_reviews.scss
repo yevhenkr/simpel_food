@@ -45,7 +45,7 @@
     }
 
     &[disable] {
-      border-color: $c-grey;
+      border-color: $c-gray;
 
       &:focus,
       &:hover,
@@ -56,7 +56,7 @@
       }
 
       &::before {
-        background-color: $c-grey;
+        background-color: $c-gray;
       }
     }
 
@@ -95,7 +95,7 @@
     min-width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: $c-grey;
+    background-color: $c-gray;
     cursor: pointer;
     outline: 2px solid transparent;
     transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;

@@ -3,7 +3,7 @@
   border-radius: 10px;
   box-shadow: 0 3px 3px 0 rgb($c-dark, 0.1);
   overflow: hidden;
-  transition: outline-color 0.3s ease-in-out, outline-width 0.15s ease-in-out;
+  transition: outline-color 0.3s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:focus {}
 
@@ -17,11 +17,9 @@
     }
   }
 
-  &:active {}
-
   &__head {
-    overflow: hidden;
     @include adaptive-image(370px, 300px);
+    overflow: hidden;
   }
 
   &__img {

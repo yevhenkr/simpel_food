@@ -1,12 +1,13 @@
 .popular {
 
   &__nav {
-    margin-bottom: 44px;
+    margin-bottom: size(45, 24);
   }
 
-  &__list{
-    margin-bottom: 60px;
+  &__list {
+    margin-bottom: size(60, 30);
   }
+
   &__btn {
     display: block;
     width: fit-content;

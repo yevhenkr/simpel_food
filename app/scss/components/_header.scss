@@ -1,11 +1,12 @@
 .header {
   position: fixed;
   top: 0;
-  right: 0;
+  // right: 0;
+  width: 100%;
   left: 0;
   z-index: 99;
   background-color: $c-white;
-  padding: 60px 0;
+  padding: size(60, 14) 0;
   border-bottom: 3px solid transparent;
   transition: padding 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
@@ -14,86 +15,69 @@
     padding: 15px 0;
   }
 
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($c-dark, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -100;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+  }
+
+  @at-root .lock {
+    overflow: hidden;
+
+    header {
+      &::before {
+        @include r($size-md) {
+          opacity: 1;
+          visibility: visible;
+          z-index: 10;
+        }
+      }
+    }
+  }
+
   &__nav {
     display: flex;
     align-items: center;
     gap: 50px;
+
+    @include r($size-sm) {
+      max-width: 100vh;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu {
+    @include r($size-md) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @include r($size-md) {
+      width: 115px;
+    }
   }
 
   &__actions {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
 
-  &__btn {
-    &:hover {
-      .btn-counter {
-        color: $c-orange-900;
-        background-color: $c-white;
-      }
-    }
-
-    &:active {
-      .btn-counter {
-        color: $c-white;
-        background-color: $c-orange-900;
-      }
+    @include r($size-md) {
+      // margin-left: auto;
     }
   }
-}
 
-.menu {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  gap: 40px;
 
-  &__linkmenu {}
-
-  &__link {
-    font-size: 18px;
-    letter-spacing: 0.01em;
-    border-radius: 5px;
-    outline: 2px solid transparent;
-    transition: outline-color 0.3s ease-in-out, color 0.3s ease-in-out, text-shadow 0.4s ease-in-out;
-
-    &:focus {
-      outline-color: rgba($c-orange-900, 0.7);
-    }
-
-    &:hover {
-      color: $c-orange-900;
-    }
-
-    &:active {
-      text-shadow: 2px 2px 5px rgba($c-dark, 0.5);
-      outline-color: transparent;
-    }
-
-    &--current {
-      color: $c-orange-900;
-    }
-  }
-}
-
-.curtaine-bg-disappear {}
-
-.curtain {
-
-  &__top {}
-
-  &__logo {}
-
-  &__img-logo {}
-
-  &__line {}
-
-  &__cross-btn {}
-
-  &__menu {}
-
-  &__link {}
 }
 
 .cross-btn {
@@ -102,28 +86,3 @@
 }
 
 .hero-btn {}
-
-.feedback {
-
-  &__mobile-nav-socuailmedias {}
-
-  &__socialmedia {}
-
-  &__facebook {}
-
-  &__curtain {}
-
-  &__curtain-list {}
-
-  &__adress {}
-
-  &__tel {}
-
-  &__email {}
-
-  &__curtain-socuailmedias {}
-
-  &__twitter {}
-
-  &__instagram {}
-}

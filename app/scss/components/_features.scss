@@ -1,7 +1,7 @@
 .features {
 
   &__inner {
-    min-height: 585px;
+    min-height: size(585, 462);
     padding: 0 size(70, 0);
 
     margin: 0 auto;
@@ -18,36 +18,37 @@
 
   &__content {
     max-width: 470px;
+    padding: 25px 0 31px;
     background-color: rgba($c-white, 0.85);
     align-self: flex-end;
   }
 
   &__title {
-    margin-top: 60px;
+    margin-top: size(60, 0);
     margin-bottom: 30px;
     text-align: left;
   }
 
   &__description {
-    font-size: 20px;
+    font-size: size(20, 18);
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: size(30, 20);
   }
 
   &__list {
-    margin-bottom: 30px;
+    margin-bottom: size(30, 20);
   }
 
   &__item {
-    font-size: 24px;
+    font-size: size(24, 18);
     line-height: 1.5;
     color: $c-darkBlue-900;
 
-    gap: 30px; //єто можем делать потому что icon имеет стили свли и висит на єтом обьекте
+    gap: size(30, 10); //єто можем делать потому что icon имеет стили свли и висит на єтом обьекте
     justify-content: flex-start;
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: size(20, 15);
     }
 
     &::before {
