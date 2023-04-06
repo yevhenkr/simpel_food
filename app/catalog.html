@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Сервис доставки еды</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+
+<body>
+  <div class="wrapper">
+<header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="logo header__logo" href="#">
+            <img class="logo__img" src="Images/logo.svg" height="39" width="208" alt="логотип">
+          </a>
+    
+          <ul class="menu header__menu">
+            <li class="menu__item">
+              <a class="menu__link menu--current" href="#hero-section">Головна</a>
+            </li>
+    
+            <li class="menu__item">
+              <a class="menu__link" href="#popular-section">Страви</a>
+            </li>
+    
+            <li class="menu__item">
+              <a class="menu__link" href="#footer-section">Контакти</a>
+            </li>
+          </ul>
+    
+          <div class="header__actions">
+            <button class="btn--sm icon icon--search" type="button">
+              <span class="sr-only">Шукати товари</span>
+            </button>
+            <button class="btn--sm header__btn icon icon--cart" type="button">
+              <span class="sr-only">Кількість товварів у кошику</span>
+              <span class="btn-counter">4</span>
+            </button>
+            <button class="burger icon icon--burger-menu" type="button">
+              <span class="sr-only">Відкрити меню</span>
+            </button>
+          </div>
+    
+        </nav>
+      </div>
+    
+      <div class="mobile-nav">
+        <div class="mobile-nav__head">
+          <a class="logo" href="">
+            <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип SimpleFood">
+          </a>
+          <buttton class="close-btn icon icon--close" type="button">
+            <span class="sr-only">Сховати меню</span>
+          </buttton>
+        </div>
+        <ul class="menu mobile-nav__menu">
+          <li class="menu__item">
+            <a class="menu__link  menu__link--current" href="#hero-section">Головна</a>
+          </li>
+    
+          <li class="menu__item">
+            <a class="menu__link" href="#popular-section">Страви</a>
+          </li>
+    
+          <li class="menu__item">
+            <a class="menu__link" href="#footer-section">Контакти</a>
+          </li>
+        </ul>
+        <address class="contacts mobile-nav__contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="" class="contacts__link icon icon--address">вул. Т.Г.Шевченко, 1</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:380501112233" class="contacts__link icon icon--phone">380501112233</a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:support@sfood.com" class="contacts__link icon icon--email"> support@sfood.com </a>
+            </li>
+          </ul>
+    
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у фейсбук </span>
+                <span class="social__icon"
+                  style="-webkit-mask-image: url('images/sprite.svg#icon-facebook'); mask-image: url('images/sprite.svg#icon-facebook')"></span>
+              </a>
+            </li>
+    
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у твітер</span>
+                <span class="social__icon"
+                  style="-webkit-mask-image:url('images/sprite.svg#icon-twitter'); mask-image:url('images/sprite.svg#icon-twitter')"></span>
+              </a>
+            </li>
+    
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у інстгарам</span>
+                <span class="social__icon"
+                  style="-webkit-mask-image: url('images/sprite.svg#icon-instagram'); mask-image: url('images/sprite.svg#icon-instagram')"></span>
+              </a>
+            </li>
+    
+          </ul>
+        </address>
+      </div>
+    </header>
+<main class="catalog-page">
+  <h1 class="title"></h1>
+  <section class="application mb-120" style="background-image: url(images/get_app.jpg);">
+  <h2 class="sr-only">Застосунки SimpleFood для швидкого замовлення їжі</h2>
+  <div class="container">
+    <div class="application__content">
+      <div class="title application__title">
+        Завантажте мобільний застосунок
+      </div>
+      <div class="application__info">
+        <p>Ресторани, які ви любите - у ваших руках.</p>
+        <p>Встановлюйте застосунок та замовляйте їжу в зручному місці в зручний час</p>
+      </div>
+      <ul class="application__list">
+        <li class="application__item">
+          <a class="app-icon app-icon--apple" href="" target="_blank">
+            <span class="sr-only"> Завантажити застосунок з AppStore</span>
+          </a>
+        </li>
+        <li class="application__item">
+          <a class="app-icon app-icon--google" href="" target="_blank">
+            <span class="sr-only"> Завантажити застосунок з GooglePlay</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer" id="footer-section">
+  <div class="container">
+    <section class="footer__content">
+      <h2 class="sr-only">Додаткова інформація</h2>
+      <div class="footer__subscription">
+        <h3 class="sr-only">Інформація про підписку</h3>
+        <a class="logo footer__logo" href="#">
+          <img class="logo__img" src="Images/logo.svg" height="39" width="200" alt="логотип">
+        </a>
+        <div class="subscription">
+          <form class="form">
+            <label class="sr-only" for="subscription">Ваш email для підписки</label>
+            <input class="form__field" placeholder="Ваш email" type="email" id="subscription" name="subscription"
+              required>
+            <button class="btn icon icon--send subscription__btn">Підписатися</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h3 class="sr-only">Навігація по сайту</h3>
+        <ul class="menu footer__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Як це працює
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Продукти
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Страви
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Меню
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Про нас
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Новини
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Партнери
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              ЧаВо
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Застосунок
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Влог
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Що нового?
+            </a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link" href="">
+              Мапа сайту
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__contacts">
+        <h3 class="sr-only">Контактна інформация, соц мережі</h3>
+        <address class="contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="" class="contacts__link icon icon--address">вул. Т.Г.Шевченко, 1</a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:380501112233" class="contacts__link icon icon--phone">380501112233</a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:support@sfood.com" class="contacts__link icon icon--email"> support@sfood.com </a>
+            </li>
+          </ul>
+
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у фейсбук </span>
+                <span class="social__icon"
+                  style="-webkit-mask-image: url('images/sprite.svg#icon-facebook'); mask-image: url('images/sprite.svg#icon-facebook')"></span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у твітер</span>
+                <span class="social__icon"
+                  style="-webkit-mask-image:url('images/sprite.svg#icon-twitter'); mask-image:url('images/sprite.svg#icon-twitter')"></span>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="">
+                <span class="sr-only">Відвідати сторінку у інстгарам</span>
+                <span class="social__icon"
+                  style="-webkit-mask-image: url('images/sprite.svg#icon-instagram'); mask-image: url('images/sprite.svg#icon-instagram')"></span>
+              </a>
+            </li>
+
+          </ul>
+        </address>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer__bottom">
+    &copy; 2023 Simple Food
+  </div>
+  </div>
+</footer>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
