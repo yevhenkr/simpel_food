@@ -12,7 +12,7 @@
       display: flex;
       gap: initial;
       justify-content: initial;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .content-card {
@@ -25,7 +25,7 @@
   &__slider {
     overflow: visible;
 
-    @include r(size-sm) {
+    @include r($size-sm) {
       overflow: hidden;
     }
   }

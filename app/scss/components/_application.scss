@@ -5,21 +5,29 @@ $rightPos: calc((100vw - 1170px) / 2);
   background-repeat: no-repeat;
   background-position: right $rightPos center;
 
+  @include r($size-lg) {
+    background-position: right 15px center;
+  }
+
+  @include r($size-sm) {
+    background-size: 0;
+  }
+
   &__content {
     max-width: 470px;
-    padding: 42px 0;
+    padding: size(40, 0) 0;
     background-color: rgba($c-white, 0.85);
   }
 
   &__title {
     text-align: left;
-    margin-bottom: 45px;
+    margin-bottom: size(45, 15);
   }
 
   &__info {
-    font-size: 20px;
+    font-size: size(20, 14);
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: size(30, 15);
   }
 
   &__list {
