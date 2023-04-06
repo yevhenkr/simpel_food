@@ -1,24 +1,46 @@
 .resto {
+  box-sizing: border-box !important;
 
-  &__list {}
+  &__list {
+    @include r($size-md) {
+      grid-template-columns: repeat(2, minmax(auto, 370px));
+      gap: 10px;
+      justify-content: center;
+    }
 
-  &__item {}
+    @include r($size-sm) {
+      display: flex;
+      gap: initial;
+      justify-content: initial;
+      margin-bottom: 30px;
+    }
+
+    .content-card {
+      @include r($size-sm) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__slider {
+    overflow: visible;
+
+    @include r(size-sm) {
+      overflow: hidden;
+    }
+  }
+
+  &__dots {
+    @extend .reviews__dots;
+    justify-content: center;
+    padding: 2px;
+  }
+
+  &__dot {
+    @extend .reviews__dot;
+
+    &--active {
+      @extend .reviews__dot--active;
+    }
+  }
 }
-
-.mb-120 {}
-
-.container {}
-
-.title {}
-
-
-
-.icon {}
-
-.icon--time {}
-
-.sr-only {}
-
-.btn {}
-
-.icon--arrow {}
