@@ -40,6 +40,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  if (window.innerWidth <= 576) {
+    const swiper = new Swiper(".resto__slider", {
+      sliderPerView: 1,
+      sliderPerGroup: 1,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+
+      pagination: {
+        el: ".resto__dots",
+        bulletClass: 'resto__dot',
+        bulletActiveClass: 'resto__dot--active',
+        clickable: true,
+      },
+    });
+  }
+
   const filterBtns = document.querySelectorAll(".categories-nav__btn");
   const grid = document.querySelector(".categories-list");
   filterBtns.forEach((btn) => {
@@ -81,6 +97,5 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("sticky");
     }
   };
-
 
 });
