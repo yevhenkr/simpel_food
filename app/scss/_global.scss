@@ -136,6 +136,12 @@ body {
     }
   }
 
+  &--filter {
+    &::before {
+      mask-image: url('../images/sprite.svg#icon-filter');
+    }
+  }
+
   &:hover {
     &::before {
       background-color: $c-white;
