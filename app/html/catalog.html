@@ -49,7 +49,7 @@
           <div class="filters-box">
             <div class="filters-box__head">
               <h3 class="filters-box__title">
-                КатегоріЇ
+                Категорії
               </h3>
             </div>
 
@@ -110,19 +110,19 @@
               <ul class="filters-list">
                 <li class="filters-list__item">
                   <div class="checkbox">
-                    <input class="sr-only" type="checkbox" id="offer[discount]" name="offer[discount]">
+                    <input class="checkbox__input sr-only" type="checkbox" id="offer[discount]" name="offer[discount]">
                     <label class="checkbox__label" for="offer[discount]">Зі знижкою</label>
                   </div>
                 </li>
                 <li class="filters-list__item">
                   <div class="checkbox">
-                    <input class="sr-only" type="checkbox" id="offer[new]" name="offer[new]" checked>
+                    <input class="checkbox__input sr-only" type="checkbox" id="offer[new]" name="offer[new]" checked>
                     <label class="checkbox__label" for="offer[new]">Новинки</label>
                   </div>
                 </li>
                 <li class="filters-list__item">
                   <div class="checkbox">
-                    <input class="sr-only" type="checkbox" id="offer[hit]" name="offer[hit]">
+                    <input class="checkbox__input sr-only" type="checkbox" id="offer[hit]" name="offer[hit]">
                     <label class="checkbox__label" for="offer[hit]">Хіт сезону</label>
                   </div>
                 </li>
@@ -143,14 +143,14 @@
                   <div class="range__items">
                     <div class="range__group">
                       <label class="range__label" for="range[form]">від</label>
-                      <input class="range__input" id="range[form]" type="number">
+                      <input class="range__input range__input--min" id="range[form]" type="number">
                     </div>
                     <div class="range__group">
                       <label class="range__label" for="range[to]">до</label>
-                      <input class="range__input" id="range[to]" type="number">
+                      <input class="range__input range__input--max" id="range[to]" type="number">
                     </div>
-                    <div class="range__slider"></div>
                   </div>
+                  <div class="range__slider"></div>
                 </div>
               </form>
             </div>

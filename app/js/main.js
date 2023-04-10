@@ -1,6 +1,42 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const rangeSlider = document.querySelector('.range__slider');
+  const inputMin = document.querySelector('.range__input--min');
+  const inputMax = document.querySelector('.range__input--max');
+
+  noUiSlider.create(rangeSlider, {
+    start: [100, 1000],
+    connect: true,
+    padding: [0, 0],
+    animate: true,
+    // cssPrefix: 'noUi-',
+    step: 10,
+    range: {
+      'min': 50,
+      'max': 1200
+    }
+  });
+
+  rangeSlider.noUiSlider.on('update', function (values, handle) {
+    // let value = values[handle];
+    let value = parseFloat(values[handle]).toFixed(0);
+    if (handle) {
+      inputMax.value = value;
+    } else {
+      inputMin.value = value;
+    }
+  });
+
+  // Оновлення значень слайдера при зміні input-ів
+  inputMin.addEventListener('change', function () {
+    rangeSlider.noUiSlider.set([this.value, null]);
+  });
+
+  inputMax.addEventListener('change', function () {
+    rangeSlider.noUiSlider.set([null, this.value]);
+  });
+
   const body = document.querySelector('body');
   const header = document.querySelector('.header');
 
@@ -97,5 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("sticky");
     }
   };
+
 
 });
