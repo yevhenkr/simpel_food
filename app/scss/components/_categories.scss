@@ -66,8 +66,8 @@
 
 .categories-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: size(30, 10);
+  grid-template-columns: repeat(4, 1fr);
+  gap: size(10, 5);
 
   @include r($size-lg) {
     grid-template-columns: repeat(4, 1fr);

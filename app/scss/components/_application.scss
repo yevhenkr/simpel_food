@@ -15,13 +15,13 @@ $rightPos: calc((100vw - 1170px) / 2);
 
   &__content {
     max-width: 470px;
-    padding: size(40, 0) 0;
+    padding: size(42, 0) 0;
     background-color: rgba($c-white, 0.85);
   }
 
   &__title {
     text-align: left;
-    margin-bottom: size(45, 15);
+    margin-bottom: size(48, 15);
   }
 
   &__info {

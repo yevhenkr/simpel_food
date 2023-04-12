@@ -1,4 +1,6 @@
 .content-card {
+  $this: &;
+  height: 100%;
   max-width: 370px;
   border-radius: 10px;
   box-shadow: 0 3px 3px 0 rgb($c-dark, 0.1);
@@ -36,7 +38,10 @@
 
   &__title {
     font-size: 24px;
-    margin-bottom: 20px;
+
+    #{$this}__actions {
+      margin-top: 20px;
+    }
   }
 
   &__actions {

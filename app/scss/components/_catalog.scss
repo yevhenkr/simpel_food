@@ -32,8 +32,8 @@
 
 .catalog {
   &__list {
-    grid-template-columns: repeat(4, 1);
-    margin-bottom: size(60, 30);
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: size(62, 30);
   }
 }
 
@@ -54,13 +54,14 @@
 .filters-box {
   border-radius: 5px;
   border: 1px solid $c-silver-200;
+  font-size: 18px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
   }
 
   &__head {
-    padding: 15px;
+    padding: 13px;
     border-bottom: 1px solid $c-silver-200;
   }
 
@@ -208,7 +209,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 31px;
   }
 
   &__input {
@@ -216,7 +217,7 @@
     border-radius: 3px;
     border: 1px solid $c-silver-200;
     background-color: rgba($c-orange-900, 0.1);
-    padding: 12px;
+    padding: 11px;
     text-align: center;
   }
 
@@ -265,6 +266,7 @@
     display: flex;
     gap: 6px;
     align-items: center;
+    justify-content: center;
   }
 
   &__link {
@@ -328,6 +330,20 @@
     &--current {
       outline-color: $c-dark;
 
+    }
+  }
+}
+
+.discount {
+  &__title {
+    text-align: left;
+  }
+
+  &__slider {
+    overflow: visible;
+
+    @include r($size-sm) {
+      overflow: hidden;
     }
   }
 }
