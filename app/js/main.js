@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".reviews__btn--prev",
     },
   });
-// 
+
   if (window.innerWidth <= 992) {
     const burger = document.querySelector('.burger');
     const closeBtn = document.querySelector('.close-btn');
@@ -102,6 +102,22 @@ document.addEventListener("DOMContentLoaded", () => {
         el: ".resto__dots",
         bulletClass: 'resto__dot',
         bulletActiveClass: 'resto__dot--active',
+        clickable: true,
+      },
+    });
+  }
+
+  if (window.innerWidth <= 576) {
+    const swipe = new Swiper(".discount__slider", {
+      sliderPerView: 1,
+      sliderPerGroup: 1,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+
+      pagination: {
+        el: ".discount__dots",
+        bulletClass: 'discount__dot',
+        bulletActiveClass: 'discount__dot--active',
         clickable: true,
       },
     });
