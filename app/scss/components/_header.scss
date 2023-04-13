@@ -49,9 +49,12 @@
     align-items: center;
     gap: 50px;
 
+    @include r($size-md) {
+      justify-content: space-between;
+    }
+
     @include r($size-sm) {
       max-width: 100vh;
-      justify-content: space-between;
     }
   }
 
