@@ -39,15 +39,43 @@
 
 .sidebar {
   min-width: 270px;
+  background-color: $c-white;
+  transition: all 0.3s ease-in-out;
+
+  @include r($size-lg) {
+    position: fixed;
+    width: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-200%);
+  }
+
+  &.open {
+    @include r($size-lg) {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
   &__head {
     display: none;
     padding: 20px;
     justify-content: flex-end;
 
-    @include r($size-md) {
-      display: flex;
+    @include r($size-lg) {
+      display: initial;
     }
+  }
+
+  &__inner {
+    width: 270px;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
   }
 }
 
@@ -97,9 +125,14 @@
 }
 
 .filter-btn {
+  display: none;
   min-width: 47px;
   height: 47px;
   background-color: rgba($c-orange-900, 0.1);
+
+  @include r($size-lg) {
+    display: flex;
+  }
 
   &::before {
     min-width: 35px;
@@ -119,7 +152,6 @@
 
 .select {
   padding: 15px;
-  // padding-right: 41px;
   font-size: 14px;
   letter-spacing: 0.03em;
   border: 1px solid $c-gray;

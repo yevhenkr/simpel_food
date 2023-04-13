@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".reviews__btn--prev",
     },
   });
-
+// 
   if (window.innerWidth <= 992) {
     const burger = document.querySelector('.burger');
-    closeBtn = document.querySelector('.close-btn');
+    const closeBtn = document.querySelector('.close-btn');
     const mobileNav = document.querySelector('.mobile-nav');
 
     burger.addEventListener('click', () => {
@@ -74,6 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileNav.classList.remove('open');
       }
     });
+
+    const filterBtn = document.querySelector('.filter-btn');
+    const filterCloseBtn = document.querySelector('.sidebar__btn');
+    const filterSidebar = document.querySelector('.sidebar');
+    filterBtn.addEventListener('click', () => {
+      filterSidebar.classList.add('open')
+    })
+
+    filterCloseBtn.addEventListener('click', () => {
+      filterSidebar.classList.remove('open')
+    })
   }
 
   if (window.innerWidth <= 576) {
