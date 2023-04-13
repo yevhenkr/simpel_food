@@ -1,13 +1,24 @@
-<div class="breadcrubms catalog-page__breadcrumbs">
+<div class="breadcrubms @className">
   <div class="container">
     <ul class="breadcrubms__list">
       <li class="breadcrubms__item">
         <a class="breadcrubms__link" href="">Головна</a>
       </li>
 
+      @if(third){
+      <li class="breadcrubms__item">
+        <a class="breadcrubms__link" href="">Католог продуктів</a>
+      </li>
+      <li class="breadcrubms__item">
+        <a class="breadcrubms__link">@thirdPage</a>
+      </li>
+      }
+
+      @if(!third){
       <li class="breadcrubms__item">
         <a class="breadcrubms__link">Католог продуктів</a>
       </li>
+      }
     </ul>
   </div>
 </div>
