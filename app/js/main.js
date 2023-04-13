@@ -66,12 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.addEventListener('click', () => {
       body.classList.remove('lock');
       mobileNav.classList.remove('open');
+
     })
 
     document.addEventListener('click', function (e) {//click evryver close burger menu
-      if (e.target !== closeBtn && e.target !== burger && e.target !== mobileNav) {
+      if (e.target !== closeBtn && e.target !== burger && e.target !== mobileNav && e.target !== filterBtn && e.target !== filterSidebar) {
         body.classList.remove('lock');
         mobileNav.classList.remove('open');
+        filterSidebar.classList.remove('open')
       }
     });
 
@@ -80,10 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterSidebar = document.querySelector('.sidebar');
     filterBtn.addEventListener('click', () => {
       filterSidebar.classList.add('open')
+      body.classList.add('lock');
     })
 
     filterCloseBtn.addEventListener('click', () => {
       filterSidebar.classList.remove('open')
+      body.classList.remove('lock');
     })
   }
 
