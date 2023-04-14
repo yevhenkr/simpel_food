@@ -1,0 +1,13 @@
+.filters-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    @extend .menu__link;
+    font-style: 18px;
+    letter-spacing: 0.03em;
+  }
+}
