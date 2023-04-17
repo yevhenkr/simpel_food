@@ -1,6 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  plusMinusProduct();
+ 
   const header = document.querySelector('.header');
   window.onscroll = () => {
 
@@ -165,4 +167,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  function plusMinusProduct() {
+    const quantityInput = document.querySelector(".quantity__input");
+    const incrementButton = document.querySelector(".quantity__btn--plus");
+    const decrementButton = document.querySelector(".quantity__btn--minus");
+    incrementButton.addEventListener("click", () => {
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+    });
+    decrementButton.addEventListener("click", () => {
+      if (parseInt(quantityInput.value) > 0) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+    });
+    quantityInput.addEventListener("input", () => {
+      const value = parseInt(quantityInput.value);
+      if (!isNaN(value) && value >= 0 && value <= 99) {
+        quantityInput.value = value;
+      } else {
+        quantityInput.value = 1;
+      }
+    });
+  }
 });
