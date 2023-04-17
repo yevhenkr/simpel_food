@@ -1,3 +1,7 @@
+html, body{
+  height: 100%;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -22,6 +26,10 @@ body {
 .wrapper {
   padding-top: size(159, 72);
   overflow-x: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
 }
 
 .container {

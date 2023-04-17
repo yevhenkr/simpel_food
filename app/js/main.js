@@ -1,6 +1,16 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const header = document.querySelector('.header');
+  window.onscroll = () => {
+
+    if (window.pageYOffset > 100) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  };
+
   const rangeSlider = document.querySelector('.range__slider');
   const inputMin = document.querySelector('.range__input--min');
   const inputMax = document.querySelector('.range__input--max');
@@ -38,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const body = document.querySelector('body');
-  const header = document.querySelector('.header');
 
   const swiper = new Swiper(".reviews__slider", {
     pagination: {
@@ -155,15 +164,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  header = document.querySelector('.header');
-  window.onscroll = () => {
-    if (window.pageYOffset > 100) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  };
-
 
 });

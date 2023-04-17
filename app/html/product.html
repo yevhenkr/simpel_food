@@ -1,0 +1,290 @@
+@include('global/_head.html',{
+name: 'Сторінка продукта "Чізбургер з листями салату"'
+})
+
+@include('global/_header.html')
+<main class="product-page">
+  @include('global/_breadcrumbs.html',{
+  className: 'product-page__breadcrumbs',
+  third: true,
+  thirdPage: 'Чізбургер з листями салату'
+  })
+
+  <div class="container">
+    <section class="product-page__head">
+      <div class="product-info">
+        <h1 class="title product-page__title">Чізбургер з листям салату</h1>
+        <div class="stars product-page__stars"></div>
+        <div class="product-page__price">160 <span class="currency">грн</span></div>
+        <div class="product-page__actions">
+          <div class="quantity product-page__quantity">
+            <button class="quantity__btn quantity__btn--minus icon icon--minus" type="button">
+              <span class="sr-only">зменшити кількість товарів</span>
+            </button>
+            <label class="sr-only" for="quantity">ввести кількість товарів</label>
+            <input class="quantity" id="quantity" type="text" value="0" min="0" max="99" maxlength="2" pattern="[0-9*]">
+            <button class="quantity__btn quantity__btn--plus icon icon--plus" type="button">
+              <span class="sr-only">збільшити кількість товарів</span>
+            </button>
+          </div>
+          <button class="btn icon icon--cart product-page__btn" type="button">Додати до кошика</button>
+        </div>
+        <div class="delivery product-page__delivery">
+          <h2 class="delivery__title">Доставка та оплата</h2>
+          <ul class="delivery__list">
+            <li class="delivery__item">Мінімальна сума замовлення — 160 грн.</li>
+            <li class="delivery__item">Час доставки замовлення — 80-140 мин.</li>
+            <li class="delivery__item">Оплата здійснюється тільки банківською карткою.</li>
+            <li class="delivery__item">Остаточна сума замовлення формується після збору товарів.</li>
+          </ul>
+          <a class="td-link delivery__link" href="">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="product-page__slider">
+        <div class="product-slider swiper">
+          <div class="product-slider__items swiper-wrapper">
+            <img class="product-slider__img swiper-slide" src="images/cheeseburger-huge.jpg" alt="бургер">
+          </div>
+          <div class="product-slider__btns">
+
+            <button class="product-slider__btn product-slider__btn--prev icon icon--chevron-left">
+              <span class="sr-only">гортати назад</span>
+            </button>
+            <button class="product-slider__btn product-slider__btn--next icon icon--chevron-right">
+              <span class="sr-only">гортати вперед</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="deteils">
+    <h2 class="sr-only">Додаткові відомості про товар</h2>
+    <div class="container">
+      <div class="tabs">
+        <ul class="tabs-nav__list">
+          <li class="tabs-nav__item">
+            <a class="tab-nav__link" href="">Опис</a>
+          </li>
+          <li class="tabs-nav__item">
+            <a class="tab-nav__link" href="">Характеристики</a>
+          </li>
+          <li class="tabs-nav__item">
+            <a class="tab-nav__link" href="">Відгуки <span>(2)</span></a>
+          </li>
+        </ul>
+        <ul class="tabs-content">
+          <li class="tabs-content__item">
+            <div class="description">
+              <p>Рубаний біфштекс із натуральної яловичини на карамелізованій булочці, зі скибочкою сиру "Чеддер",
+                кетчупом, гірчицею, цибулею та маринованими огірочками.</p>
+              <p>Алергени: глютен, молоко, гірчиця. Може містити сою, яйце, сліди кунжуту</p>
+              <p>Зовнішній вигляд товару може відрізнятися від зображень, представлених на сайті.</p>
+            </div>
+          </li>
+          <li class="tabs-content__item">
+            <div class="characteristic">
+              <p>Вага: <span>20 см</span></p>
+              <p>Калорійність (на 100г): <span>300 гр</span></p>
+              <p>Термін зберігання: <span>295 ккал</span></p>
+              <p>Діаметр: <span>до 3 діб</span></p>
+            </div>
+          </li>
+
+          <li class="tabs-content__item">
+
+            <div class="product-rewiews">
+              <h3 class="product-rewiews__title">
+                Думки наших кліентів
+              </h3>
+              <ul class="product-reviews__items">
+                <li class="product-reviews__item">
+                  <figure class="product-rewiew">
+                    <div class="product-review__head">
+                      <img class="product-review__img" src="images/ava_previews.png" width="70" height="70"
+                        alt="фото автора відгука">
+                      <figcaption class="product-review__info">
+                        <div class="product-review__name">Андрій</div>
+                        <time class="product-review__time" datetime="2021-06-10">10.06.2021</time>
+                      </figcaption>
+                      <div class="stars product-reviews__stars"></div>
+                    </div>
+                    <blockquote class="product-review__text">Доставили швидко. Товар свіжий та дуже смачний, буду ще
+                      обов’язково куштувати!</blockquote>
+                  </figure>
+                </li>
+                <li class="product-reviews__item">
+                  <figure class="product-rewiew">
+                    <div class="product-review__head">
+                      <img class="product-review__img" src="images/ava_previews.png" width="70" height="70"
+                        alt="фото автора відгука">
+                      <figcaption class="product-review__info">
+                        <div class="product-review__name">Катерина Біла</div>
+                        <time class="product-review__time" datetime="2021-06-07">07.06.2021</time>
+                      </figcaption>
+                      <div class="stars product-reviews__stars"></div>
+                    </div>
+                    <blockquote class="product-review__text">Цей бургер непоганий на смак, особливо, коли немає
+                      можливості або часу щось готувати. Це чудовий варіант, щоб перекусити находу, але, щоб себе
+                      побалувати, краще замовлю піцу</blockquote>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product-feedback">
+              <h3 class="product-feedback__title">
+                Залишити відгук
+              </h3>
+              <form class="feedback" action="">
+                <div class="feedback-form__row">
+                  <label class="feedback-form__label " for="">Ваша оцінка *</label>
+                  <div class="stars feedback-form__stars"></div>
+                </div>
+                <div class="feedback-form__inner">
+                  <div class="feedback-form__group">
+                    <label class="feedback-form__label" for="feedback[text]">Ваш відгук</label>
+                    <textarea class="feedback-form__fild feedback-form__fild--textarea" name="feedback[text]"
+                      id="feedback[text]" cols="30" rows="10" required placeholder="Введіть текст відгука"></textarea>
+                  </div>
+
+                  <div class="feedback-form__group">
+                    <label class="feedback-form__label" for="feedback[name]">Ім’я</label>
+                    <input class="feedback-form__fild" type="text" name="feedback[name]" id="feedback[name]" required
+                      placeholder="Введіть ваше ім’я"></input>
+                  </div>
+
+                  <div class="feedback-form__group">
+                    <label class="feedback-form__label" for="feedback[e-mail]">Email *</label>
+                    <input class="feedback-form__fild" type="email" name="feedback[e-mail]" id="feedback[e-mail]"
+                      required placeholder="youremail@mail.com"></input>
+                  </div>
+                </div>
+                <div class="checkbox feedback-form__checkbox">
+                  <input class="checkbox__input sr-only" type="checkbox" id="feedback[checkbox]"
+                    name="feedback[checkbox]">
+                  <label class="checkbox__label" for="feedback[checkbox]">Зберегти моє ім’я, email та адресу сайта в
+                    цьому браузері для наступних моїх коментарів.</label>
+                </div>
+                <button class="btn feedback-form__btn" type="submit">Залишити відгук</button>
+              </form>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="interesting">
+    <div class="interesting__head">
+      <h2 class="title interesting__title">Вас може зацікавити</h2>
+      <div class="interesting__actions">
+        <button class="interesting__btn interesting__btn--prev" type="button"></button>
+        <button class="interesting__btn interesting__btn--next" type="button"></button>
+      </div>
+    </div>
+    <div class="interesting__slider swiper">
+      <ul class="interesting-slider slider-wraper">
+        <li class="interesting-slider__item swiper-slide">
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+          <article class="product-cart">
+            <a class="product-cart__link" href="">
+              <h3 class="product-cart__title">Чізбургер з листям салату</h3>
+            </a>
+            <a class="product-cart__link" href="">
+              <img class="product-cart__img" src="images/burger_icons/cheese_burger.png" height="140" width="140"
+                alt="Чизбургер с листьями салата">
+            </a>
+            <div class="product-cart__price">
+              160 <span class="product-cart__currency">грн.</span>
+            </div>
+            <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+@include('global/_footer.html')
+
+@include('global/_scripts.html')
