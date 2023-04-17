@@ -26,7 +26,6 @@
 @import 'components/popular-section';
 @import 'parts/categories';
 @import 'components/prodact-cart';
-@import 'global/footer';
 @import 'parts/features';
 @import 'parts/resto';
 @import 'components/content-card.scss';
@@ -34,3 +33,6 @@
 @import 'parts/reviews';
 @import 'parts/application';
 @import 'parts/catalog';
+
+@import 'parts/product-page';
+@import 'global/footer';

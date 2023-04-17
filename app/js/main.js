@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   plusMinusProduct();
  
+  const burgerSwiper = new Swiper(".product-slider", {
+    navigation: {
+      nextEl: ".product-slider__btn--next",
+      prevEl: ".product-slider__btn--prev",
+    },
+  });
   const header = document.querySelector('.header');
   window.onscroll = () => {
 
