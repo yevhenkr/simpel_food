@@ -2,7 +2,19 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   plusMinusProduct();
- 
+  const interestingSwiper = new Swiper(".interesting__slider", {
+    navigation: {
+      nextEl: ".interesting__btn--next",
+      prevEl: ".interesting__btn--prev",
+    },
+
+    breakpoints: {
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
   const burgerSwiper = new Swiper(".product-slider", {
     navigation: {
       nextEl: ".product-slider__btn--next",

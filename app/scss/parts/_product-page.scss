@@ -80,8 +80,6 @@
 .quantity {
   display: flex;
 
-  //   flex-direction: row;
-  //   justify-content: flex-start;
   &__btn {
     width: 44px;
     height: 44px;
@@ -148,7 +146,6 @@
     }
   }
 }
-
 
 .delivery {
   letter-spacing: 0.03em;
@@ -335,24 +332,41 @@
 
 .interesting {
 
-  &__head {}
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: size(60, 30);
+  }
 
-  &__title {}
+  &__title {
+    font-size: size(36, 20);
+    margin-bottom: 0;
+  }
 
-  &__actions {}
+  &__actions {
+    display: flex;
+    gap: 25px;
+    height: 34px;
+    width: 34px;
+    // }
 
-  &__btn {}
+    &__btn {
+      @extend .reviews__btn;
 
-  &__btn--prev {}
+      &--prev {
+        @extend .reviews__btn--prev;
+      }
 
-  &__btn--next {}
+      &--next {
+        @extend .reviews__btn--next;
+      }
+    }
+  }
 
-  &__slider {}
-}
-
-.interesting-slider {
-
-  &__item {}
+  &__slider {
+    padding: 3px;
+  }
 }
 
 .slider-wraper {}
