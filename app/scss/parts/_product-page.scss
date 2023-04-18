@@ -251,22 +251,35 @@
 }
 
 .tabs-nav {
+  display: flex;
+  gap: size(60, 30);
+  overflow-x: auto;
+  margin-bottom: 30px;
 
-  &__list {}
 
   &__item {}
-}
 
-.tab-nav {
+  &__link {
+    font-size: size(24, 20);
+    line-height: 1.5;
 
-  &__link {}
+    &.active {
+      color: $c-orange-900;
+    }
+  }
 }
 
 .tabs-content {
   font-size: 20px;
   line-height: 1.5;
 
-  &__item {}
+  &__item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .description {

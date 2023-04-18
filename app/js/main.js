@@ -1,6 +1,29 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const tabsNav = document.querySelectorAll(".tabs-nav__link");
+  const tabsContent = document.querySelectorAll(".tabs-content__item");
+
+  tabsNav.forEach((navLink, index) => {
+    navLink.addEventListener("click", () => {
+      tabsNav.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      navLink.classList.add("active");
+
+      let navIndex = index;
+
+      tabsContent.forEach((item, index) => {
+        item.classList.remove("active");
+
+        if (index === navIndex) {
+          item.classList.add("active");
+        }
+      });
+    });
+  });
+
   plusMinusProduct();
   const interestingSwiper = new Swiper(".interesting__slider", {
     navigation: {
