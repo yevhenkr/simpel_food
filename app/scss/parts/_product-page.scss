@@ -245,7 +245,7 @@
 }
 
 .stars {
-  .Starry .Starry-star{
+  .Starry .Starry-star {
     min-width: 20px;
     width: 20px;
     height: 20px;
@@ -325,7 +325,7 @@
 
   margin-bottom: 60px;
 
-  &__stars{
+  &__stars {
     margin-left: auto;
   }
 }
@@ -500,4 +500,102 @@
   &__btn {}
 }
 
-.btn--md {}
+.product-lightbox {
+  .lg-backdrop {
+    background-color: rgba($c-dark, 0.2);
+  }
+
+  .lg-outer{
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: $c-white;
+    border-radius: 15px;
+  }
+  .lg-content {
+    top: 0 !important;
+  }
+
+  .lg-prev,
+  .lg-next {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: transparent;
+    @extend .icon;
+    @extend .icon--chevron-left;
+
+    &::before {
+      min-width: 32px;
+      height: 32px;
+    }
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $c-orange-900;
+      }
+    }
+  }
+
+  .lg-next {
+    @extend .icon--chevron-right;
+  }
+
+  .lg-close {
+    border-radius: 5px;
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    font-size: 32px;
+    line-height: 60px;
+    margin-top: 24px;
+    margin-right: 24px;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      background-color: rgba($c-orange-900, 0.25);
+      color: rgba($c-dark, 0.2);
+    }
+
+    &:hover {
+      background-color: rgba($c-orange-900, 0.1);
+      color: $c-orange-900;
+    }
+  }
+
+  .lg-pager_uoter {
+    margin-bottom: 30px;
+  }
+
+  .lg-pager {
+    width: 15px;
+    height: 15px;
+    background-color: $c-gray;
+    box-shadow: unset;
+
+    &:hover {
+      box-shadow: unset;
+      background-color: rgba($c-orange-900, 0.6);
+    }
+  }
+
+  .lg-pager-cont {
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  .lg-pager-cont.lg-pager-active .lg-pager {
+    box-shadow: unset;
+  }
+
+  .lg-pager-active {
+    .lg-pager {
+      background-color: $c-orange-900;
+    }
+  }
+}

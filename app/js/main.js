@@ -1,6 +1,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const lightbox = document.querySelector('.product-slider__items')
+  lightGallery(lightbox, {
+    plugins: [lgPager],
+    speed: 600,
+    addClass: 'product-lightbox',
+    counter: false,
+    download: false,
+    closeOnTap: false,
+    getCaptionFromTitleOrAlt: false
+  });
+
   const staticStars = document.querySelectorAll(".static-stars");
 
   staticStars.forEach((starItem, index) => {
