@@ -1,6 +1,33 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const staticStars = document.querySelectorAll(".static-stars");
+
+  staticStars.forEach((starItem, index) => {
+    let stars = starItem.dataset.stars;
+
+    new Starry(starItem, {
+      name: `stars-${index}`,
+      readOnly: true,
+      beginWith: 20 * stars,
+      icons: {
+        blank: "../images/star-empty.svg",
+        hover: "../images/star-fill.svg",
+        active: "../images/star-fill.svg",
+      },
+    });
+  });
+
+  const rateStars = document.querySelector(".feedback-form__stars");
+  const rating = new Starry(rateStars, {
+    name: `rating`,
+    icons: {
+      blank: "../images/star-empty.svg",
+      hover: "../images/star-fill.svg",
+      active: "../images/star-fill.svg",
+    },
+  });
+
   const tabsNav = document.querySelectorAll(".tabs-nav__link");
   const tabsContent = document.querySelectorAll(".tabs-content__item");
 
