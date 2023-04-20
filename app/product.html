@@ -13,8 +13,15 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title>SimpleFood сервіс доставки готових страв | Сторінка продукта "Чізбургер з листями салату"</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css"
+    integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-pager.min.css"
+      integrity="sha512-F4gJy0MBz7nwvFMIYNeap+CXaVQY0Y9pwsn/Up4mvOfjYD50u+8D7jIVZBkeHV7hZ2xjhY8uJRMkRzWQBvznRw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/gh/teddy95/starry@5/dist/starry.min.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -135,7 +142,7 @@
         <a class="breadcrubms__link" href="">Католог продуктів</a>
       </li>
       <li class="breadcrubms__item">
-        <a class="breadcrubms__link">Чізбургер з листями салату</a>
+        <a class="breadcrubms__link">Чізбургер з листям салату</a>
       </li>
       
 
@@ -148,7 +155,7 @@
     <section class="product-page__head">
       <div class="product-page__info">
         <h1 class="title product-page__title">Чізбургер з листям салату</h1>
-        <div class="stars product-page__stars"></div>
+        <div class="stars static-stars product-page__stars" data-stars="4"></div>
         <div class="product-page__price">160 <span class="currency">грн</span></div>
         <div class="product-page__actions">
           <div class="quantity product-page__quantity">
@@ -179,10 +186,22 @@
       <div class="product-page__slider">
         <div class="product-slider swiper">
           <div class="product-slider__items swiper-wrapper">
-            <img class="product-slider__img swiper-slide" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
-            <img class="product-slider__img swiper-slide" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
-            <img class="product-slider__img swiper-slide" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
-            <img class="product-slider__img swiper-slide" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
+            <a class="swiper-slide" href="images/burger_icons/cheeseburger-huge.jpg" data-lg-size="750-750">
+              <img class="product-slider__img" src="images/burger_icons/cheeseburger-huge.jpg"
+                alt="бургер">
+            </a>
+            <a class="swiper-slide" href="images/burger_icons/cheeseburger-huge.jpg" data-lg-size="750-750">
+              <img class="product-slider__img" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
+            </a>
+            <a class="swiper-slide" href="images/burger_icons/cheeseburger-huge.jpg" data-lg-size="750-750">
+              <img class="product-slider__img" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
+            </a>
+            <a class="swiper-slide" href="images/burger_icons/cheeseburger-huge.jpg" data-lg-size="750-750">
+              <img class="product-slider__img" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
+            </a>
+            <a class="swiper-slide" href="images/burger_icons/cheeseburger-huge.jpg" data-lg-size="750-750">
+              <img class="product-slider__img" src="images/burger_icons/cheeseburger-huge.jpg" alt="бургер">
+            </a>
           </div>
           <div class="product-slider__btns">
 
@@ -225,7 +244,7 @@
           <li class="tabs-content__item">
             <div class="characteristic">
               <p><span>Діаметр: </span>до 3 діб<p>
-              <p><span>Вага: </span>20 см</span></p>
+              <p><span>Вага: </span>20 см</p>
               <p><span>Калорійність (на 100г): </span>300 гр<p>
               <p><span>Термін зберігання: </span>295 ккал<p>
             </div>
@@ -247,7 +266,7 @@
                         <div class="product-review__name">Андрій</div>
                         <time class="product-review__time" datetime="2021-06-10">10.06.2021</time>
                       </figcaption>
-                      <div class="stars product-reviews__stars"></div>
+                      <div class="stars static-stars product-reviews__stars" data-stars="5"></div>
                     </div>
                     <blockquote class="product-review__text">Доставили швидко. Товар свіжий та дуже смачний, буду ще
                       обов’язково куштувати!</blockquote>
@@ -262,7 +281,7 @@
                         <div class="product-review__name">Катерина Біла</div>
                         <time class="product-review__time" datetime="2021-06-07">07.06.2021</time>
                       </figcaption>
-                      <div class="stars product-reviews__stars"></div>
+                      <div class="stars static-stars product-reviews__stars" data-stars="4"></div>
                     </div>
                     <blockquote class="product-review__text">Цей бургер непоганий на смак, особливо, коли немає
                       можливості або часу щось готувати. Це чудовий варіант, щоб перекусити находу, але, щоб себе
@@ -417,7 +436,7 @@
               <button class="btn btn--md product-cart__btn" type="button">До кошика</button>
             </article>
           </li>
-          
+
         </ul>
       </div>
     </div>
@@ -572,8 +591,16 @@
 
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"
+  integrity="sha512-dSI4QnNeaXiNEjX2N8bkb16B7aMu/8SI5/rE6NIa3Hr/HnWUO+EAZpizN2JQJrXuvU7z0HTgpBVk/sfGd0oW+w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/pager/lg-pager.min.js"
+    integrity="sha512-JuEDozFHrFXMEQ9WXhpLpfmdIZs53JlKO1v20E2GUVf/VzcgW/KIhHZYWFfjLewmNEPptVSfjNM1jzL0jh7tkg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/teddy95/starry@5/dist/starry.min.js" type="text/javascript"
+  language="javascript"></script>
 <script src="js/mixitup.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>

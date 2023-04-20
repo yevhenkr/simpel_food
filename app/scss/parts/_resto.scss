@@ -2,6 +2,10 @@
   box-sizing: border-box !important;
 
   &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: size(30, 0);
+
     @include r($size-md) {
       grid-template-columns: repeat(2, minmax(auto, 370px));
       gap: 10px;
@@ -24,6 +28,7 @@
 
   &__slider {
     overflow: visible;
+
     @include r($size-sm) {
       overflow: hidden;
     }
