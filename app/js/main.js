@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const staticStars = document.querySelectorAll(".static-stars");
-
   staticStars.forEach((starItem, index) => {
     let stars = starItem.dataset.stars;
 
@@ -30,14 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const rateStars = document.querySelector(".feedback-form__stars");
-  const rating = new Starry(rateStars, {
-    name: `rating`,
-    icons: {
-      blank: "../images/star-empty.svg",
-      hover: "../images/star-fill.svg",
-      active: "../images/star-fill.svg",
-    },
-  });
+  if (rateStars) {
+    const rating = new Starry(rateStars, {
+      name: `rating`,
+      icons: {
+        blank: "../images/star-empty.svg",
+        hover: "../images/star-fill.svg",
+        active: "../images/star-fill.svg",
+      },
+    });
+  }
 
   const tabsNav = document.querySelectorAll(".tabs-nav__link");
   const tabsContent = document.querySelectorAll(".tabs-content__item");
@@ -95,38 +96,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const rangeSlider = document.querySelector('.range__slider');
   const inputMin = document.querySelector('.range__input--min');
   const inputMax = document.querySelector('.range__input--max');
+  if (rangeSlider) {
+    noUiSlider.create(rangeSlider, {
+      start: [100, 1000],
+      connect: true,
+      padding: [0, 0],
+      animate: true,
+      // cssPrefix: 'noUi-',
+      step: 10,
+      range: {
+        'min': 50,
+        'max': 1200
+      }
+    });
 
-  noUiSlider.create(rangeSlider, {
-    start: [100, 1000],
-    connect: true,
-    padding: [0, 0],
-    animate: true,
-    // cssPrefix: 'noUi-',
-    step: 10,
-    range: {
-      'min': 50,
-      'max': 1200
-    }
-  });
+    rangeSlider.noUiSlider.on('update', function (values, handle) {
+      // let value = values[handle];
+      let value = parseFloat(values[handle]).toFixed(0);
+      if (handle) {
+        inputMax.value = value;
+      } else {
+        inputMin.value = value;
+      }
+    });
 
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
-    // let value = values[handle];
-    let value = parseFloat(values[handle]).toFixed(0);
-    if (handle) {
-      inputMax.value = value;
-    } else {
-      inputMin.value = value;
-    }
-  });
+    // Оновлення значень слайдера при зміні input-ів
+    inputMin.addEventListener('change', function () {
+      rangeSlider.noUiSlider.set([this.value, null]);
+    });
 
-  // Оновлення значень слайдера при зміні input-ів
-  inputMin.addEventListener('change', function () {
-    rangeSlider.noUiSlider.set([this.value, null]);
-  });
-
-  inputMax.addEventListener('change', function () {
-    rangeSlider.noUiSlider.set([null, this.value]);
-  });
+    inputMax.addEventListener('change', function () {
+      rangeSlider.noUiSlider.set([null, this.value]);
+    });
+  }
 
   const body = document.querySelector('body');
 
@@ -250,21 +252,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const quantityInput = document.querySelector(".quantity__input");
     const incrementButton = document.querySelector(".quantity__btn--plus");
     const decrementButton = document.querySelector(".quantity__btn--minus");
-    incrementButton.addEventListener("click", () => {
-      quantityInput.value = parseInt(quantityInput.value) + 1;
-    });
-    decrementButton.addEventListener("click", () => {
-      if (parseInt(quantityInput.value) > 0) {
-        quantityInput.value = parseInt(quantityInput.value) - 1;
-      }
-    });
-    quantityInput.addEventListener("input", () => {
-      const value = parseInt(quantityInput.value);
-      if (!isNaN(value) && value >= 0 && value <= 99) {
-        quantityInput.value = value;
-      } else {
-        quantityInput.value = 1;
-      }
-    });
+    if (incrementButton) {
+
+      incrementButton.addEventListener("click", () => {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+      });
+      decrementButton.addEventListener("click", () => {
+        if (parseInt(quantityInput.value) > 0) {
+          quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+      });
+      quantityInput.addEventListener("input", () => {
+        const value = parseInt(quantityInput.value);
+        if (!isNaN(value) && value >= 0 && value <= 99) {
+          quantityInput.value = value;
+        } else {
+          quantityInput.value = 1;
+        }
+      });
+    }
   }
 });
