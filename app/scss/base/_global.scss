@@ -25,6 +25,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   padding-top: size(159, 72);
   overflow-x: hidden;
   display: grid;
@@ -267,7 +268,7 @@ body {
   &--md {
     letter-spacing: 0;
     font-size: 14px;
-    padding: 5px 13px;
+    padding: 7px 14px;
   }
 }
 

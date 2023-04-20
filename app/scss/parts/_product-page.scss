@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row-reverse;
     gap: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
 
     @include r(size-md) {
       flex-direction: column;
@@ -22,11 +22,11 @@
 
   &__title {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   &__stars {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
   }
 
   &__price {
@@ -56,6 +56,7 @@
     font-weight: 500;
     padding: 14px 28px;
     white-space: nowrap;
+    letter-spacing: 0;
 
     &::before {
       min-width: 16px;
@@ -82,6 +83,7 @@
 
   &__btn {
     width: 44px;
+    min-width: 44px;
     height: 44px;
     background-color: $c-orange-900;
     outline: 2px solid transparent;
@@ -152,7 +154,7 @@
 
   &__title {
     font-size: size(24, 18);
-    margin-bottom: 15px;
+    margin-bottom: 11px;
     color: $c-darkBlue-900;
   }
 

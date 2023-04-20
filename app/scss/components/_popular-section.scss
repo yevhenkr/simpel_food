@@ -6,6 +6,8 @@
 
   &__list {
     margin-bottom: size(60, 30);
+    grid-template-columns: repeat(5, 1fr);
+    gap: size(30, 5);
   }
 
   &__btn {
