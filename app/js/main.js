@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const lightbox = document.querySelector('.product-slider__items')
+  const lightbox = document.querySelector('.product-slider__items');
   lightGallery(lightbox, {
     plugins: [lgPager],
     speed: 600,
