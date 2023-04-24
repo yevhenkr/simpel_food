@@ -2,9 +2,17 @@
   background-color: rgba($c-orange-900, 0.1);
   padding: 24px 0;
 
+  @include r($size-md) {
+    max-width: 100vw;
+  }
+
   &__list {
     display: flex;
     align-items: center;
+
+    @include r($size-md) {
+      overflow-y: auto;
+    }
   }
 
 
@@ -15,6 +23,7 @@
     font-size: 14px;
     line-height: 1.3;
     letter-spacing: 0.03em;
+    @include line-clamp(1);
 
     &::after {
       content: '';
@@ -39,5 +48,3 @@
     }
   }
 }
-
-.container {}
