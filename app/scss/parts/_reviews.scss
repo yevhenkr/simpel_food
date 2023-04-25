@@ -1,6 +1,4 @@
 .reviews {
-
-  // position: relative;
   &__list {
     margin-bottom: 28px;
 
@@ -66,22 +64,6 @@
       }
     }
 
-    &[disabled] {
-      border-color: $c-gray;
-
-      &:focus,
-      &:hover,
-      &:active {
-        border-color: inherit;
-        outline-color: transparent;
-        background-color: inherit;
-      }
-
-      &::before {
-        background-color: $c-gray;
-      }
-    }
-
     &:focus {
       outline-color: rgba($c-orange-900, 0.5);
     }
@@ -106,6 +88,21 @@
       }
     }
 
+    &[disabled] {
+      border-color: $c-gray;
+
+      &:focus,
+      &:hover,
+      &:active {
+        border-color: inherit;
+        outline-color: transparent;
+        background-color: inherit;
+      }
+
+      &::before {
+        background-color: $c-gray;
+      }
+    }
   }
 
   &__dots {
