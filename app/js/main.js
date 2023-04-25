@@ -75,6 +75,18 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 5,
         spaceBetween: 30,
       },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 3,
+      },
     },
   });
   const burgerSwiper = new Swiper(".product-slider", {
