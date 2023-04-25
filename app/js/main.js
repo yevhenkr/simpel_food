@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
       readOnly: true,
       beginWith: 20 * stars,
       icons: {
-        blank: "../images/star-empty.svg",
-        hover: "../images/star-fill.svg",
-        active: "../images/star-fill.svg",
+        blank: "images/star-empty.svg",
+        hover: "images/star-fill.svg",
+        active: "images/star-fill.svg",
       },
     });
   });
@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const rating = new Starry(rateStars, {
       name: `rating`,
       icons: {
-        blank: "../images/star-empty.svg",
-        hover: "../images/star-fill.svg",
-        active: "../images/star-fill.svg",
+        blank: "images/star-empty.svg",
+        hover: "images/star-fill.svg",
+        active: "images/star-fill.svg",
       },
     });
   }

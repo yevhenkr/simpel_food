@@ -118,14 +118,14 @@ function images() {
 
 function build() {
   return src([
-    'app/*.html',
-    'app/favicon/**/*.*',
-    'app/fonts/**/*.woff2',
-    'app/css/*.css',
-    'app/js/*.js',
-    'app/images/**/*.*'
-  ], { base: 'app' })
-    .pipe(dest('dist'))
+    "app/*.html",
+    "app/favicon/**/*.*",
+    "app/fonts/**/*.*",
+    "app/css/*.css",
+    "app/js/*.js",
+    "app/images/**/*.*"
+  ], { base: "app" })
+    .pipe(dest("dist"))
 }
 
 function cleanDist() {
