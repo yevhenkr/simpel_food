@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterCloseBtn = document.querySelector('.sidebar__btn');
     const filterSidebar = document.querySelector('.sidebar');
     filterBtn.addEventListener('click', () => {
-      
+
       filterSidebar.classList.add('open')
       body.classList.add('lock');
     })
