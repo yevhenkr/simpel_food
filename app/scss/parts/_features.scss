@@ -1,0 +1,77 @@
+.features {
+
+  &__inner {
+    min-height: size(585, 462);
+    padding: 0 size(70, 0);
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left size(70, 0) center;
+  }
+
+
+  &__content {
+    max-width: 470px;
+    padding: 25px 0 31px;
+    background-color: rgba($c-white, 0.85);
+    align-self: flex-end;
+  }
+
+  &__title {
+    margin-top: size(30, 0);
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  &__description {
+    font-size: size(20, 18);
+    line-height: 1.5;
+    margin-bottom: size(30, 20);
+  }
+
+  &__list {
+    margin-bottom: size(30, 20);
+  }
+
+  &__item {
+    font-size: size(24, 18);
+    line-height: 1.5;
+    color: $c-darkBlue-900;
+
+    gap: size(30, 10); //єто можем делать потому что icon имеет стили свли и висит на єтом обьекте
+    justify-content: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: size(20, 15);
+    }
+
+    &::before {
+      min-width: 34px;
+      height: 34px;
+    }
+
+    &.icon--delivery {
+      &::before {
+        border-color: $c-orange-900;
+      }
+    }
+
+    .icon--courier {
+      &::before {
+        border-color: #00AAFF;
+      }
+    }
+
+    .icon--build {
+      &::before {
+        border-color: #FF2222;
+      }
+    }
+  }
+}

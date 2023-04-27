@@ -1,0 +1,36 @@
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+%Rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+%Rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+%Rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+%Rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+$size-xl: 1200;
+$size-lg: 992;
+$size-md: 768;
+$size-sm: 576;

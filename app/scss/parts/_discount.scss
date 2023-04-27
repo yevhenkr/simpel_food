@@ -1,0 +1,46 @@
+.discount {
+  &__title {
+    text-align: left;
+
+    @include r($size-sm) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @include r($size-sm) {
+      display: flex;
+      gap: initial;
+      justify-content: initial;
+      margin-bottom: 45px;
+    }
+
+    .content-card {
+      @include r($size-sm) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__slider {
+    overflow: visible;
+
+    @include r($size-sm) {
+      overflow: hidden;
+    }
+  }
+
+  &__dots {
+    @extend .reviews__dots;
+    justify-content: center;
+    padding: 2px;
+  }
+
+  &__dot {
+    @extend .reviews__dot;
+
+    &--active {
+      @extend .reviews__dot--active;
+    }
+  }
+}

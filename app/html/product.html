@@ -1,0 +1,24 @@
+@include('global/_head.html',{
+name: 'Сторінка продукта "Чізбургер з листями салату"'
+})
+
+@include('global/_header.html')
+<main class="product-page">
+  @include('global/_breadcrumbs.html',{
+  className: 'product-page__breadcrumbs',
+  third: true,
+  thirdPage: 'Чізбургер з листям салату'
+  })
+
+  <div class="container">
+    <section class="product-page__head">
+      @include('components/_product-page__info.html')
+      @include('components/_product-page__slider.html')
+    </section>
+  </div>
+  @include('components/_deteils.html')
+  @include('components/_interesting.html')
+</main>
+@include('global/_footer.html')
+
+@include('global/_scripts.html')

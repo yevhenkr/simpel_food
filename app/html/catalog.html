@@ -1,0 +1,20 @@
+@include('global/_head.html',{
+  name: 'Список продуктів'
+})
+
+@include('global/_header.html')
+<main class="catalog-page">
+  @include('global/_breadcrumbs.html',{
+    className: 'catalog-page__breadcrumbs',
+    third: false
+  })
+
+  @include('components/_catalog-page__head.html')
+  @include('components/_catalog-page__inner.html')
+  @include('components/_application.html')
+  @include('components/_discount.html')
+</main>
+
+@include('global/_footer.html')
+
+@include('global/_scripts.html')

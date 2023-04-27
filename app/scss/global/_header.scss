@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  top: 0;
+  // right: 0;
+  width: 100%;
+  left: 0;
+  z-index: 99;
+  background-color: $c-white;
+  padding: size(56, 14) 0;
+  border-bottom: 3px solid transparent;
+  transition: padding 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &.sticky {
+    border-color: $c-orange-900;
+    padding: 15px 0;
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($c-dark, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -100;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+  }
+
+  @at-root .lock {
+    overflow: hidden;
+
+    header {
+      &::before {
+        @include r($size-md) {
+          opacity: 1;
+          visibility: visible;
+          z-index: 10;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include r($size-md) {
+      justify-content: space-between;
+    }
+
+    @include r($size-sm) {
+      max-width: 100vh;
+    }
+  }
+
+  &__menu {
+    @include r($size-md) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @include r($size-md) {
+      width: 115px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include r($size-md) {
+      // margin-left: auto;
+    }
+  }
+
+
+}
+
+.cross-btn {
+
+  &__line {}
+}
+
+.hero-btn {}

@@ -1,0 +1,16 @@
+@include('global/_head.html',{
+  name: 'Головна сторінка'
+})
+@include('global/_header.html')
+<main class="page">
+  <h1 class="sr-only">Cepsic доставки SimpleFood - номер один у місті Київ</h1>
+  @include('components/_hero.html')
+  @include('components/_popular.html')
+  @include('components/_features.html')
+  @include('components/_resto.html')
+  @include('components/_reviews.html')
+  @include('components/_application.html')
+</main>
+@include('global/_footer.html')
+
+@include('global/_scripts.html')

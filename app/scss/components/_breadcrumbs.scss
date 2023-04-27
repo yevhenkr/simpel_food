@@ -1,0 +1,50 @@
+.breadcrubms {
+  background-color: rgba($c-orange-900, 0.1);
+  padding: 24px 0;
+
+  @include r($size-md) {
+    max-width: 100vw;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include r($size-md) {
+      overflow-y: auto;
+    }
+  }
+
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    @include line-clamp(1);
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      mask-image: url('../images/sprite.svg#icon-chevron-right');
+      mask-position: center;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background-color: $c-gray;
+    }
+  }
+
+  &__item {
+    &:last-child {
+      .breadcrubms__link {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

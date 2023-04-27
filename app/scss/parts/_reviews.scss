@@ -1,0 +1,156 @@
+.reviews {
+  &__list {
+    margin-bottom: 28px;
+
+    @include r($size-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__actions {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid transparent;
+    border: 3px solid $c-orange-900;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &::before {
+      content: '';
+      min-width: 19px;
+      height: 19px;
+      display: inline-block;
+      mask-image: url('../images/sprite.svg#icon-right');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      background-color: $c-orange-900;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    @include r($size-sm) {
+      position: absolute;
+      top: 30px;
+    }
+
+    &--prev {
+      &::before {
+        margin-right: auto;
+        margin-left: 7px;
+        mask-image: url('../images/sprite.svg#icon-left');
+      }
+
+      @include r($size-sm) {
+        left: calc(50% - 140px);
+      }
+    }
+
+    &--next {
+      @include r($size-sm) {
+        right: calc(50% - 140px);
+      }
+    }
+
+    &:focus {
+      outline-color: rgba($c-orange-900, 0.5);
+    }
+
+    &:hover {
+      background-color: rgba($c-orange-900, 0.1);
+      border-color: rgba($c-orange-900, 0.5);
+      outline-color: transparent;
+
+      &::before {
+        background-color: rgba($c-orange-900, 0.5);
+      }
+    }
+
+    &:active {
+      background-color: rgba($c-orange-900, 0.1);
+      border-color: transparent;
+      outline-color: transparent;
+
+      &::before {
+        background-color: $c-orange-900;
+      }
+    }
+
+    &[disabled] {
+      border-color: $c-gray;
+
+      &:focus,
+      &:hover,
+      &:active {
+        border-color: inherit;
+        outline-color: transparent;
+        background-color: inherit;
+      }
+
+      &::before {
+        background-color: $c-gray;
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__dot {
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $c-gray;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &--active {
+      background-color: $c-orange-900;
+    }
+
+    &:focus {
+      outline-color: $c-orange-900
+    }
+
+    &:hover {
+      outline-color: rgba($c-orange-900, 0.5);
+      background-color: rgba($c-orange-900, 0.1);
+    }
+
+    &:active {
+      outline-color: transparent;
+      background-color: rgba($c-orange-900, 0.5);
+    }
+  }
+
+  &__slider {
+    .reviews__dots {
+      @include r($size-sm) {
+        display: none;
+      }
+    }
+  }
+}
+
+.reviews--mb {
+  margin-bottom: 116px;
+
+  @include r($size-sm) {
+    margin-bottom: 40px;
+  }
+}

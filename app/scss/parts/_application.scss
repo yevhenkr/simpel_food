@@ -1,0 +1,57 @@
+$rightPos: calc((100vw - 1170px) / 2);
+
+.application {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right $rightPos center;
+
+  @include r($size-lg) {
+    background-position: right 15px center;
+  }
+
+  @include r($size-sm) {
+    background-size: 0;
+  }
+
+  &__content {
+    max-width: 470px;
+    padding: size(42, 0) 0;
+    background-color: rgba($c-white, 0.85);
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: size(48, 15);
+  }
+
+  &__info {
+    font-size: size(20, 14);
+    line-height: 1.5;
+    margin-bottom: size(30, 15);
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+}
+
+.app-icon {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background-image: url('../images/app-apple.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--google {
+    width: 135px;
+    background-image: url('../images/app-android.jpg');
+  }
+}
+
+.app-icon--apple {}
+
+.app-icon--google {}
