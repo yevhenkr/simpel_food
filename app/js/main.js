@@ -182,18 +182,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const filterBtn = document.querySelector('.filter-btn');
-    const filterCloseBtn = document.querySelector('.sidebar__btn');
-    const filterSidebar = document.querySelector('.sidebar');
-    filterBtn.addEventListener('click', () => {
+    if (filterBtn) {
+      console.log("1111");
+      const filterCloseBtn = document.querySelector('.sidebar__btn');
+      const filterSidebar = document.querySelector('.sidebar');
+      filterBtn.addEventListener('click', () => {
 
-      filterSidebar.classList.add('open')
-      body.classList.add('lock');
-    })
+        filterSidebar.classList.add('open')
+        body.classList.add('lock');
+      })
 
-    filterCloseBtn.addEventListener('click', () => {
-      filterSidebar.classList.remove('open')
-      body.classList.remove('lock');
-    })
+      filterCloseBtn.addEventListener('click', () => {
+        filterSidebar.classList.remove('open')
+        body.classList.remove('lock');
+      })
+    }
+
   }
 
   if (window.innerWidth <= 576) {
