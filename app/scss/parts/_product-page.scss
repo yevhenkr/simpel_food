@@ -531,7 +531,7 @@
   }
 
   &__slider {
-    padding: size(3, 1);
+    padding: 3px;
 
     @include r($size-lg) {
       max-width: calc(100vh - 30px);

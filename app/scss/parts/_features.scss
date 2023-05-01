@@ -58,19 +58,19 @@
 
     &.icon--delivery {
       &::before {
-        border-color: $c-orange-900;
+        background-color: $c-orange-900;
       }
     }
 
-    .icon--courier {
+    &.icon--courier {
       &::before {
-        border-color: #00AAFF;
+        background-color: #00AAFF;
       }
     }
 
-    .icon--build {
+    &.icon--build {
       &::before {
-        border-color: #FF2222;
+        background-color: #FF2222;
       }
     }
   }

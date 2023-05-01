@@ -1476,13 +1476,13 @@ body {
   height: 34px;
 }
 .features__item.icon--delivery::before {
-  border-color: #ff6838;
+  background-color: #ff6838;
 }
-.features__item .icon--courier::before {
-  border-color: #00AAFF;
+.features__item.icon--courier::before {
+  background-color: #00AAFF;
 }
-.features__item .icon--build::before {
-  border-color: #FF2222;
+.features__item.icon--build::before {
+  background-color: #FF2222;
 }
 
 .resto {
@@ -2510,11 +2510,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
-  height: 34px;
-  width: 34px;
 }
 .interesting__slider {
-  padding: calc(1px + (3 - 1) * ((100vw - 375px) / (1920 - 375)));
+  padding: 3px;
 }
 @media (max-width: 992px) {
   .interesting__slider {
