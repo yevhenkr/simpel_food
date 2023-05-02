@@ -18,6 +18,7 @@
 
   &__select-sort {
     width: 130px;
+    @include line-clamp(1);
   }
 
   &__select-number {

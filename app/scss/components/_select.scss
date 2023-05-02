@@ -1,10 +1,11 @@
 .select {
+  display: flex;
   padding: 15px;
+  padding-right: 25px;
   font-size: 14px;
   letter-spacing: 0.03em;
   border: 1px solid $c-gray;
   border-radius: 3px;
-
   background-image: url('../images/sprite.svg#icon-chevron-right');
   background-position: right 15px center;
   background-repeat: no-repeat;
