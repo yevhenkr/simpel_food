@@ -99,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.onscroll = () => {
 
     if (window.pageYOffset > 100) {
-      header.classList.add("sticky");
+      // header.classList.add("sticky");
     } else {
-      header.classList.remove("sticky");
+      // header.classList.remove("sticky");
     }
   };
 

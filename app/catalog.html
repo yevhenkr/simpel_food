@@ -149,7 +149,7 @@
       <div class="filters-top__group">
         <label for="stor-by-name" class="sr-only">Select a product sorting option</label>
         <select class="select catalog-page__select-sort" name="stor-by-name" id="stor-by-name">
-          <option value="name">By name select a product sorting option</option>
+          <option value="name">By name</option>
           <option value="popularity">By popularity</option>
           <option value="price_high">Initially more expensive</option>
           <option value="price_low">First, the girls</option>
@@ -277,11 +277,11 @@
                 <div class="range__items">
                   <div class="range__group">
                     <label class="range__label" for="range[form]">from</label>
-                    <input class="range__input range__input--min" id="range[form]" type="number">
+                    <input class="range__input range__input--min" id="range[form]" type="text" pattern="[0-9]*">
                   </div>
                   <div class="range__group">
                     <label class="range__label" for="range[to]">to</label>
-                    <input class="range__input range__input--max" id="range[to]" type="number">
+                    <input class="range__input range__input--max" id="range[to]" type="text" pattern="[0-9]*">
                   </div>
                 </div>
                 <div class="range__slider"></div>
